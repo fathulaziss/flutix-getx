@@ -1,0 +1,150 @@
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+
+// Uncomment below when build App Bundle
+// def keystoreProperties = new Properties()
+// def keystorePropertiesFile = rootProject.file('key.properties')
+// if (keystorePropertiesFile.exists()) {
+//     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+// }
+
+android {
+    flavorDimensions "flavor-dimension"
+
+    productFlavors {
+        production {
+            dimension "flavor-dimension"
+            applicationId "com.fathdotdev.flutix"
+            resValue "string", "app_name", "Flutix"
+            proguardFile 'proguard-rules.pro'
+        }
+        
+        development {
+            dimension "flavor-dimension"
+            applicationId "com.fathdotdev.flutix"
+            resValue "string", "app_name", "Flutix"
+            proguardFile 'proguard-rules.pro'
+        }
+
+        staging {
+            dimension "flavor-dimension"
+            applicationId "com.fathdotdev.flutix"
+            resValue "string", "app_name", "Flutix"
+            proguardFile 'proguard-rules.pro'
+        }
+    }
+
+    compileSdkVersion 33
+    ndkVersion flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        applicationId "com.fathdotdev.flutix"
+        minSdkVersion 25
+        targetSdkVersion 33
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+        multiDexEnabled true
+        ndk { abiFilters "armeabi", "x86", "armeabi-v7a","x86_64", "mips",
+         "mips64", "arm64-v8a" }
+    }
+
+    // Uncomment below when build App Bundle
+    // signingConfigs {
+    //    release {
+    //        keyAlias keystoreProperties['keyAlias']
+    //        keyPassword keystoreProperties['keyPassword']
+    //        storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+    //        storePassword keystoreProperties['storePassword']
+    //    }
+    // }
+
+    buildTypes {
+        release {
+            // Change to signingConfigs.release when build App Bundle
+            // Don't Forget change to signingConfigs.debug when run App
+            signingConfig signingConfigs.debug
+            // Enables code shrinking, obfuscation, and optimization for only
+            // your project's release build type.
+            minifyEnabled true
+
+            // Enables resource shrinking, which is performed by the
+            // Android Gradle plugin.
+            shrinkResources true
+
+            // Includes the default ProGuard rules files that are packaged with
+            // the Android Gradle plugin. To learn more, go to the section about
+            // R8 configuration files.
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+            'proguard-rules.pro'
+
+            ndk {
+                abiFilters 'armeabi-v7a','arm64-v8a','x86_64'
+            }
+        }
+        debug {
+            signingConfig signingConfigs.debug
+            // Enables code shrinking, obfuscation, and optimization for only
+            // your project's release build type.
+            minifyEnabled true
+
+            // Enables resource shrinking, which is performed by the
+            // Android Gradle plugin.
+            shrinkResources true
+
+            // Includes the default ProGuard rules files that are packaged with
+            // the Android Gradle plugin. To learn more, go to the section about
+            // R8 configuration files.
+             proguardFiles getDefaultProguardFile('proguard-android.txt'),
+            'proguard-rules.pro'
+
+            ndk {
+                abiFilters 'armeabi-v7a','arm64-v8a','x86_64'
+            }
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}

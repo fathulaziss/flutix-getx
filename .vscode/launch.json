@@ -1,0 +1,87 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "PRODUCTION",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main_production.dart",
+            "args":[		
+                "--flavor",
+                "production",
+                "--debug",
+                "--verbose",
+                "--warning-mode all"
+			]
+        },
+        {
+            "name": "DEVELOPMENT",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main_development.dart",
+            "args":[
+                "--flavor",
+                "development",
+                "--debug",
+                "--verbose",
+                "--warning-mode all"
+			]
+        },
+        {
+            "name": "STAGING",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main_staging.dart",
+            "args":[
+                "--flavor",
+                "staging",
+                "--debug",
+                "--verbose",
+                "--warning-mode all"
+			]
+        },
+        {
+            "name": "PRODUCTION IOS",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main_production.dart",
+            "args":[
+                "--target",
+                "lib/main_production.dart",
+			]
+        },
+        {
+            "name": "DEVELOPMENT IOS",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main_development.dart",
+            "args":[
+                "--target",
+                "lib/main_development.dart"
+			]
+        },
+        {
+            "name": "STAGING IOS",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main_staging.dart",
+            "args":[
+                "--target",
+                "lib/main_staging.dart"
+			]
+        }
+    ]
+    
+    // APK
+    // flutter build apk --split-per-abi --flavor development -t lib/main_development.dart --release
+    // flutter build apk --split-per-abi --flavor staging -t lib/main_staging.dart --release
+    // flutter build apk --split-per-abi --flavor production -t lib/main_production.dart --release
+
+    // AppBundle
+    // flutter build appbundle --flavor development -t lib/main_development.dart
+    // flutter build appbundle --flavor staging -t lib/main_staging.dart
+    // flutter build appbundle --flavor production -t lib/main_production.dart
+}
