@@ -14,7 +14,7 @@ class SplashScreenView extends StatefulWidget {
 
 class _SplashScreenViewState extends State<SplashScreenView> {
   final cUtility = Get.find<UtilityController>();
-  double width = Get.width * 0.1;
+  double width = Get.width * 0.2;
 
   @override
   void initState() {
@@ -28,20 +28,20 @@ class _SplashScreenViewState extends State<SplashScreenView> {
     await Future.delayed(const Duration(milliseconds: 100));
     if (mounted) {
       setState(() {
-        width = Get.width * 0.45;
+        width = Get.width * 0.5;
       });
     }
   }
 
   Future<void> checkRoute() async {
-    await Future.delayed(const Duration(milliseconds: 1500));
+    await Future.delayed(const Duration(milliseconds: 2000));
     await AppCycleService().checkTokenAndRoute();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.primaryColor1,
+      backgroundColor: AppColor.backgroundColor,
       body: Center(
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 1000),
