@@ -9,6 +9,6 @@ class OnboardingController extends GetxController {
 
   Future<void> getStarted() async {
     await AppStorage.write(key: APP_FIRST_TIME_OPEN, value: 'true');
-    await Get.offNamed(Routes.LOGIN);
+    await Get.offNamed(Routes.SIGNIN);
   }
 }

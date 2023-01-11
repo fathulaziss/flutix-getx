@@ -2,8 +2,21 @@
     "onboardingTitle": "Dapatkan Pengalaman Baru",
     "onboardingDesc": "Nonton film lebih mudah\n daripada sebelumnya",
 
+    "signInTitle": "Halo,\nMoviemania",
+
+    "emailAddressLabel": "Alamat Email",
+    "emailAddressHint": "Masukkan Alamat Email",
+    "emailAddressValidationText": "Email tidak boleh kosong",
+    "emailAddressValidationText2": "Email tidak valid",
+    "passwordLabel": "Kata Sandi",
+    "passwordHint": "Masukkan Kata Sandi",
+    "passwordValidationText": "Kata Sandi tidak boleh kosong",
+    "passwordValidationText2": "- Kata Sandi minimal 8 karakter\n- Kata Sandi terdiri dari huruf besar, huruf kecil dan angka",
+
     "start": "Mulai",
-    "login": "Masuk",
-    "register": "Daftar",
-    "chooseLanguage": "Pilih Bahasa"
+    "signIn": "Masuk",
+    "signUp": "Daftar",
+    "chooseLanguage": "Pilih Bahasa",
+    "dontHaveAccount": "Belum memiliki akun ? ",
+    "haveAccount": "Sudah memiliki akun ? "
 }

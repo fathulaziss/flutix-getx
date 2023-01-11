@@ -2,8 +2,21 @@
     "onboardingTitle": "Get New Experience",
     "onboardingDesc": "Watch a new movie much\neasier then any before",
 
+    "signInTitle": "Hello,\nMoviemania",
+
+    "emailAddressLabel": "Email Address",
+    "emailAddressHint": "Enter Email Address",
+    "emailAddressValidationText": "Email can't be empty",
+    "emailAddressValidationText2": "Invalid Email",
+    "passwordLabel": "Password",
+    "passwordHint": "Enter Password",
+    "passwordValidationText": "Password can't be empty",
+    "passwordValidationText2": "- Password minimum 8 character\n- Password consists of uppercase, lowercase and number",
+
     "start": "Get Started",
-    "login": "Login",
-    "register": "Register",
-    "chooseLanguage": "Choose Language"
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "chooseLanguage": "Choose Language",
+    "dontHaveAccount": "Don't have an account ? ",
+    "haveAccount": "Have an account ? "
 }

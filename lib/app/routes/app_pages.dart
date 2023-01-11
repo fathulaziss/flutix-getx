@@ -3,10 +3,10 @@ import 'package:flutix/app/modules/api_log/views/api_log_view.dart';
 import 'package:flutix/app/modules/blocked_view.dart';
 import 'package:flutix/app/modules/home/bindings/home_binding.dart';
 import 'package:flutix/app/modules/home/views/home_view.dart';
-import 'package:flutix/app/modules/login/bindings/login_binding.dart';
-import 'package:flutix/app/modules/login/views/login_view.dart';
 import 'package:flutix/app/modules/onboarding/bindings/onboarding_binding.dart';
 import 'package:flutix/app/modules/onboarding/views/onboarding_view.dart';
+import 'package:flutix/app/modules/signin/bindings/signin_binding.dart';
+import 'package:flutix/app/modules/signin/views/signin_view.dart';
 import 'package:flutix/app/modules/splash_screen_view.dart';
 import 'package:flutix/app/modules/under_development.dart';
 import 'package:get/get.dart';
@@ -42,14 +42,14 @@ class AppPages {
       binding: ApiLogBinding(),
     ),
     GetPage(
-      name: _Paths.LOGIN,
-      page: () => const LoginView(),
-      binding: LoginBinding(),
-    ),
-    GetPage(
       name: _Paths.ONBOARDING,
       page: () => const OnboardingView(),
       binding: OnboardingBinding(),
+    ),
+    GetPage(
+      name: _Paths.SIGNIN,
+      page: () => const SigninView(),
+      binding: SigninBinding(),
     ),
   ];
 }

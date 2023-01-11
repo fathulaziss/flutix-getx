@@ -65,7 +65,7 @@ class AppCycleService {
       //* CHECK TOKEN
       final token = await AppStorage.read(key: CACHE_ACCESS_TOKEN);
       if (token.isEmpty) {
-        await Get.offNamed(Routes.LOGIN);
+        await Get.offNamed(Routes.SIGNIN);
         return;
       }
 
@@ -78,7 +78,7 @@ class AppCycleService {
       //* DEFAULT ROUTES TO HOME
       await Get.offNamed(Routes.HOME);
     } on Exception {
-      await Get.offNamed(Routes.LOGIN);
+      await Get.offNamed(Routes.SIGNIN);
     }
   }
 
@@ -95,6 +95,6 @@ class AppCycleService {
 
     await Future.delayed(const Duration(milliseconds: 500));
 
-    await Get.offAllNamed(Routes.LOGIN);
+    await Get.offAllNamed(Routes.SIGNIN);
   }
 }
