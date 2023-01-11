@@ -1,11 +1,11 @@
-import 'package:flutix/app/modules/onboarding/components/onboarding_slidetile.dart';
-import 'package:flutix/app/modules/onboarding/components/onboarding_slidetile_indicator.dart';
+import 'package:flutix/app/models/app_language_model.dart';
 import 'package:flutix/app/modules/onboarding/controllers/onboarding_controller.dart';
-import 'package:flutix/app/routes/app_pages.dart';
-import 'package:flutix/constants/constant.dart';
+import 'package:flutix/styles/colors.dart';
 import 'package:flutix/styles/styles.dart';
-import 'package:flutix/utils/app_storage.dart';
+import 'package:flutix/utils/app_asset.dart';
 import 'package:flutix/widgets/buttons/button_primary.dart';
+import 'package:flutix/widgets/inputs/input_dropdown.dart';
+import 'package:flutix/widgets/others/input_dropdwon_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -16,45 +16,70 @@ class OnboardingView extends GetView<OnboardingController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Obx(
-        () => Flex(
-          direction: Axis.vertical,
+      body: SizedBox(
+        width: Get.width,
+        child: Stack(
           children: [
-            verticalSpace(Insets.xxl * 2),
-            Expanded(
-              child: PageView(
-                controller: controller.cSlideTile,
-                physics: const ClampingScrollPhysics(),
-                onPageChanged: (index) {
-                  controller.slideIndex(index);
-                },
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox.square(
+                  dimension: 200.w,
+                  child: Image.asset(AppAsset.logo('logo_app.png')),
+                ),
+                Text('onboardingTitle'.tr, style: TextStyles.title),
+                verticalSpace(Insets.xs),
+                Text(
+                  'onboardingDesc'.tr,
+                  style:
+                      TextStyles.text.copyWith(color: AppColor.disabledColor2),
+                  textAlign: TextAlign.center,
+                ),
+                verticalSpace(40.w),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 55.w),
+                  child: ButtonPrimary(
+                    label: 'start'.tr,
+                    onTap: controller.getStarted,
+                  ),
+                )
+              ],
+            ),
+            Positioned(
+              top: 40.w,
+              right: 24.w,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  ...controller.listSlideTile.map((e) {
-                    return OnboardingSlidetile(data: e);
-                  }),
+                  Text('chooseLanguage'.tr, style: TextStyles.text),
+                  verticalSpace(Insets.xs),
+                  SizedBox(
+                    width: 72.w,
+                    child: InputDropdown(
+                      hintText: '',
+                      borderColor: Colors.blueGrey[200],
+                      outlinedBorderColor: Colors.transparent,
+                      textAlign: TextAlign.center,
+                      items: [
+                        ...controller.cUtility.appLanguageOptions.map((item) {
+                          return DropdownMenuItem<AppLanguageModel>(
+                            value: item,
+                            child: InputDropdownItem(value: item.language),
+                          );
+                        })
+                      ],
+                      selectedItem:
+                          controller.cUtility.appLanguage.value.language,
+                      onChanged: (value) {
+                        if (value != null) {
+                          final data = value as AppLanguageModel;
+                          controller.cUtility.changeLanguage(data);
+                        }
+                      },
+                    ),
+                  ),
                 ],
               ),
-            ),
-            SizedBox(
-              width: double.infinity,
-              height: 144.w,
-              child: (controller.slideIndex.value == 2)
-                  ? Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 24.w),
-                      child: ButtonPrimary(
-                        onTap: () {
-                          AppStorage.write(
-                            key: APP_FIRST_TIME_OPEN,
-                            value: 'true',
-                          );
-                          Get.offNamed(Routes.LOGIN);
-                        },
-                        label: 'start'.tr,
-                      ),
-                    )
-                  : OnboardingSlidetileIndicator(
-                      activeIndex: controller.slideIndex.value,
-                    ),
             )
           ],
         ),

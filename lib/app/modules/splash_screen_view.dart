@@ -28,7 +28,7 @@ class _SplashScreenViewState extends State<SplashScreenView> {
     await Future.delayed(const Duration(milliseconds: 100));
     if (mounted) {
       setState(() {
-        width = Get.width * 0.5;
+        width = Get.width * 0.65;
       });
     }
   }

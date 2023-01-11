@@ -1,5 +1,9 @@
 {
+    "onboardingTitle": "Dapatkan Pengalaman Baru",
+    "onboardingDesc": "Nonton film lebih mudah\n daripada sebelumnya",
+
     "start": "Mulai",
     "login": "Masuk",
-    "register": "Daftar"
+    "register": "Daftar",
+    "chooseLanguage": "Pilih Bahasa"
 }

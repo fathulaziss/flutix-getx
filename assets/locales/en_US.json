@@ -1,5 +1,9 @@
 {
-    "start": "Start",
+    "onboardingTitle": "Get New Experience",
+    "onboardingDesc": "Watch a new movie much\neasier then any before",
+
+    "start": "Get Started",
     "login": "Login",
-    "register": "Register"
+    "register": "Register",
+    "chooseLanguage": "Choose Language"
 }
