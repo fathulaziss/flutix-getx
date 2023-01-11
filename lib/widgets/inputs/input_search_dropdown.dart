@@ -16,7 +16,7 @@ class InputSearchDropdown extends StatefulWidget {
     this.label,
     this.textStyle,
     this.hintStyle,
-    this.textColor = AppColor.primaryColor,
+    this.textColor = AppColor.primaryColor1,
     this.hintColor = const Color(0xFFC1BABA),
     this.prefixIcon,
     this.suffixIcon,
@@ -56,7 +56,7 @@ class _InputSearchDropdownState extends State<InputSearchDropdown> {
     if (widget.inputStyle == InputStyle.box) {
       switch (tState) {
         case TextFieldState.focus:
-          return _box(borderColor: AppColor.primaryColor);
+          return _box(borderColor: AppColor.primaryColor1);
         case TextFieldState.error:
           return _box(borderColor: Colors.red);
         case TextFieldState.none:
@@ -67,7 +67,7 @@ class _InputSearchDropdownState extends State<InputSearchDropdown> {
     } else if (widget.inputStyle == InputStyle.line) {
       switch (tState) {
         case TextFieldState.focus:
-          return _line(borderColor: AppColor.primaryColor);
+          return _line(borderColor: AppColor.primaryColor1);
         case TextFieldState.error:
           return _line(borderColor: Colors.red);
         case TextFieldState.none:
@@ -82,7 +82,7 @@ class _InputSearchDropdownState extends State<InputSearchDropdown> {
     } else {
       switch (tState) {
         case TextFieldState.focus:
-          return _outline(borderColor: AppColor.primaryColor);
+          return _outline(borderColor: AppColor.primaryColor1);
         case TextFieldState.error:
           return _outline(borderColor: Colors.red);
         case TextFieldState.none:
@@ -169,7 +169,7 @@ class _InputSearchDropdownState extends State<InputSearchDropdown> {
               },
               suggestionsBoxDecoration: SuggestionsBoxDecoration(
                 shadowColor: Colors.transparent,
-                color: AppColor.primaryColor,
+                color: AppColor.primaryColor1,
                 constraints: BoxConstraints(
                   minWidth: MediaQuery.of(context).size.width / 2,
                   maxHeight: MediaQuery.of(context).size.width / 2,

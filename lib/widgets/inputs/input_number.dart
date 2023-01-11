@@ -12,7 +12,7 @@ class InputNumber extends StatefulWidget {
     this.prefixIcon,
     this.suffixIcon,
     this.color,
-    this.textColor = AppColor.primaryColor,
+    this.textColor = AppColor.primaryColor1,
     this.margin,
     this.padding,
     this.enable = true,

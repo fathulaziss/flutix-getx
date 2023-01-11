@@ -49,7 +49,7 @@ class _AppState extends State<App> {
       builder: (context, child) {
         return GetMaterialApp(
           title: 'Flutix',
-          theme: AppStyle.appTheme(0xFF00B34D, Colors.white),
+          theme: AppStyle.appTheme(0xFF2C1F63, Colors.white),
           builder: (context, child) {
             return MediaQuery(
               data: MediaQuery.of(context)

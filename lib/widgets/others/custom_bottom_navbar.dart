@@ -109,11 +109,11 @@ class ItemNavbar extends StatelessWidget {
               child: assetIcon.isNotEmpty
                   ? Image.asset(
                       assetIcon,
-                      color: isSelected ? AppColor.primaryColor : Colors.grey,
+                      color: isSelected ? AppColor.primaryColor1 : Colors.grey,
                     )
                   : Icon(
                       icon,
-                      color: isSelected ? AppColor.primaryColor : Colors.grey,
+                      color: isSelected ? AppColor.primaryColor1 : Colors.grey,
                       size: isSelected ? 16.w : 15.w,
                     ),
             ),
@@ -122,7 +122,7 @@ class ItemNavbar extends StatelessWidget {
               label,
               style: TextStyles.text.copyWith(
                 fontSize: 10.w,
-                color: isSelected ? AppColor.primaryColor : Colors.grey,
+                color: isSelected ? AppColor.primaryColor1 : Colors.grey,
               ),
             )
           ],

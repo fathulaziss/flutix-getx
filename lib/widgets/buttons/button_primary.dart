@@ -56,17 +56,17 @@ class ButtonPrimary extends StatelessWidget {
                   isLoading ? 24.w : radius ?? Insets.xl,
                 ),
                 color: enabled
-                    ? color ?? AppColor.primaryColor
+                    ? color ?? AppColor.primaryColor2
                     : Colors.transparent,
                 border: Border.all(color: outlineColor ?? Colors.white),
               )
             : BoxDecoration(
                 borderRadius: BorderRadius.circular(
-                  isLoading ? 24.w : radius ?? Insets.xl,
+                  isLoading ? 24.w : radius ?? Insets.sm,
                 ),
                 color: enabled
-                    ? color ?? AppColor.primaryColor
-                    : AppColor.disabledColor,
+                    ? color ?? AppColor.primaryColor2
+                    : AppColor.disabledColor1,
               ),
         child: Align(
           child: Material(
@@ -93,7 +93,9 @@ class ButtonPrimary extends StatelessWidget {
                                 label ?? 'BUTTON',
                                 style: textStyle ??
                                     TextStyles.button.copyWith(
-                                      color: textColor ?? Colors.white,
+                                      color: enabled
+                                          ? color ?? Colors.white
+                                          : AppColor.disabledColor2,
                                     ),
                                 textAlign: TextAlign.center,
                               ),

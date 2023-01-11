@@ -12,7 +12,7 @@ class InputPrimary extends StatefulWidget {
     this.prefixIcon,
     this.suffixIcon,
     this.color,
-    this.textColor = AppColor.primaryColor,
+    this.textColor = AppColor.primaryColor1,
     this.margin,
     this.padding,
     this.enable = true,
@@ -29,7 +29,7 @@ class InputPrimary extends StatefulWidget {
     this.textCapitalization = TextCapitalization.none,
     this.obsecureText = false,
     this.inputStyle = InputStyle.box,
-    this.cursorColor = AppColor.primaryColor,
+    this.cursorColor = AppColor.primaryColor1,
     this.contentPadding,
     this.textAlign,
     this.outlineColor,
@@ -102,7 +102,7 @@ class _InputPrimaryState extends State<InputPrimary> {
     if (widget.inputStyle == InputStyle.box) {
       switch (tState) {
         case TextFieldState.focus:
-          return _box(borderColor: AppColor.primaryColor);
+          return _box(borderColor: AppColor.primaryColor1);
         case TextFieldState.error:
           return _box(borderColor: Colors.red);
         case TextFieldState.none:
@@ -113,7 +113,7 @@ class _InputPrimaryState extends State<InputPrimary> {
     } else if (widget.inputStyle == InputStyle.line) {
       switch (tState) {
         case TextFieldState.focus:
-          return _line(borderColor: AppColor.primaryColor);
+          return _line(borderColor: AppColor.primaryColor1);
         case TextFieldState.error:
           return _line(borderColor: Colors.red);
         case TextFieldState.none:
@@ -128,7 +128,7 @@ class _InputPrimaryState extends State<InputPrimary> {
     } else {
       switch (tState) {
         case TextFieldState.focus:
-          return _outline(borderColor: AppColor.primaryColor);
+          return _outline(borderColor: AppColor.primaryColor1);
         case TextFieldState.error:
           return _outline(borderColor: Colors.red);
         case TextFieldState.none:
@@ -223,7 +223,7 @@ class _InputPrimaryState extends State<InputPrimary> {
         if (widget.label != null)
           Text(
             widget.label!,
-            style: TextStyles.desc.copyWith(color: AppColor.primaryColor),
+            style: TextStyles.desc.copyWith(color: AppColor.primaryColor1),
           ),
         Container(
           margin: widget.margin ??

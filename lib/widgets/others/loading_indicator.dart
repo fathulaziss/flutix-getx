@@ -19,7 +19,7 @@ class LoadingIndicator extends StatelessWidget {
       child: SpinKitRing(
         size: size ?? 32.w,
         lineWidth: 3,
-        color: color ?? AppColor.primaryColor,
+        color: color ?? AppColor.primaryColor1,
       ),
     );
   }
@@ -39,7 +39,7 @@ class LoadingIndicatorBounce extends StatelessWidget {
     return Center(
       child: SpinKitThreeBounce(
         size: size ?? 12.w,
-        color: color ?? AppColor.primaryColor,
+        color: color ?? AppColor.primaryColor1,
       ),
     );
   }

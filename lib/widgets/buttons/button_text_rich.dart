@@ -32,7 +32,7 @@ class ButtonTextRich extends StatelessWidget {
             TextSpan(
               text: label2,
               style: TextStyles.title
-                  .copyWith(color: AppColor.primaryColor, fontSize: 14.w),
+                  .copyWith(color: AppColor.primaryColor1, fontSize: 14.w),
             ),
           ],
         ),

@@ -20,7 +20,7 @@ class OnboardingSlidetileIndicator extends StatelessWidget {
           dotHeight: 10.w,
           dotWidth: 10.w,
           spacing: Insets.lg,
-          activeDotColor: AppColor.primaryColor,
+          activeDotColor: AppColor.primaryColor1,
         ),
         activeIndex: activeIndex,
         count: 3,
