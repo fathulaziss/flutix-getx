@@ -4,6 +4,7 @@
 
     "signInTitle": "Hello,\nMoviemania",
 
+    "signUpTitle": "Create New Account",
     "emailAddressLabel": "Email Address",
     "emailAddressHint": "Enter Email Address",
     "emailAddressValidationText": "Email can't be empty",
@@ -13,10 +14,21 @@
     "passwordValidationText": "Password can't be empty",
     "passwordValidationText2": "- Password minimum 8 character\n- Password consists of uppercase, lowercase and number",
 
+    "fullNameLabel": "Full Name",
+    "fullNameHint": "Enter Full Name",
+    "dateOfBirthLabel": "Date of Birth",
+    "dateOfBirthHint": "Choose Date of Birth",
+    "pinTransactionLabel": "PIN Transaction",
+    "pinTransactionHint": "Enter PIN Transaction",
+    "pinTransactionValidationText": "Pin must be 6 numeric character",
+
     "start": "Get Started",
     "signIn": "Sign In",
     "signUp": "Sign Up",
     "chooseLanguage": "Choose Language",
     "dontHaveAccount": "Don't have an account ? ",
-    "haveAccount": "Have an account ? "
+    "haveAccount": "Have an account ? ",
+    "uploadPhoto": "Upload Photo",
+    "camera": "Camera",
+    "gallery": "Gallery"
 }

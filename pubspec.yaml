@@ -22,6 +22,7 @@ dependencies:
   get: ^4.6.5
   get_storage: ^2.0.3
   google_fonts: ^3.0.1
+  image_picker: ^0.8.6
   intl: ^0.17.0
   jwt_decoder: ^2.0.1
   package_info_plus: ^3.0.1

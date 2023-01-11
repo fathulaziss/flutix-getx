@@ -7,6 +7,8 @@ import 'package:flutix/app/modules/onboarding/bindings/onboarding_binding.dart';
 import 'package:flutix/app/modules/onboarding/views/onboarding_view.dart';
 import 'package:flutix/app/modules/signin/bindings/signin_binding.dart';
 import 'package:flutix/app/modules/signin/views/signin_view.dart';
+import 'package:flutix/app/modules/signup/bindings/signup_binding.dart';
+import 'package:flutix/app/modules/signup/views/signup_view.dart';
 import 'package:flutix/app/modules/splash_screen_view.dart';
 import 'package:flutix/app/modules/under_development.dart';
 import 'package:get/get.dart';
@@ -50,6 +52,11 @@ class AppPages {
       name: _Paths.SIGNIN,
       page: () => const SigninView(),
       binding: SigninBinding(),
+    ),
+    GetPage(
+      name: _Paths.SIGNUP,
+      page: () => const SignupView(),
+      binding: SignupBinding(),
     ),
   ];
 }

@@ -1,5 +1,6 @@
 import 'package:flutix/app/models/app_language_model.dart';
 import 'package:flutix/app/modules/signin/controllers/signin_controller.dart';
+import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/styles/styles.dart';
 import 'package:flutix/utils/app_asset.dart';
 import 'package:flutix/widgets/buttons/button_primary.dart';
@@ -63,8 +64,7 @@ class SigninView extends GetView<SigninController> {
                       child: ButtonTextRich(
                         label1: 'dontHaveAccount'.tr,
                         label2: 'signUp'.tr,
-                        // onPressed: () => Get.toNamed(Routes.REGISTER),
-                        onPressed: () {},
+                        onPressed: () => Get.toNamed(Routes.SIGNUP),
                       ),
                     ),
                     verticalSpace(

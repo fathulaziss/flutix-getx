@@ -1,4 +1,5 @@
 import 'package:flutix/app/controllers/utility_controller.dart';
+import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/utils/app_utils.dart';
 import 'package:flutix/widgets/others/show_dialog.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +47,7 @@ class SigninController extends GetxController {
     }
   }
 
-  void signIn() {
+  Future<void> signIn() async {
     try {
       AppUtils.dismissKeyboard();
       // isLoading(true);
@@ -64,7 +65,7 @@ class SigninController extends GetxController {
 
       // await Future.delayed(const Duration(milliseconds: 220));
 
-      // await Get.offNamed(Routes.HOME);
+      await Get.offNamed(Routes.HOME);
     } catch (e) {
       isLoading(false);
       showPopUpInfo(title: 'Error', description: e.toString());

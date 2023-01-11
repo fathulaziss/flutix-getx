@@ -4,6 +4,7 @@
 
     "signInTitle": "Halo,\nMoviemania",
 
+    "signUpTitle": "Buat Akun Baru", 
     "emailAddressLabel": "Alamat Email",
     "emailAddressHint": "Masukkan Alamat Email",
     "emailAddressValidationText": "Email tidak boleh kosong",
@@ -13,10 +14,21 @@
     "passwordValidationText": "Kata Sandi tidak boleh kosong",
     "passwordValidationText2": "- Kata Sandi minimal 8 karakter\n- Kata Sandi terdiri dari huruf besar, huruf kecil dan angka",
 
+    "fullNameLabel": "Nama Lengkap",
+    "fullNameHint": "Masukkan Nama Lengkap",
+    "dateOfBirthLabel": "Tanggal Lahir",
+    "dateOfBirthHint": "Pilih Tanggal Lahir",
+    "pinTransactionLabel": "PIN Transaksi",
+    "pinTransactionHint": "Masukkan PIN Transaksi",
+    "pinTransactionValidationText": "Pin harus 6 karakter numerik",
+
     "start": "Mulai",
     "signIn": "Masuk",
     "signUp": "Daftar",
     "chooseLanguage": "Pilih Bahasa",
     "dontHaveAccount": "Belum memiliki akun ? ",
-    "haveAccount": "Sudah memiliki akun ? "
+    "haveAccount": "Sudah memiliki akun ? ",
+    "uploadPhoto": "Unggah Foto",
+    "camera": "Kamera",
+    "gallery": "Galeri"
 }
