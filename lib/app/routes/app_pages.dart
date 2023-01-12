@@ -8,6 +8,8 @@ import 'package:flutix/app/modules/onboarding/views/onboarding_view.dart';
 import 'package:flutix/app/modules/signin/bindings/signin_binding.dart';
 import 'package:flutix/app/modules/signin/views/signin_view.dart';
 import 'package:flutix/app/modules/signup/bindings/signup_binding.dart';
+import 'package:flutix/app/modules/signup/views/signup_confirm_view.dart';
+import 'package:flutix/app/modules/signup/views/signup_two_view.dart';
 import 'package:flutix/app/modules/signup/views/signup_view.dart';
 import 'package:flutix/app/modules/splash_screen_view.dart';
 import 'package:flutix/app/modules/under_development.dart';
@@ -56,6 +58,16 @@ class AppPages {
     GetPage(
       name: _Paths.SIGNUP,
       page: () => const SignupView(),
+      binding: SignupBinding(),
+    ),
+    GetPage(
+      name: _Paths.SIGNUP_TWO,
+      page: () => const SignupTwoView(),
+      binding: SignupBinding(),
+    ),
+    GetPage(
+      name: _Paths.SIGNUP_CONFIRM,
+      page: () => const SignupConfirmView(),
       binding: SignupBinding(),
     ),
   ];

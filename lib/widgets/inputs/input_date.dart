@@ -3,6 +3,7 @@ import 'package:flutix/styles/styles.dart';
 import 'package:flutix/widgets/inputs/input_primary.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 class InputDate extends StatefulWidget {
@@ -95,7 +96,9 @@ class InputDateState extends State<InputDate> {
       context: context,
       initialDate: widget.initialDate ?? widget.firstDate ?? DateTime.now(),
       firstDate: widget.firstDate ?? DateTime.now(),
-      lastDate: DateTime(2100),
+      lastDate: DateTime(DateTime.now().year + 1),
+      initialEntryMode: DatePickerEntryMode.calendarOnly,
+      locale: Get.locale,
     );
 
     if (datePicked != null) {

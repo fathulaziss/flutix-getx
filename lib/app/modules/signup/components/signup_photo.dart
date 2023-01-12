@@ -25,6 +25,7 @@ class SignupPhoto extends GetView<SignupController> {
                 child: Image.file(
                   File(controller.photoProfile.value),
                   width: 80.w,
+                  height: 80.w,
                   fit: BoxFit.cover,
                 ),
               )
@@ -49,9 +50,12 @@ class SignupPhoto extends GetView<SignupController> {
                 },
                 padding: EdgeInsets.zero,
                 highlightColor: Colors.transparent,
-                iconSize: 30.w,
                 constraints: BoxConstraints(minWidth: 24.w),
-                icon: Image.asset(AppAsset.icon('ic_add_photo.png')),
+                icon: Image.asset(
+                  controller.photoProfile.isEmpty
+                      ? AppAsset.icon('ic_add_photo.png')
+                      : AppAsset.icon('ic_remove_photo.png'),
+                ),
               ),
             ),
           ],

@@ -1,5 +1,6 @@
 import 'package:flutix/app/modules/signup/components/signup_photo.dart';
 import 'package:flutix/app/modules/signup/controllers/signup_controller.dart';
+import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/styles/colors.dart';
 import 'package:flutix/styles/styles.dart';
 import 'package:flutix/widgets/buttons/button_primary.dart';
@@ -30,11 +31,10 @@ class SignupView extends GetView<SignupController> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.w),
               child: ButtonPrimary(
-                onTap: () {},
-                label: 'signUp'.tr,
+                onTap: () => Get.toNamed(Routes.SIGNUP_TWO),
+                label: 'continuee'.tr,
                 margin: EdgeInsets.symmetric(horizontal: 24.w),
-                isLoading: controller.isLoading.value,
-                enabled: controller.isValidForm.value,
+                enabled: controller.isValidFormOne.value,
               ),
             ),
             ButtonTextRich(

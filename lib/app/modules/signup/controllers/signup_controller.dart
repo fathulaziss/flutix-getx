@@ -1,4 +1,6 @@
 import 'package:flutix/app/controllers/user_info_controller.dart';
+import 'package:flutix/app/data/genre_data.dart';
+import 'package:flutix/app/models/genre_model.dart';
 import 'package:flutix/utils/app_utils.dart';
 import 'package:flutix/utils/regex.dart';
 import 'package:flutix/widgets/others/show_dialog.dart';
@@ -31,8 +33,27 @@ class SignupController extends GetxController {
   RxString pinTransaction = ''.obs;
   bool isValidPinTransaction = false;
 
+  RxList<GenreModel> listGenre = <GenreModel>[].obs;
+  RxList<GenreModel> selectedGenre = <GenreModel>[].obs;
+
+  RxBool isValidFormOne = false.obs;
+  RxBool isValidFormTwo = false.obs;
   RxBool isLoading = false.obs;
-  RxBool isValidForm = false.obs;
+
+  @override
+  void onInit() {
+    getGenre();
+    super.onInit();
+  }
+
+  Future<void> getGenre() async {
+    try {
+      final data = genreData;
+      listGenre(RxList.from(data.map((e) => GenreModel.fromJson(e))));
+    } catch (e) {
+      logSys(e.toString());
+    }
+  }
 
   Future<void> changePhotoProfile(ImageSource source) async {
     final picker = ImagePicker();
@@ -51,7 +72,7 @@ class SignupController extends GetxController {
     } else {
       isValidFullName = false;
     }
-    validateForm();
+    validateFormOne();
   }
 
   void setEmail(String value) {
@@ -61,7 +82,7 @@ class SignupController extends GetxController {
     } else {
       isValidEmail = false;
     }
-    validateForm();
+    validateFormOne();
   }
 
   void setDateOfBirth(DateTime value) {
@@ -71,7 +92,7 @@ class SignupController extends GetxController {
     } else {
       isValidDateOfBirth = false;
     }
-    validateForm();
+    validateFormOne();
   }
 
   void setPassword(String value) {
@@ -81,7 +102,7 @@ class SignupController extends GetxController {
     } else {
       isValidPasswordd = false;
     }
-    validateForm();
+    validateFormOne();
   }
 
   void setPinTransaction(String value) {
@@ -91,25 +112,45 @@ class SignupController extends GetxController {
     } else {
       isValidPinTransaction = false;
     }
-    validateForm();
+    validateFormOne();
   }
 
-  void validateForm() {
+  void validateFormOne() {
     if (isValidFullName &&
         isValidEmail &&
         isValidDateOfBirth &&
         isValidPasswordd &&
         isValidPinTransaction) {
-      isValidForm(true);
+      isValidFormOne(true);
     } else {
-      isValidForm(false);
+      isValidFormOne(false);
     }
   }
 
-  Future<void> register() async {
+  void selectGenre(GenreModel value) {
+    if (!selectedGenre.contains(value)) {
+      if (selectedGenre.length < 4) {
+        selectedGenre.add(value);
+      }
+    } else {
+      selectedGenre.remove(value);
+    }
+    validateFormTwo();
+  }
+
+  void validateFormTwo() {
+    if (selectedGenre.length == 4) {
+      isValidFormTwo(true);
+    } else {
+      isValidFormTwo(false);
+    }
+  }
+
+  Future<void> signUp() async {
     try {
-      AppUtils.dismissKeyboard();
-      // isLoading(true);
+      isLoading(true);
+      await Future.delayed(const Duration(seconds: 2));
+      isLoading(false);
 
       // final firebaseAuth = FirebaseAuth.instance;
       // final collectionReference =

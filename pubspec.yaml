@@ -12,6 +12,7 @@ dependencies:
   dio: ^4.0.6
   dropdown_button2: ^1.8.9
   easy_mask: ^2.0.1
+  equatable: ^2.0.5
   flutter:
     sdk: flutter
   flutter_jailbreak_detection: ^1.8.0

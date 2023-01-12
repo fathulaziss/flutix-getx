@@ -13,7 +13,6 @@
     "passwordHint": "Enter Password",
     "passwordValidationText": "Password can't be empty",
     "passwordValidationText2": "- Password minimum 8 character\n- Password consists of uppercase, lowercase and number",
-
     "fullNameLabel": "Full Name",
     "fullNameHint": "Enter Full Name",
     "dateOfBirthLabel": "Date of Birth",
@@ -21,6 +20,8 @@
     "pinTransactionLabel": "PIN Transaction",
     "pinTransactionHint": "Enter PIN Transaction",
     "pinTransactionValidationText": "Pin must be 6 numeric character",
+    "signUpTwoTitle": "Select Your\nFavorite Genre",
+    "signUpConfirmTitle": "Confirm\nNew Account",
 
     "start": "Get Started",
     "signIn": "Sign In",
@@ -30,5 +31,6 @@
     "haveAccount": "Have an account ? ",
     "uploadPhoto": "Upload Photo",
     "camera": "Camera",
-    "gallery": "Gallery"
+    "gallery": "Gallery",
+    "continuee": "Continue"
 }

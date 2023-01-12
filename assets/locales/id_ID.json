@@ -13,7 +13,6 @@
     "passwordHint": "Masukkan Kata Sandi",
     "passwordValidationText": "Kata Sandi tidak boleh kosong",
     "passwordValidationText2": "- Kata Sandi minimal 8 karakter\n- Kata Sandi terdiri dari huruf besar, huruf kecil dan angka",
-
     "fullNameLabel": "Nama Lengkap",
     "fullNameHint": "Masukkan Nama Lengkap",
     "dateOfBirthLabel": "Tanggal Lahir",
@@ -21,6 +20,8 @@
     "pinTransactionLabel": "PIN Transaksi",
     "pinTransactionHint": "Masukkan PIN Transaksi",
     "pinTransactionValidationText": "Pin harus 6 karakter numerik",
+    "signUpTwoTitle": "Pilih Aliran\nKesukaanmu",
+    "signUpConfirmTitle": "Konfirmasi\nAkun Baru",
 
     "start": "Mulai",
     "signIn": "Masuk",
@@ -30,5 +31,6 @@
     "haveAccount": "Sudah memiliki akun ? ",
     "uploadPhoto": "Unggah Foto",
     "camera": "Kamera",
-    "gallery": "Galeri"
+    "gallery": "Galeri",
+    "continuee": "Selanjutnya"
 }

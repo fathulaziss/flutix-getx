@@ -30,6 +30,8 @@ class LocaleKeys {
   static const pinTransactionLabel = 'pinTransactionLabel';
   static const pinTransactionHint = 'pinTransactionHint';
   static const pinTransactionValidationText = 'pinTransactionValidationText';
+  static const signUpTwoTitle = 'signUpTwoTitle';
+  static const signUpConfirmTitle = 'signUpConfirmTitle';
   static const start = 'start';
   static const signIn = 'signIn';
   static const signUp = 'signUp';
@@ -39,6 +41,7 @@ class LocaleKeys {
   static const uploadPhoto = 'uploadPhoto';
   static const camera = 'camera';
   static const gallery = 'gallery';
+  static const continuee = 'continuee';
 }
 
 class Locales {
@@ -63,6 +66,8 @@ class Locales {
     'pinTransactionLabel': 'PIN Transaksi',
     'pinTransactionHint': 'Masukkan PIN Transaksi',
     'pinTransactionValidationText': 'Pin harus 6 karakter numerik',
+    'signUpTwoTitle': 'Pilih Aliran\nKesukaanmu',
+    'signUpConfirmTitle': 'Konfirmasi\nAkun Baru',
     'start': 'Mulai',
     'signIn': 'Masuk',
     'signUp': 'Daftar',
@@ -72,6 +77,7 @@ class Locales {
     'uploadPhoto': 'Unggah Foto',
     'camera': 'Kamera',
     'gallery': 'Galeri',
+    'continuee': 'Selanjutnya',
   };
   static const en_US = {
     'onboardingTitle': 'Get New Experience',
@@ -94,6 +100,8 @@ class Locales {
     'pinTransactionLabel': 'PIN Transaction',
     'pinTransactionHint': 'Enter PIN Transaction',
     'pinTransactionValidationText': 'Pin must be 6 numeric character',
+    'signUpTwoTitle': 'Select Your\nFavorite Genre',
+    'signUpConfirmTitle': 'Confirm\nNew Account',
     'start': 'Get Started',
     'signIn': 'Sign In',
     'signUp': 'Sign Up',
@@ -103,5 +111,6 @@ class Locales {
     'uploadPhoto': 'Upload Photo',
     'camera': 'Camera',
     'gallery': 'Gallery',
+    'continuee': 'Continue',
   };
 }
