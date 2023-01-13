@@ -42,13 +42,15 @@ class LocaleKeys {
   static const camera = 'camera';
   static const gallery = 'gallery';
   static const continuee = 'continuee';
+  static const movie = 'movie';
+  static const ticket = 'ticket';
 }
 
 class Locales {
   static const id_ID = {
     'onboardingTitle': 'Dapatkan Pengalaman Baru',
     'onboardingDesc': 'Nonton film lebih mudah\n daripada sebelumnya',
-    'signInTitle': 'Halo,\nMoviemania',
+    'signInTitle': 'Halo,\nFilmmania',
     'signUpTitle': 'Buat Akun Baru',
     'emailAddressLabel': 'Alamat Email',
     'emailAddressHint': 'Masukkan Alamat Email',
@@ -78,6 +80,8 @@ class Locales {
     'camera': 'Kamera',
     'gallery': 'Galeri',
     'continuee': 'Selanjutnya',
+    'movie': 'Film',
+    'ticket': 'Tiket',
   };
   static const en_US = {
     'onboardingTitle': 'Get New Experience',
@@ -112,5 +116,7 @@ class Locales {
     'camera': 'Camera',
     'gallery': 'Gallery',
     'continuee': 'Continue',
+    'movie': 'Movie',
+    'ticket': 'Ticket',
   };
 }

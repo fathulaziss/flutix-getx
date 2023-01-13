@@ -2,7 +2,7 @@
     "onboardingTitle": "Dapatkan Pengalaman Baru",
     "onboardingDesc": "Nonton film lebih mudah\n daripada sebelumnya",
 
-    "signInTitle": "Halo,\nMoviemania",
+    "signInTitle": "Halo,\nFilmmania",
 
     "signUpTitle": "Buat Akun Baru", 
     "emailAddressLabel": "Alamat Email",
@@ -32,5 +32,7 @@
     "uploadPhoto": "Unggah Foto",
     "camera": "Kamera",
     "gallery": "Galeri",
-    "continuee": "Selanjutnya"
+    "continuee": "Selanjutnya",
+    "movie": "Film",
+    "ticket": "Tiket"
 }

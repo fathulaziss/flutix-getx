@@ -1,6 +1,7 @@
 import 'package:flutix/app/controllers/user_info_controller.dart';
 import 'package:flutix/app/data/genre_data.dart';
 import 'package:flutix/app/models/genre_model.dart';
+import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/utils/app_utils.dart';
 import 'package:flutix/utils/regex.dart';
 import 'package:flutix/widgets/others/show_dialog.dart';
@@ -151,6 +152,8 @@ class SignupController extends GetxController {
       isLoading(true);
       await Future.delayed(const Duration(seconds: 2));
       isLoading(false);
+
+      await Get.offAllNamed(Routes.HOME);
 
       // final firebaseAuth = FirebaseAuth.instance;
       // final collectionReference =

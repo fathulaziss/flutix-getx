@@ -1,5 +1,6 @@
 import 'package:flutix/styles/colors.dart';
 import 'package:flutix/styles/styles.dart';
+import 'package:flutix/utils/app_asset.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -15,61 +16,28 @@ class CustomBottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: 55.w,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(Insets.xxl),
-          topRight: Radius.circular(Insets.xxl),
-        ),
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.3),
-            spreadRadius: 5,
-            blurRadius: 5,
-            offset: const Offset(0, 5),
-          )
-        ],
-      ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           ItemNavbar(
             isSelected: selectedIndex == 0,
-            label: 'Home',
-            // assetIcon: AppAsset.icon('ic_home.png'),
-            icon: Icons.home,
+            label: 'movie'.tr,
+            assetIcon: selectedIndex == 0
+                ? AppAsset.icon('ic_movie_selected.png')
+                : AppAsset.icon('ic_movie_unselect.png'),
             onTap: () => onTap(0),
           ),
+          SizedBox(width: Get.width / 5),
           ItemNavbar(
             isSelected: selectedIndex == 1,
-            label: 'Explore',
-            // assetIcon: AppAsset.icon('ic_opac.png'),
-            icon: Icons.explore,
+            label: 'ticket'.tr,
+            assetIcon: selectedIndex == 1
+                ? AppAsset.icon('ic_ticket_selected.png')
+                : AppAsset.icon('ic_ticket_unselect.png'),
             onTap: () => onTap(1),
-          ),
-          ItemNavbar(
-            isSelected: selectedIndex == 2,
-            label: 'Dashboard',
-            // assetIcon: AppAsset.icon('ic_dashboard.png'),
-            icon: Icons.dashboard,
-            onTap: () => onTap(2),
-          ),
-          ItemNavbar(
-            isSelected: selectedIndex == 3,
-            label: 'History',
-            // assetIcon: AppAsset.icon('ic_history.png'),
-            icon: Icons.history,
-            onTap: () => onTap(3),
-          ),
-          ItemNavbar(
-            isSelected: selectedIndex == 4,
-            label: 'Account',
-            // assetIcon: AppAsset.icon('ic_account.png'),
-            icon: Icons.person,
-            onTap: () => onTap(4),
           ),
         ],
       ),
@@ -104,13 +72,10 @@ class ItemNavbar extends StatelessWidget {
           children: [
             AnimatedContainer(
               duration: const Duration(milliseconds: 300),
-              width: isSelected ? 16.w : 15.w,
-              height: isSelected ? 16.w : 15.w,
+              width: isSelected ? 22.w : 20.w,
+              height: isSelected ? 22.w : 20.w,
               child: assetIcon.isNotEmpty
-                  ? Image.asset(
-                      assetIcon,
-                      color: isSelected ? AppColor.primaryColor1 : Colors.grey,
-                    )
+                  ? Image.asset(assetIcon)
                   : Icon(
                       icon,
                       color: isSelected ? AppColor.primaryColor1 : Colors.grey,
