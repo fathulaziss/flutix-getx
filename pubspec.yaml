@@ -13,6 +13,9 @@ dependencies:
   dropdown_button2: ^1.8.9
   easy_mask: ^2.0.1
   equatable: ^2.0.5
+  firebase_auth: ^4.2.5
+  firebase_core: ^2.4.1
+  firebase_storage: ^11.0.10
   flutter:
     sdk: flutter
   flutter_jailbreak_detection: ^1.8.0

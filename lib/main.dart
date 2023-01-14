@@ -1,5 +1,7 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutix/app.dart';
 import 'package:flutix/app_config.dart';
+import 'package:flutix/firebase_options.dart';
 import 'package:flutix/services/api_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
@@ -23,7 +25,7 @@ Future<void> setupApp({
 }
 
 Future<void> initFirebase() async {
-  // await Firebase.initializeApp();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   // await FirebaseService().initializeFirebaseMessaging();
   // await FirebaseService().initializeFirebaseMessagingHandler();
 }
