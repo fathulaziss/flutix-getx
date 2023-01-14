@@ -1,3 +1,5 @@
+import 'package:flutix/app/modules/home/components/movie_header.dart';
+import 'package:flutix/app/modules/home/components/movie_playing.dart';
 import 'package:flutter/material.dart';
 
 class TabMovie extends StatelessWidget {
@@ -5,6 +7,12 @@ class TabMovie extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text('Tab Movie is Working'));
+    return Flex(
+      direction: Axis.vertical,
+      children: const [
+        MovieHeader(),
+        MoviePlaying(),
+      ],
+    );
   }
 }
