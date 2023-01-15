@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/constants/constant.dart';
 import 'package:flutix/utils/app_storage.dart';
@@ -63,11 +64,11 @@ class AppCycleService {
       }
 
       //* CHECK TOKEN
-      final token = await AppStorage.read(key: CACHE_ACCESS_TOKEN);
-      if (token.isEmpty) {
-        await Get.offNamed(Routes.SIGNIN);
-        return;
-      }
+      // final token = await AppStorage.read(key: CACHE_ACCESS_TOKEN);
+      // if (token.isEmpty) {
+      //   await Get.offNamed(Routes.SIGNIN);
+      //   return;
+      // }
 
       // final isValid = await AppUtils.checkTokenValidity(token);
       // if (isValid) {
@@ -75,8 +76,15 @@ class AppCycleService {
       //   return;
       // }
 
-      //* DEFAULT ROUTES TO HOME
-      await Get.offNamed(Routes.HOME);
+      //* CHECK LOGGING USER
+      final user = FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        await Get.offNamed(Routes.HOME);
+        return;
+      }
+
+      //* DEFAULT ROUTES TO SIGN IN
+      await Get.offNamed(Routes.SIGNIN);
     } on Exception {
       await Get.offNamed(Routes.SIGNIN);
     }

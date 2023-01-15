@@ -1,6 +1,12 @@
+import 'dart:io';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutix/app/controllers/user_info_controller.dart';
 import 'package:flutix/app/data/genre_data.dart';
 import 'package:flutix/app/models/genre_model.dart';
+import 'package:flutix/app/models/user_model.dart';
 import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/utils/app_utils.dart';
 import 'package:flutix/utils/regex.dart';
@@ -8,6 +14,7 @@ import 'package:flutix/widgets/others/show_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:path/path.dart';
 
 class SignupController extends GetxController {
   final cUserInfo = Get.find<UserInfoController>();
@@ -147,41 +154,55 @@ class SignupController extends GetxController {
     }
   }
 
+  Future<String> uploadPhoto() async {
+    final fileName = basename(photoProfile.value);
+
+    final ref = FirebaseStorage.instance.ref().child(fileName);
+    final task = ref.putFile(File(photoProfile.value));
+    final snapshot = await task;
+    final url = await snapshot.ref.getDownloadURL();
+
+    return url;
+  }
+
   Future<void> signUp() async {
     try {
       isLoading(true);
-      await Future.delayed(const Duration(seconds: 2));
+
+      final firebaseAuth = FirebaseAuth.instance;
+      final collectionReference =
+          FirebaseFirestore.instance.collection('users');
+
+      final userCredential = await firebaseAuth.createUserWithEmailAndPassword(
+        email: email.value,
+        password: password.value,
+      );
+
+      var photoProfilePath = '';
+
+      if (photoProfile.value.isNotEmpty) {
+        photoProfilePath = await uploadPhoto();
+      }
+
+      final dataUser = UserModel(
+        userId: userCredential.user!.uid,
+        email: email.value,
+        fullName: fullName.value,
+        pinTransaction: pinTransaction.value,
+        dateOfBirth: dateOfBirth.value,
+        imageProfile: photoProfilePath,
+        favoriteGenres: selectedGenre.map((item) => item.id).toList(),
+      );
+
+      await collectionReference.doc(dataUser.userId).set(dataUser.toJson());
+
+      cUserInfo.setDataUser(dataUser);
+
+      await Future.delayed(const Duration(seconds: 1));
+
       isLoading(false);
 
       await Get.offAllNamed(Routes.HOME);
-
-      // final firebaseAuth = FirebaseAuth.instance;
-      // final collectionReference =
-      //     FirebaseFirestore.instance.collection('users');
-
-      // final userCredential = await firebaseAuth.createUserWithEmailAndPassword(
-      //   email: email.value,
-      //   password: password.value,
-      // );
-
-      // final dataUser = UserModel(
-      //   userId: userCredential.user!.uid,
-      //   email: email.value,
-      //   fullName: fullName.value,
-      //   pinTransaction: pinTransaction.value,
-      //   dateOfBirth: dateOfBirth.value,
-      //   balance: 1000000,
-      // );
-
-      // await collectionReference.doc(dataUser.userId).set(dataUser.toJson());
-
-      // cUserInfo.setDataUser(dataUser);
-
-      // await Future.delayed(const Duration(seconds: 1));
-
-      // isLoading(false);
-
-      // await Get.offAllNamed(Routes.REGISTER_SUCCESS);
     } catch (e) {
       isLoading(false);
       showPopUpInfo(title: 'Error', description: e.toString());

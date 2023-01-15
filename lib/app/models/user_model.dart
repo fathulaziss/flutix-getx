@@ -9,6 +9,7 @@ class UserModel extends Equatable {
     this.imageProfile = '',
     this.dateOfBirth = '',
     this.balance = 0,
+    this.favoriteGenres = const [],
   });
 
   factory UserModel.fromJson(String id, Map<String, dynamic> json) => UserModel(
@@ -19,6 +20,7 @@ class UserModel extends Equatable {
         imageProfile: json['image_profile'],
         dateOfBirth: json['date_of_birth'],
         balance: json['balance'],
+        favoriteGenres: json['favorite_genres'],
       );
 
   final String userId;
@@ -28,6 +30,7 @@ class UserModel extends Equatable {
   final String imageProfile;
   final String dateOfBirth;
   final int balance;
+  final List favoriteGenres;
 
   Map<String, dynamic> toJson() => {
         'user_id': userId,
@@ -37,6 +40,7 @@ class UserModel extends Equatable {
         'image_profile': imageProfile,
         'date_of_birth': dateOfBirth,
         'balance': balance,
+        'favorite_genres': favoriteGenres,
       };
 
   @override
@@ -47,6 +51,7 @@ class UserModel extends Equatable {
         pinTransaction,
         imageProfile,
         dateOfBirth,
-        balance
+        balance,
+        favoriteGenres,
       ];
 }

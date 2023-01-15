@@ -2,6 +2,7 @@
 
 const String CACHE_ACCESS_TOKEN = 'access_token';
 const String CACHE_API_LOG = 'log_api';
+const String CACHE_PIN = 'pin';
 const String LOG_BUTTON = 'log_button';
 const String OPEN_LOG = 'open_log';
 const String CLOSE_LOG = 'close_log';
