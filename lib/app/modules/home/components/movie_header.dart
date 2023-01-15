@@ -1,4 +1,5 @@
 import 'package:flutix/app/modules/home/controllers/movie_controller.dart';
+import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/styles/colors.dart';
 import 'package:flutix/styles/styles.dart';
 import 'package:flutix/utils/app_asset.dart';
@@ -50,25 +51,28 @@ class MovieHeader extends GetView<MovieController> {
                 ),
               )
             else
-              Container(
-                width: 55.w,
-                height: 55.w,
-                padding: EdgeInsets.all(3.w),
-                decoration: BoxDecoration(
-                  color: Colors.transparent,
-                  shape: BoxShape.circle,
-                  border: Border.all(color: AppColor.primaryColor4),
+              InkWell(
+                onTap: () => Get.toNamed(Routes.PROFILE),
+                child: Container(
+                  width: 55.w,
+                  height: 55.w,
+                  padding: EdgeInsets.all(3.w),
+                  decoration: BoxDecoration(
+                    color: Colors.transparent,
+                    shape: BoxShape.circle,
+                    border: Border.all(color: AppColor.primaryColor4),
+                  ),
+                  child: controller
+                          .cUserInfo.dataUser.value.imageProfile.isNotEmpty
+                      ? ClipRRect(
+                          borderRadius: BorderRadius.circular(55.w),
+                          child: Image.network(
+                            controller.cUserInfo.dataUser.value.imageProfile,
+                            fit: BoxFit.cover,
+                          ),
+                        )
+                      : Image.asset(AppAsset.image('img_photo_profile.png')),
                 ),
-                child:
-                    controller.cUserInfo.dataUser.value.imageProfile.isNotEmpty
-                        ? ClipRRect(
-                            borderRadius: BorderRadius.circular(55.w),
-                            child: Image.network(
-                              controller.cUserInfo.dataUser.value.imageProfile,
-                              fit: BoxFit.cover,
-                            ),
-                          )
-                        : Image.asset(AppAsset.image('img_photo_profile.png')),
               ),
             horizontalSpace(Insets.med),
             Expanded(

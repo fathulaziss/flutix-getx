@@ -5,6 +5,8 @@ import 'package:flutix/app/modules/home/bindings/home_binding.dart';
 import 'package:flutix/app/modules/home/views/home_view.dart';
 import 'package:flutix/app/modules/onboarding/bindings/onboarding_binding.dart';
 import 'package:flutix/app/modules/onboarding/views/onboarding_view.dart';
+import 'package:flutix/app/modules/profile/bindings/profile_binding.dart';
+import 'package:flutix/app/modules/profile/views/profile_view.dart';
 import 'package:flutix/app/modules/signin/bindings/signin_binding.dart';
 import 'package:flutix/app/modules/signin/views/signin_view.dart';
 import 'package:flutix/app/modules/signup/bindings/signup_binding.dart';
@@ -69,6 +71,11 @@ class AppPages {
       name: _Paths.SIGNUP_CONFIRM,
       page: () => const SignupConfirmView(),
       binding: SignupBinding(),
+    ),
+    GetPage(
+      name: _Paths.PROFILE,
+      page: () => const ProfileView(),
+      binding: ProfileBinding(),
     ),
   ];
 }

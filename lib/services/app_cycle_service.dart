@@ -91,15 +91,19 @@ class AppCycleService {
   }
 
   Future<void> onUserLogout() async {
-    await AppStorage.delete(key: CACHE_ACCESS_TOKEN);
+    // await AppStorage.delete(key: CACHE_ACCESS_TOKEN);
 
-    try {
-      tokenExpiredTimer!.cancel();
-    } catch (e) {
-      logSys(e.toString());
-    } finally {
-      tokenExpiredTimer = null;
-    }
+    // try {
+    //   tokenExpiredTimer!.cancel();
+    // } catch (e) {
+    //   logSys(e.toString());
+    // } finally {
+    //   tokenExpiredTimer = null;
+    // }
+
+    final firebaseAuth = FirebaseAuth.instance;
+
+    await firebaseAuth.signOut();
 
     await Future.delayed(const Duration(milliseconds: 500));
 

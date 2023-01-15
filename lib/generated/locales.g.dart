@@ -34,8 +34,11 @@ class LocaleKeys {
   static const signUpConfirmTitle = 'signUpConfirmTitle';
   static const start = 'start';
   static const signIn = 'signIn';
+  static const signOut = 'signOut';
   static const signUp = 'signUp';
+  static const profile = 'profile';
   static const chooseLanguage = 'chooseLanguage';
+  static const changeLanguage = 'changeLanguage';
   static const dontHaveAccount = 'dontHaveAccount';
   static const haveAccount = 'haveAccount';
   static const uploadPhoto = 'uploadPhoto';
@@ -44,6 +47,20 @@ class LocaleKeys {
   static const continuee = 'continuee';
   static const movie = 'movie';
   static const ticket = 'ticket';
+  static const editProfile = 'editProfile';
+  static const changePassword = 'changePassword';
+  static const changePin = 'changePin';
+  static const confirmation = 'confirmation';
+  static const exitApp = 'exitApp';
+  static const cancel = 'cancel';
+  static const yes = 'yes';
+  static const no = 'no';
+  static const choose = 'choose';
+  static const success = 'success';
+  static const information = 'information';
+  static const forgotPin = 'forgotPin';
+  static const underDevelopment = 'underDevelopment';
+  static const jailbreakDevice = 'jailbreakDevice';
 }
 
 class Locales {
@@ -72,8 +89,11 @@ class Locales {
     'signUpConfirmTitle': 'Konfirmasi\nAkun Baru',
     'start': 'Mulai',
     'signIn': 'Masuk',
+    'signOut': 'Keluar',
     'signUp': 'Daftar',
+    'profile': 'Profil',
     'chooseLanguage': 'Pilih Bahasa',
+    'changeLanguage': 'Ubah Bahasa',
     'dontHaveAccount': 'Belum memiliki akun ? ',
     'haveAccount': 'Sudah memiliki akun ? ',
     'uploadPhoto': 'Unggah Foto',
@@ -82,6 +102,21 @@ class Locales {
     'continuee': 'Selanjutnya',
     'movie': 'Film',
     'ticket': 'Tiket',
+    'editProfile': 'Sunting Profil',
+    'changePassword': 'Ubah Kata Sandi',
+    'changePin': 'Ubah PIN',
+    'confirmation': 'Konfirmasi',
+    'exitApp': 'Apakah kamu yakin untuk keluar dari aplikasi ?',
+    'cancel': 'batal',
+    'yes': 'ya',
+    'no': 'tidak',
+    'choose': 'Pilih',
+    'success': 'Berhasil',
+    'information': 'Informasi',
+    'forgotPin': 'Lupa PIN',
+    'underDevelopment': 'Fitur ini Sedang Dalam Pengembangan',
+    'jailbreakDevice':
+        'Aplikasi Ini Diblokir Untuk Anda Karena Perangkat Anda Telah Di-Root',
   };
   static const en_US = {
     'onboardingTitle': 'Get New Experience',
@@ -108,8 +143,11 @@ class Locales {
     'signUpConfirmTitle': 'Confirm\nNew Account',
     'start': 'Get Started',
     'signIn': 'Sign In',
+    'signOut': 'Sign Out',
     'signUp': 'Sign Up',
+    'profile': 'Profile',
     'chooseLanguage': 'Choose Language',
+    'changeLanguage': 'Change Language',
     'dontHaveAccount': 'Don\'t have an account ? ',
     'haveAccount': 'Have an account ? ',
     'uploadPhoto': 'Upload Photo',
@@ -118,5 +156,20 @@ class Locales {
     'continuee': 'Continue',
     'movie': 'Movie',
     'ticket': 'Ticket',
+    'editProfile': 'Edit Profile',
+    'changePassword': 'Change Password',
+    'changePin': 'Change PIN',
+    'confirmation': 'Confirmation',
+    'exitApp': 'Are you sure to exit application ?',
+    'cancel': 'cancel',
+    'yes': 'yes',
+    'no': 'no',
+    'choose': 'Choose',
+    'success': 'Success',
+    'information': 'Information',
+    'forgotPin': 'Forgot PIN',
+    'underDevelopment': 'This Feature is Under Development',
+    'jailbreakDevice':
+        'This App Blocked For You Because Your Device has been Rooted',
   };
 }

@@ -53,7 +53,7 @@ class ButtonPrimary extends StatelessWidget {
         decoration: isOutline
             ? BoxDecoration(
                 borderRadius: BorderRadius.circular(
-                  isLoading ? 24.w : radius ?? Insets.xl,
+                  isLoading ? 24.w : radius ?? Insets.sm,
                 ),
                 color: enabled
                     ? color ?? AppColor.primaryColor2

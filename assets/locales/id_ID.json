@@ -25,8 +25,11 @@
 
     "start": "Mulai",
     "signIn": "Masuk",
+    "signOut": "Keluar",
     "signUp": "Daftar",
+    "profile": "Profil",
     "chooseLanguage": "Pilih Bahasa",
+    "changeLanguage": "Ubah Bahasa",
     "dontHaveAccount": "Belum memiliki akun ? ",
     "haveAccount": "Sudah memiliki akun ? ",
     "uploadPhoto": "Unggah Foto",
@@ -34,5 +37,19 @@
     "gallery": "Galeri",
     "continuee": "Selanjutnya",
     "movie": "Film",
-    "ticket": "Tiket"
+    "ticket": "Tiket",
+    "editProfile": "Sunting Profil",
+    "changePassword": "Ubah Kata Sandi",
+    "changePin": "Ubah PIN",
+    "confirmation": "Konfirmasi",
+    "exitApp": "Apakah kamu yakin untuk keluar dari aplikasi ?",
+    "cancel": "batal",
+    "yes": "ya",
+    "no": "tidak",
+    "choose": "Pilih",
+    "success": "Berhasil",
+    "information": "Informasi",
+    "forgotPin": "Lupa PIN",
+    "underDevelopment": "Fitur ini Sedang Dalam Pengembangan",
+    "jailbreakDevice": "Aplikasi Ini Diblokir Untuk Anda Karena Perangkat Anda Telah Di-Root"
 }

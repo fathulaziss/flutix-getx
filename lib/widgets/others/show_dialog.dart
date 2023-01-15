@@ -1,3 +1,4 @@
+import 'package:flutix/styles/colors.dart';
 import 'package:flutix/styles/styles.dart';
 import 'package:flutix/widgets/buttons/button_primary.dart';
 import 'package:flutter/material.dart';
@@ -37,8 +38,80 @@ showPopUpInfo({
             ButtonPrimary(
               onTap: onPress ?? Get.back,
               label: labelButton ?? 'OK',
+              color: AppColor.primaryColor1,
+              textStyle: TextStyles.title
+                  .copyWith(fontSize: 14.w, color: Colors.white),
             ),
             SizedBox(height: 20.h),
+          ],
+        ),
+      ),
+    ),
+    barrierDismissible: false,
+  );
+}
+
+showPopUpConfirmation({
+  String? title,
+  String? description,
+  String? labelButtonPostive,
+  String? labelButtonNegative,
+  Function()? onPressPositive,
+  Function()? onPressNegative,
+}) {
+  Get.dialog(
+    Dialog(
+      backgroundColor: Colors.transparent,
+      insetPadding: EdgeInsets.symmetric(horizontal: 24.w),
+      child: Container(
+        padding: EdgeInsets.fromLTRB(20.w.w, 20.w, 20.w, 4.w),
+        decoration:
+            BoxDecoration(borderRadius: Corners.smBorder, color: Colors.white),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              title ?? '',
+              style: TextStyles.title.copyWith(fontSize: 14.w),
+              textAlign: TextAlign.center,
+            ),
+            verticalSpace(Insets.med),
+            Text(
+              description ?? '',
+              style: TextStyles.text,
+              textAlign: TextAlign.center,
+            ),
+            verticalSpace(Insets.xl),
+            Row(
+              children: [
+                Expanded(
+                  child: ButtonPrimary(
+                    height: 35.w,
+                    onTap: onPressNegative ?? Get.back,
+                    label: labelButtonNegative ?? 'CANCEL',
+                    textStyle: TextStyles.title.copyWith(
+                      fontSize: 14.w,
+                      color: AppColor.primaryColor1,
+                    ),
+                    color: Colors.transparent,
+                    isOutline: true,
+                    outlineColor: AppColor.primaryColor1,
+                  ),
+                ),
+                horizontalSpace(Insets.sm),
+                Expanded(
+                  child: ButtonPrimary(
+                    height: 35.w,
+                    color: AppColor.primaryColor1,
+                    textStyle: TextStyles.title
+                        .copyWith(fontSize: 14.w, color: Colors.white),
+                    onTap: onPressPositive ?? Get.back,
+                    label: labelButtonPostive ?? 'YES',
+                  ),
+                )
+              ],
+            ),
+            SizedBox(height: 20.w),
           ],
         ),
       ),
