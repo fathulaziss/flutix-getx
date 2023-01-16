@@ -1,6 +1,8 @@
 import 'package:flutix/app/modules/api_log/bindings/api_log_binding.dart';
 import 'package:flutix/app/modules/api_log/views/api_log_view.dart';
 import 'package:flutix/app/modules/blocked_view.dart';
+import 'package:flutix/app/modules/edit_profile/bindings/edit_profile_binding.dart';
+import 'package:flutix/app/modules/edit_profile/views/edit_profile_view.dart';
 import 'package:flutix/app/modules/home/bindings/home_binding.dart';
 import 'package:flutix/app/modules/home/views/home_view.dart';
 import 'package:flutix/app/modules/onboarding/bindings/onboarding_binding.dart';
@@ -76,6 +78,11 @@ class AppPages {
       name: _Paths.PROFILE,
       page: () => const ProfileView(),
       binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.EDIT_PROFILE,
+      page: () => const EditProfileView(),
+      binding: EditProfileBinding(),
     ),
   ];
 }

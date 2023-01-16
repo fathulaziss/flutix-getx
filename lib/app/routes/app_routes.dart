@@ -16,6 +16,7 @@ abstract class Routes {
   static const SIGNUP_TWO = _Paths.SIGNUP_TWO;
   static const SIGNUP_CONFIRM = _Paths.SIGNUP_CONFIRM;
   static const PROFILE = _Paths.PROFILE;
+  static const EDIT_PROFILE = _Paths.EDIT_PROFILE;
 }
 
 abstract class _Paths {
@@ -31,4 +32,5 @@ abstract class _Paths {
   static const SIGNUP_TWO = '/signup-two';
   static const SIGNUP_CONFIRM = '/signup-confirm';
   static const PROFILE = '/profile';
+  static const EDIT_PROFILE = '/edit-profile';
 }

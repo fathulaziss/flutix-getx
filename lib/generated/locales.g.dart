@@ -42,12 +42,14 @@ class LocaleKeys {
   static const dontHaveAccount = 'dontHaveAccount';
   static const haveAccount = 'haveAccount';
   static const uploadPhoto = 'uploadPhoto';
+  static const editPhoto = 'editPhoto';
   static const camera = 'camera';
   static const gallery = 'gallery';
   static const continuee = 'continuee';
   static const movie = 'movie';
   static const ticket = 'ticket';
   static const editProfile = 'editProfile';
+  static const updateProfileSuccess = 'updateProfileSuccess';
   static const changePassword = 'changePassword';
   static const changePin = 'changePin';
   static const confirmation = 'confirmation';
@@ -55,6 +57,7 @@ class LocaleKeys {
   static const cancel = 'cancel';
   static const yes = 'yes';
   static const no = 'no';
+  static const update = 'update';
   static const choose = 'choose';
   static const success = 'success';
   static const information = 'information';
@@ -97,12 +100,14 @@ class Locales {
     'dontHaveAccount': 'Belum memiliki akun ? ',
     'haveAccount': 'Sudah memiliki akun ? ',
     'uploadPhoto': 'Unggah Foto',
+    'editPhoto': 'Ubah Foto',
     'camera': 'Kamera',
     'gallery': 'Galeri',
     'continuee': 'Selanjutnya',
     'movie': 'Film',
     'ticket': 'Tiket',
     'editProfile': 'Sunting Profil',
+    'updateProfileSuccess': 'Profile anda telah berhasil diperbarui',
     'changePassword': 'Ubah Kata Sandi',
     'changePin': 'Ubah PIN',
     'confirmation': 'Konfirmasi',
@@ -110,6 +115,7 @@ class Locales {
     'cancel': 'batal',
     'yes': 'ya',
     'no': 'tidak',
+    'update': 'Perbarui',
     'choose': 'Pilih',
     'success': 'Berhasil',
     'information': 'Informasi',
@@ -151,12 +157,14 @@ class Locales {
     'dontHaveAccount': 'Don\'t have an account ? ',
     'haveAccount': 'Have an account ? ',
     'uploadPhoto': 'Upload Photo',
+    'editPhoto': 'Edit Photo',
     'camera': 'Camera',
     'gallery': 'Gallery',
     'continuee': 'Continue',
     'movie': 'Movie',
     'ticket': 'Ticket',
     'editProfile': 'Edit Profile',
+    'updateProfileSuccess': 'Your profile has been succesfully updated',
     'changePassword': 'Change Password',
     'changePin': 'Change PIN',
     'confirmation': 'Confirmation',
@@ -164,6 +172,7 @@ class Locales {
     'cancel': 'cancel',
     'yes': 'yes',
     'no': 'no',
+    'update': 'Update',
     'choose': 'Choose',
     'success': 'Success',
     'information': 'Information',

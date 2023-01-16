@@ -66,7 +66,9 @@ class SignupController extends GetxController {
   Future<void> changePhotoProfile(ImageSource source) async {
     final picker = ImagePicker();
     final file = await picker.pickImage(source: source);
-    photoProfile(file != null ? file.path : '');
+    if (file != null) {
+      photoProfile(file.path);
+    }
   }
 
   void removePhotoProfile() {
