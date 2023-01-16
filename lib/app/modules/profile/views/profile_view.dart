@@ -1,4 +1,5 @@
 import 'package:flutix/app/modules/profile/components/profile_header.dart';
+import 'package:flutix/app/modules/profile/components/profile_language_bottomsheet.dart';
 import 'package:flutix/app/modules/profile/components/profile_menu.dart';
 import 'package:flutix/app/modules/profile/controllers/profile_controller.dart';
 import 'package:flutix/services/app_cycle_service.dart';
@@ -51,8 +52,7 @@ class ProfileView extends GetView<ProfileController> {
               BottomSheetCustom(
                 context: context,
                 initialChildSize: 0.31,
-                // child: const SettingLanguageBottomsheet(),
-                child: const SizedBox(),
+                child: const ProfileLanguageBottomSheet(),
               ).showData();
             },
           ),
