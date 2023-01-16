@@ -55,10 +55,9 @@ class SigninView extends GetView<SigninController> {
                     verticalSpace(30.w),
                     ButtonPrimary(
                       label: 'signIn'.tr,
-                      // onTap: controller.signIn,
-                      onTap: () => Get.toNamed(Routes.HOME),
+                      onTap: controller.signIn,
                       isLoading: controller.isLoading.value,
-                      // enabled: controller.isValidForm.value,
+                      enabled: controller.isValidForm.value,
                     ),
                     SizedBox(
                       width: double.infinity,

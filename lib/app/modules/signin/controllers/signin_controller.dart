@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutix/app/controllers/utility_controller.dart';
 import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/utils/app_utils.dart';
@@ -50,20 +51,20 @@ class SigninController extends GetxController {
   Future<void> signIn() async {
     try {
       AppUtils.dismissKeyboard();
-      // isLoading(true);
+      isLoading(true);
 
-      // final firebaseAuth = FirebaseAuth.instance;
+      final firebaseAuth = FirebaseAuth.instance;
 
-      // await firebaseAuth.signInWithEmailAndPassword(
-      //   email: email.value,
-      //   password: password.value,
-      // );
+      await firebaseAuth.signInWithEmailAndPassword(
+        email: email.value,
+        password: password.value,
+      );
 
-      // await Future.delayed(const Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 1));
 
-      // isLoading(false);
+      isLoading(false);
 
-      // await Future.delayed(const Duration(milliseconds: 220));
+      await Future.delayed(const Duration(milliseconds: 300));
 
       await Get.offNamed(Routes.HOME);
     } catch (e) {
