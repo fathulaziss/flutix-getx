@@ -36,6 +36,12 @@ class LocaleKeys {
   static const enterYourPin = 'enterYourPin';
   static const forgotPin = 'forgotPin';
   static const incorrectPin = 'incorrectPin';
+  static const transactionHistory = 'transactionHistory';
+  static const balance = 'balance';
+  static const cardHolder = 'cardHolder';
+  static const cardId = 'cardId';
+  static const transactionList = 'transactionList';
+  static const dontHaveTransaction = 'dontHaveTransaction';
   static const start = 'start';
   static const signIn = 'signIn';
   static const signOut = 'signOut';
@@ -98,6 +104,12 @@ class Locales {
     'enterYourPin': 'Masukkan PIN',
     'forgotPin': 'Lupa PIN',
     'incorrectPin': 'PIN Salah',
+    'transactionHistory': 'Riwayat Transaksi',
+    'balance': 'Saldo',
+    'cardHolder': 'Pemegang Kartu',
+    'cardId': 'ID Kartu',
+    'transactionList': 'Daftar Transaksi',
+    'dontHaveTransaction': 'Kamu tidak memiliki transaksi.',
     'start': 'Mulai',
     'signIn': 'Masuk',
     'signOut': 'Keluar',
@@ -159,6 +171,12 @@ class Locales {
     'enterYourPin': 'Enter PIN',
     'forgotPin': 'Forgot PIN',
     'incorrectPin': 'Incorrect PIN',
+    'transactionHistory': 'Transaction History',
+    'balance': 'Balance',
+    'cardHolder': 'Card Holder',
+    'cardId': 'Card ID',
+    'transactionList': 'Transaction List',
+    'dontHaveTransaction': 'You don\'t have transaction.',
     'start': 'Get Started',
     'signIn': 'Sign In',
     'signOut': 'Sign Out',

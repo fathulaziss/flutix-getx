@@ -4,6 +4,7 @@ import 'package:flutix/app/modules/profile/components/profile_menu.dart';
 import 'package:flutix/app/modules/profile/controllers/profile_controller.dart';
 import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/services/app_cycle_service.dart';
+import 'package:flutix/styles/styles.dart';
 import 'package:flutix/widgets/others/bottomsheet_custom.dart';
 import 'package:flutix/widgets/others/show_dialog.dart';
 import 'package:flutix/widgets/pages/page_default.dart';
@@ -19,57 +20,73 @@ class ProfileView extends GetView<ProfileController> {
       return PageDefault(
         title: 'profile'.tr,
         shadowColor: Colors.transparent,
-        child: Column(
+        child: Flex(
+          direction: Axis.vertical,
           children: [
             ProfileHeader(data: controller.cUserInfo.dataUser.value),
-            ProfileMenu(
-              icon: Icons.person_rounded,
-              label: 'editProfile'.tr,
-              onTap: () => Get.toNamed(Routes.EDIT_PROFILE),
-            ),
-            ProfileMenu(
-              icon: Icons.lock_open,
-              label: 'changePassword'.tr,
-              onTap: () {
-                showPopUpInfo(
-                  title: 'information'.tr,
-                  description: 'underDevelopment'.tr,
-                );
-              },
-            ),
-            ProfileMenu(
-              icon: Icons.pin,
-              label: 'changePin'.tr,
-              onTap: () {
-                showPopUpInfo(
-                  title: 'information'.tr,
-                  description: 'underDevelopment'.tr,
-                );
-              },
-            ),
-            ProfileMenu(
-              icon: Icons.translate,
-              label: 'changeLanguage'.tr,
-              onTap: () {
-                BottomSheetCustom(
-                  context: context,
-                  initialChildSize: 0.31,
-                  child: const ProfileLanguageBottomSheet(),
-                ).showData();
-              },
-            ),
-            ProfileMenu(
-              icon: Icons.power_settings_new,
-              label: 'signOut'.tr,
-              onTap: () {
-                showPopUpConfirmation(
-                  title: 'confirmation'.tr,
-                  description: 'exitApp'.tr,
-                  onPressPositive: () => AppCycleService().onUserLogout(),
-                  labelButtonPostive: 'yes'.tr.toUpperCase(),
-                  labelButtonNegative: 'cancel'.tr.toUpperCase(),
-                );
-              },
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    ProfileMenu(
+                      icon: Icons.person_rounded,
+                      label: 'editProfile'.tr,
+                      onTap: () => Get.toNamed(Routes.EDIT_PROFILE),
+                    ),
+                    ProfileMenu(
+                      icon: Icons.receipt,
+                      label: 'transactionHistory'.tr,
+                      onTap: () => Get.toNamed(Routes.TRANSACTION_HISTORY),
+                    ),
+                    ProfileMenu(
+                      icon: Icons.lock_open,
+                      label: 'changePassword'.tr,
+                      onTap: () {
+                        showPopUpInfo(
+                          title: 'information'.tr,
+                          description: 'underDevelopment'.tr,
+                        );
+                      },
+                    ),
+                    ProfileMenu(
+                      icon: Icons.pin,
+                      label: 'changePin'.tr,
+                      onTap: () {
+                        showPopUpInfo(
+                          title: 'information'.tr,
+                          description: 'underDevelopment'.tr,
+                        );
+                      },
+                    ),
+                    ProfileMenu(
+                      icon: Icons.translate,
+                      label: 'changeLanguage'.tr,
+                      onTap: () {
+                        BottomSheetCustom(
+                          context: context,
+                          initialChildSize: 0.31,
+                          child: const ProfileLanguageBottomSheet(),
+                        ).showData();
+                      },
+                    ),
+                    ProfileMenu(
+                      icon: Icons.power_settings_new,
+                      label: 'signOut'.tr,
+                      onTap: () {
+                        showPopUpConfirmation(
+                          title: 'confirmation'.tr,
+                          description: 'exitApp'.tr,
+                          onPressPositive: () =>
+                              AppCycleService().onUserLogout(),
+                          labelButtonPostive: 'yes'.tr.toUpperCase(),
+                          labelButtonNegative: 'cancel'.tr.toUpperCase(),
+                        );
+                      },
+                    ),
+                    verticalSpace(Insets.med),
+                  ],
+                ),
+              ),
             ),
           ],
         ),

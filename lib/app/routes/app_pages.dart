@@ -20,6 +20,8 @@ import 'package:flutix/app/modules/signup/views/signup_view.dart';
 import 'package:flutix/app/modules/splash_screen_view.dart';
 import 'package:flutix/app/modules/topup/bindings/topup_binding.dart';
 import 'package:flutix/app/modules/topup/views/topup_view.dart';
+import 'package:flutix/app/modules/transaction_history/bindings/transaction_history_binding.dart';
+import 'package:flutix/app/modules/transaction_history/views/transaction_history_view.dart';
 import 'package:flutix/app/modules/under_development.dart';
 import 'package:get/get.dart';
 
@@ -97,6 +99,11 @@ class AppPages {
       name: _Paths.PIN,
       page: () => const PinView(),
       binding: PinBinding(),
+    ),
+    GetPage(
+      name: _Paths.TRANSACTION_HISTORY,
+      page: () => const TransactionHistoryView(),
+      binding: TransactionHistoryBinding(),
     ),
   ];
 }

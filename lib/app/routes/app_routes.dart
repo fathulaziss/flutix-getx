@@ -19,6 +19,7 @@ abstract class Routes {
   static const EDIT_PROFILE = _Paths.EDIT_PROFILE;
   static const TOPUP = _Paths.TOPUP;
   static const PIN = _Paths.PIN;
+  static const TRANSACTION_HISTORY = _Paths.TRANSACTION_HISTORY;
 }
 
 abstract class _Paths {
@@ -37,4 +38,5 @@ abstract class _Paths {
   static const EDIT_PROFILE = '/edit-profile';
   static const TOPUP = '/topup';
   static const PIN = '/pin';
+  static const TRANSACTION_HISTORY = '/transaction-history';
 }

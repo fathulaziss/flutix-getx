@@ -28,6 +28,13 @@
     "forgotPin": "Forgot PIN",
     "incorrectPin": "Incorrect PIN",
 
+    "transactionHistory": "Transaction History",
+    "balance": "Balance",
+    "cardHolder": "Card Holder",
+    "cardId": "Card ID",
+    "transactionList": "Transaction List",
+    "dontHaveTransaction": "You don't have transaction.",
+
     "start": "Get Started",
     "signIn": "Sign In",
     "signOut": "Sign Out",

@@ -28,6 +28,13 @@
     "forgotPin": "Lupa PIN",
     "incorrectPin": "PIN Salah",
 
+    "transactionHistory": "Riwayat Transaksi",
+    "balance": "Saldo",
+    "cardHolder": "Pemegang Kartu",
+    "cardId": "ID Kartu",
+    "transactionList": "Daftar Transaksi",
+    "dontHaveTransaction": "Kamu tidak memiliki transaksi.",
+
     "start": "Mulai",
     "signIn": "Masuk",
     "signOut": "Keluar",
