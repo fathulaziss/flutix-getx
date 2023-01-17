@@ -48,6 +48,7 @@ class LocaleKeys {
   static const continuee = 'continuee';
   static const movie = 'movie';
   static const ticket = 'ticket';
+  static const topup = 'topup';
   static const editProfile = 'editProfile';
   static const updateProfileSuccess = 'updateProfileSuccess';
   static const changePassword = 'changePassword';
@@ -106,6 +107,7 @@ class Locales {
     'continuee': 'Selanjutnya',
     'movie': 'Film',
     'ticket': 'Tiket',
+    'topup': 'Isi Saldo',
     'editProfile': 'Sunting Profil',
     'updateProfileSuccess': 'Profile anda telah berhasil diperbarui',
     'changePassword': 'Ubah Kata Sandi',
@@ -163,6 +165,7 @@ class Locales {
     'continuee': 'Continue',
     'movie': 'Movie',
     'ticket': 'Ticket',
+    'topup': 'Top Up',
     'editProfile': 'Edit Profile',
     'updateProfileSuccess': 'Your profile has been succesfully updated',
     'changePassword': 'Change Password',

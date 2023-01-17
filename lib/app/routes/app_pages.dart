@@ -16,6 +16,8 @@ import 'package:flutix/app/modules/signup/views/signup_confirm_view.dart';
 import 'package:flutix/app/modules/signup/views/signup_two_view.dart';
 import 'package:flutix/app/modules/signup/views/signup_view.dart';
 import 'package:flutix/app/modules/splash_screen_view.dart';
+import 'package:flutix/app/modules/topup/bindings/topup_binding.dart';
+import 'package:flutix/app/modules/topup/views/topup_view.dart';
 import 'package:flutix/app/modules/under_development.dart';
 import 'package:get/get.dart';
 
@@ -83,6 +85,11 @@ class AppPages {
       name: _Paths.EDIT_PROFILE,
       page: () => const EditProfileView(),
       binding: EditProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.TOPUP,
+      page: () => const TopupView(),
+      binding: TopupBinding(),
     ),
   ];
 }

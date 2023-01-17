@@ -1,6 +1,7 @@
 import 'package:flutix/app/modules/home/controllers/home_controller.dart';
 import 'package:flutix/app/modules/home/tab/tab_movie.dart';
 import 'package:flutix/app/modules/home/tab/tab_ticket.dart';
+import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/styles/colors.dart';
 import 'package:flutix/utils/app_asset.dart';
 import 'package:flutix/widgets/others/custom_bottom_navbar.dart';
@@ -19,7 +20,7 @@ class HomeView extends GetView<HomeController> {
         backgroundColor: AppColor.backgroundColor,
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () => Get.toNamed(Routes.TOPUP),
           child: Image.asset(
             AppAsset.icon('ic_topup.png'),
             width: 30.w,
