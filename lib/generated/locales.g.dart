@@ -32,6 +32,10 @@ class LocaleKeys {
   static const pinTransactionValidationText = 'pinTransactionValidationText';
   static const signUpTwoTitle = 'signUpTwoTitle';
   static const signUpConfirmTitle = 'signUpConfirmTitle';
+  static const pinVerification = 'pinVerification';
+  static const enterYourPin = 'enterYourPin';
+  static const forgotPin = 'forgotPin';
+  static const incorrectPin = 'incorrectPin';
   static const start = 'start';
   static const signIn = 'signIn';
   static const signOut = 'signOut';
@@ -62,7 +66,6 @@ class LocaleKeys {
   static const choose = 'choose';
   static const success = 'success';
   static const information = 'information';
-  static const forgotPin = 'forgotPin';
   static const underDevelopment = 'underDevelopment';
   static const jailbreakDevice = 'jailbreakDevice';
 }
@@ -91,6 +94,10 @@ class Locales {
     'pinTransactionValidationText': 'Pin harus 6 karakter numerik',
     'signUpTwoTitle': 'Pilih Aliran\nKesukaanmu',
     'signUpConfirmTitle': 'Konfirmasi\nAkun Baru',
+    'pinVerification': 'PIN Verifikasi',
+    'enterYourPin': 'Masukkan PIN',
+    'forgotPin': 'Lupa PIN',
+    'incorrectPin': 'PIN Salah',
     'start': 'Mulai',
     'signIn': 'Masuk',
     'signOut': 'Keluar',
@@ -121,7 +128,6 @@ class Locales {
     'choose': 'Pilih',
     'success': 'Berhasil',
     'information': 'Informasi',
-    'forgotPin': 'Lupa PIN',
     'underDevelopment': 'Fitur ini Sedang Dalam Pengembangan',
     'jailbreakDevice':
         'Aplikasi Ini Diblokir Untuk Anda Karena Perangkat Anda Telah Di-Root',
@@ -149,6 +155,10 @@ class Locales {
     'pinTransactionValidationText': 'Pin must be 6 numeric character',
     'signUpTwoTitle': 'Select Your\nFavorite Genre',
     'signUpConfirmTitle': 'Confirm\nNew Account',
+    'pinVerification': 'Verification PIN',
+    'enterYourPin': 'Enter PIN',
+    'forgotPin': 'Forgot PIN',
+    'incorrectPin': 'Incorrect PIN',
     'start': 'Get Started',
     'signIn': 'Sign In',
     'signOut': 'Sign Out',
@@ -179,7 +189,6 @@ class Locales {
     'choose': 'Choose',
     'success': 'Success',
     'information': 'Information',
-    'forgotPin': 'Forgot PIN',
     'underDevelopment': 'This Feature is Under Development',
     'jailbreakDevice':
         'This App Blocked For You Because Your Device has been Rooted',

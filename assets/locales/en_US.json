@@ -23,6 +23,11 @@
     "signUpTwoTitle": "Select Your\nFavorite Genre",
     "signUpConfirmTitle": "Confirm\nNew Account",
 
+    "pinVerification": "Verification PIN",
+    "enterYourPin": "Enter PIN",
+    "forgotPin": "Forgot PIN",
+    "incorrectPin": "Incorrect PIN",
+
     "start": "Get Started",
     "signIn": "Sign In",
     "signOut": "Sign Out",
@@ -53,7 +58,6 @@
     "choose": "Choose",
     "success": "Success",
     "information": "Information",
-    "forgotPin": "Forgot PIN",
     "underDevelopment": "This Feature is Under Development",
     "jailbreakDevice": "This App Blocked For You Because Your Device has been Rooted"
 }

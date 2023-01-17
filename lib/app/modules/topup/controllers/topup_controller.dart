@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutix/app/controllers/user_info_controller.dart';
 import 'package:flutix/app/models/user_model.dart';
+import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/utils/app_utils.dart';
 import 'package:flutix/utils/format_currency.dart';
 import 'package:flutix/widgets/others/show_dialog.dart';
@@ -49,10 +50,10 @@ class TopupController extends GetxController {
   }
 
   Future<void> submit() async {
-    // final pin = await Get.toNamed(Routes.PIN);
-    // if (pin != null) {
-    //   await topup();
-    // }
+    final pin = await Get.toNamed(Routes.PIN);
+    if (pin != null) {
+      await topup();
+    }
   }
 
   Future<void> topup() async {

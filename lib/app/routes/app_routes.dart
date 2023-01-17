@@ -18,6 +18,7 @@ abstract class Routes {
   static const PROFILE = _Paths.PROFILE;
   static const EDIT_PROFILE = _Paths.EDIT_PROFILE;
   static const TOPUP = _Paths.TOPUP;
+  static const PIN = _Paths.PIN;
 }
 
 abstract class _Paths {
@@ -35,4 +36,5 @@ abstract class _Paths {
   static const PROFILE = '/profile';
   static const EDIT_PROFILE = '/edit-profile';
   static const TOPUP = '/topup';
+  static const PIN = '/pin';
 }

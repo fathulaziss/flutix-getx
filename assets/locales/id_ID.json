@@ -23,6 +23,11 @@
     "signUpTwoTitle": "Pilih Aliran\nKesukaanmu",
     "signUpConfirmTitle": "Konfirmasi\nAkun Baru",
 
+    "pinVerification": "PIN Verifikasi",
+    "enterYourPin": "Masukkan PIN",
+    "forgotPin": "Lupa PIN",
+    "incorrectPin": "PIN Salah",
+
     "start": "Mulai",
     "signIn": "Masuk",
     "signOut": "Keluar",
@@ -53,7 +58,6 @@
     "choose": "Pilih",
     "success": "Berhasil",
     "information": "Informasi",
-    "forgotPin": "Lupa PIN",
     "underDevelopment": "Fitur ini Sedang Dalam Pengembangan",
     "jailbreakDevice": "Aplikasi Ini Diblokir Untuk Anda Karena Perangkat Anda Telah Di-Root"
 }

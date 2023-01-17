@@ -7,6 +7,8 @@ import 'package:flutix/app/modules/home/bindings/home_binding.dart';
 import 'package:flutix/app/modules/home/views/home_view.dart';
 import 'package:flutix/app/modules/onboarding/bindings/onboarding_binding.dart';
 import 'package:flutix/app/modules/onboarding/views/onboarding_view.dart';
+import 'package:flutix/app/modules/pin/bindings/pin_binding.dart';
+import 'package:flutix/app/modules/pin/views/pin_view.dart';
 import 'package:flutix/app/modules/profile/bindings/profile_binding.dart';
 import 'package:flutix/app/modules/profile/views/profile_view.dart';
 import 'package:flutix/app/modules/signin/bindings/signin_binding.dart';
@@ -90,6 +92,11 @@ class AppPages {
       name: _Paths.TOPUP,
       page: () => const TopupView(),
       binding: TopupBinding(),
+    ),
+    GetPage(
+      name: _Paths.PIN,
+      page: () => const PinView(),
+      binding: PinBinding(),
     ),
   ];
 }
