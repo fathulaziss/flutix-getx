@@ -17,7 +17,7 @@ class TransactionHistoryView extends GetView<TransactionHistoryController> {
   Widget build(BuildContext context) {
     return PageDefault(
       title: 'transactionHistory'.tr,
-      backgroundColor: AppColor.backgroundColor,
+      backgroundColor: AppColor.backgroundColor1,
       child: Obx(() {
         return Flex(
           direction: Axis.vertical,

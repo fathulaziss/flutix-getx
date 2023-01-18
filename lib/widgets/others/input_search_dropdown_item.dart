@@ -15,7 +15,7 @@ class InputSearchDropdonwItem extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 5.w),
       alignment: Alignment.center,
       decoration: const BoxDecoration(
-        border: Border(bottom: BorderSide(color: AppColor.backgroundColor)),
+        border: Border(bottom: BorderSide(color: AppColor.backgroundColor1)),
       ),
       child: child,
     );

@@ -1,3 +1,4 @@
+import 'package:flutix/app/modules/home/components/movie_browse.dart';
 import 'package:flutix/app/modules/home/components/movie_header.dart';
 import 'package:flutix/app/modules/home/components/movie_playing.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,7 @@ class TabMovie extends StatelessWidget {
       children: const [
         MovieHeader(),
         MoviePlaying(),
+        MovieBrowse(),
       ],
     );
   }

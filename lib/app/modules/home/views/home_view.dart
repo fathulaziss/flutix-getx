@@ -17,7 +17,7 @@ class HomeView extends GetView<HomeController> {
     return Obx(
       () => Scaffold(
         extendBody: true,
-        backgroundColor: AppColor.backgroundColor,
+        backgroundColor: AppColor.backgroundColor1,
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
           onPressed: () => Get.toNamed(Routes.TOPUP),

@@ -7,7 +7,8 @@ class AppColor {
   static const primaryColor4 = Color(0xFF5F558B);
   static const disabledColor1 = Color(0xFFE4E4E4);
   static const disabledColor2 = Color(0xFFBEBEBE);
-  static const backgroundColor = Color(0xFFF6F7F9);
+  static const backgroundColor1 = Color(0xFFF6F7F9);
+  static const backgroundColor2 = Color(0xFFEBEFF6);
   static const yellowColor1 = Color(0xFFFBD460);
   static const yellowColor2 = Color(0xFFFFF2CB);
   static const redColor = Color(0xFFFF5C83);

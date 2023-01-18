@@ -41,7 +41,7 @@ class _SplashScreenViewState extends State<SplashScreenView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.backgroundColor,
+      backgroundColor: AppColor.backgroundColor1,
       body: Center(
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 1000),
