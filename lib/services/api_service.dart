@@ -70,6 +70,7 @@ class ApiService {
     Map<String, String>? headers,
     Map<String, dynamic>? parameters,
     bool isToken = true,
+    bool isCustomResponse = false,
   }) async {
     Response response;
 
@@ -94,12 +95,15 @@ class ApiService {
       }
 
       if (response.statusCode == 200) {
-        return checkResponse(
-          url: url,
-          params: params,
-          response: response.data,
-          method: method,
-        );
+        if (isCustomResponse) {
+          return checkResponse(
+            url: url,
+            params: params,
+            response: response.data,
+            method: method,
+          );
+        }
+        return response.data;
       } else if (response.statusCode == 401) {
         throw Exception('Unauthorized');
       } else if (response.statusCode == 500) {

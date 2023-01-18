@@ -94,7 +94,10 @@ class MovieHeader extends GetView<MovieController> {
                       convertTitleCase(
                         controller.cUserInfo.dataUser.value.fullName,
                       ),
-                      style: TextStyles.title.copyWith(color: Colors.white),
+                      style: TextStyles.text.copyWith(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),
