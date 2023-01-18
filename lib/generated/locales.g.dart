@@ -32,6 +32,10 @@ class LocaleKeys {
   static const pinTransactionValidationText = 'pinTransactionValidationText';
   static const signUpTwoTitle = 'signUpTwoTitle';
   static const signUpConfirmTitle = 'signUpConfirmTitle';
+  static const currentShowing = 'currentShowing';
+  static const comingSoon = 'comingSoon';
+  static const browseMovie = 'browseMovie';
+  static const dataNotFound = 'dataNotFound';
   static const pinVerification = 'pinVerification';
   static const enterYourPin = 'enterYourPin';
   static const forgotPin = 'forgotPin';
@@ -100,6 +104,10 @@ class Locales {
     'pinTransactionValidationText': 'Pin harus 6 karakter numerik',
     'signUpTwoTitle': 'Pilih Aliran\nKesukaanmu',
     'signUpConfirmTitle': 'Konfirmasi\nAkun Baru',
+    'currentShowing': 'Sedang Tayang',
+    'comingSoon': 'Segera Tayang',
+    'browseMovie': 'Jelajahi Film',
+    'dataNotFound': 'Data Tidak Ditemukan',
     'pinVerification': 'PIN Verifikasi',
     'enterYourPin': 'Masukkan PIN',
     'forgotPin': 'Lupa PIN',
@@ -167,6 +175,10 @@ class Locales {
     'pinTransactionValidationText': 'Pin must be 6 numeric character',
     'signUpTwoTitle': 'Select Your\nFavorite Genre',
     'signUpConfirmTitle': 'Confirm\nNew Account',
+    'currentShowing': 'Current Showing',
+    'comingSoon': 'Coming Soon',
+    'browseMovie': 'Browse Movie',
+    'dataNotFound': 'Data Not Found',
     'pinVerification': 'Verification PIN',
     'enterYourPin': 'Enter PIN',
     'forgotPin': 'Forgot PIN',

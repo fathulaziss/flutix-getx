@@ -23,6 +23,11 @@
     "signUpTwoTitle": "Select Your\nFavorite Genre",
     "signUpConfirmTitle": "Confirm\nNew Account",
 
+    "currentShowing": "Current Showing",
+    "comingSoon": "Coming Soon",
+    "browseMovie": "Browse Movie",
+    "dataNotFound": "Data Not Found",
+
     "pinVerification": "Verification PIN",
     "enterYourPin": "Enter PIN",
     "forgotPin": "Forgot PIN",

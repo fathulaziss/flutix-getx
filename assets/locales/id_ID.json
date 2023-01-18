@@ -23,6 +23,11 @@
     "signUpTwoTitle": "Pilih Aliran\nKesukaanmu",
     "signUpConfirmTitle": "Konfirmasi\nAkun Baru",
 
+    "currentShowing": "Sedang Tayang",
+    "comingSoon": "Segera Tayang",
+    "browseMovie": "Jelajahi Film",
+    "dataNotFound": "Data Tidak Ditemukan",
+
     "pinVerification": "PIN Verifikasi",
     "enterYourPin": "Masukkan PIN",
     "forgotPin": "Lupa PIN",

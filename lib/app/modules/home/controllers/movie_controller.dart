@@ -9,15 +9,16 @@ class MovieController extends GetxController {
   final cUserInfo = Get.find<UserInfoController>();
   final cUtility = Get.find<UtilityController>();
 
-  RxList<MovieModel> listMoviePlaying = <MovieModel>[].obs;
+  RxList<MovieModel> listMovieShowing = <MovieModel>[].obs;
+  RxList<MovieModel> listMovieComingSoon = <MovieModel>[].obs;
 
   RxBool isLoadingDataUser = false.obs;
-  RxBool isLoadingMoviePlaying = false.obs;
+  RxBool isLoadingMovie = false.obs;
 
   @override
   void onInit() {
     getDataUser();
-    getPlayingMovie();
+    getMovies();
     super.onInit();
   }
 
@@ -35,26 +36,30 @@ class MovieController extends GetxController {
     }
   }
 
-  Future<void> getPlayingMovie() async {
+  Future<void> getMovies() async {
     try {
-      isLoadingMoviePlaying(true);
+      isLoadingMovie(true);
 
       final data = await ApiMovies.getMovies(
         language: cUtility.appLanguage.value,
         page: 1,
       );
 
-      final dataShortlist = data.sublist(0, 10);
+      final dataMoviePlaying = data.sublist(0, 10);
+      final dataMovieComingSoon = data.sublist(10);
 
-      listMoviePlaying(
-        RxList.from(dataShortlist.map((e) => MovieModel.fromJson(e))),
+      listMovieShowing(
+        RxList.from(dataMoviePlaying.map((e) => MovieModel.fromJson(e))),
+      );
+      listMovieComingSoon(
+        RxList.from(dataMovieComingSoon.map((e) => MovieModel.fromJson(e))),
       );
 
       await Future.delayed(const Duration(seconds: 1));
 
-      isLoadingMoviePlaying(false);
+      isLoadingMovie(false);
     } catch (e) {
-      isLoadingMoviePlaying(false);
+      isLoadingMovie(false);
       logSys(e.toString());
     }
   }

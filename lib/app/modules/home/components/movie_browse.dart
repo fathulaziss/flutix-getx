@@ -17,7 +17,7 @@ class MovieBrowse extends GetView<MovieController> {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: Insets.xl),
-            child: Text('Browse Movie', style: TextStyles.title),
+            child: Text('browseMovie'.tr, style: TextStyles.title),
           ),
           Padding(
             padding: EdgeInsets.symmetric(
