@@ -66,6 +66,7 @@ class MovieController extends GetxController {
     } catch (e) {
       isLoadingMovie(false);
       logSys(e.toString());
+      rethrow;
     }
   }
 

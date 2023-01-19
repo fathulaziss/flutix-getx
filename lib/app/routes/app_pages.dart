@@ -5,6 +5,8 @@ import 'package:flutix/app/modules/edit_profile/bindings/edit_profile_binding.da
 import 'package:flutix/app/modules/edit_profile/views/edit_profile_view.dart';
 import 'package:flutix/app/modules/home/bindings/home_binding.dart';
 import 'package:flutix/app/modules/home/views/home_view.dart';
+import 'package:flutix/app/modules/movie_detail/bindings/movie_detail_binding.dart';
+import 'package:flutix/app/modules/movie_detail/views/movie_detail_view.dart';
 import 'package:flutix/app/modules/onboarding/bindings/onboarding_binding.dart';
 import 'package:flutix/app/modules/onboarding/views/onboarding_view.dart';
 import 'package:flutix/app/modules/pin/bindings/pin_binding.dart';
@@ -104,6 +106,11 @@ class AppPages {
       name: _Paths.TRANSACTION_HISTORY,
       page: () => const TransactionHistoryView(),
       binding: TransactionHistoryBinding(),
+    ),
+    GetPage(
+      name: _Paths.MOVIE_DETAIL,
+      page: () => const MovieDetailView(),
+      binding: MovieDetailBinding(),
     ),
   ];
 }

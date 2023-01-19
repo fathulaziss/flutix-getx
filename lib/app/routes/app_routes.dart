@@ -20,6 +20,7 @@ abstract class Routes {
   static const TOPUP = _Paths.TOPUP;
   static const PIN = _Paths.PIN;
   static const TRANSACTION_HISTORY = _Paths.TRANSACTION_HISTORY;
+  static const MOVIE_DETAIL = _Paths.MOVIE_DETAIL;
 }
 
 abstract class _Paths {
@@ -39,4 +40,5 @@ abstract class _Paths {
   static const TOPUP = '/topup';
   static const PIN = '/pin';
   static const TRANSACTION_HISTORY = '/transaction-history';
+  static const MOVIE_DETAIL = '/movie-detail';
 }

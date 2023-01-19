@@ -1,5 +1,6 @@
 import 'package:flutix/app/modules/home/components/movie_item.dart';
 import 'package:flutix/app/modules/home/controllers/movie_controller.dart';
+import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/styles/styles.dart';
 import 'package:flutix/widgets/others/shimmer_indicator.dart';
 import 'package:flutter/material.dart';
@@ -63,7 +64,12 @@ class MovieShowing extends GetView<MovieController> {
                             top: 16.w,
                             bottom: 16.w,
                           ),
-                          onTap: () {},
+                          onTap: () => Get.toNamed(
+                            Routes.MOVIE_DETAIL,
+                            arguments: {
+                              'movie': controller.listMovieShowing[index]
+                            },
+                          ),
                         );
                       },
                     )

@@ -39,7 +39,7 @@ class MovieItem extends StatelessWidget {
           child: Stack(
             children: [
               Image.network(
-                '${AppConfig.imageBaseUrl}w780${isShowTitleAndRating ? data.backdropPath : data.posterPath}',
+                '${AppConfig.imageBaseUrl}w500${isShowTitleAndRating ? data.backdropPath : data.posterPath}',
                 fit: BoxFit.cover,
                 width: width ?? 200.w,
                 height: height ?? 150.w,

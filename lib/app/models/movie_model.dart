@@ -26,7 +26,9 @@ class MovieModel {
         originalLanguage: json['original_language'] ?? '',
         originalTitle: json['original_title'] ?? '',
         overview: json['overview'] ?? '',
-        popularity: json['popularity'] ?? 0,
+        popularity: json['popularity'] != null
+            ? ConvertType.toDouble(json['popularity'])
+            : 0,
         posterPath: json['poster_path'] ?? '',
         releaseDate: json['release_date'] ?? '',
         title: json['title'] ?? '',
