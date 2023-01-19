@@ -24,7 +24,7 @@ class RatingStar extends StatelessWidget {
       ..add(horizontalSpace(Insets.xs))
       ..add(
         Text(
-          '$voteAverage/10',
+          '$voteAverage/10.0',
           style: TextStyles.desc.copyWith(color: Colors.white),
         ),
       );

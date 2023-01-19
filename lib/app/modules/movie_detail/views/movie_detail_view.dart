@@ -11,7 +11,9 @@ class MovieDetailView extends GetView<MovieDetailController> {
     return PageDefault(
       title: 'Movie Detail',
       child: Column(
-        children: [Text(controller.movieData.value.title)],
+        children: [
+          Text(controller.movieData.value.releaseDate),
+        ],
       ),
     );
   }

@@ -4,13 +4,13 @@ import 'package:flutix/app_config.dart';
 import 'package:flutix/services/api_service.dart';
 
 class ApiMovies {
-  static Future<List> getMovies({
+  static Future<Map<String, dynamic>> getMovieShowing({
     required AppLanguageModel language,
     required int page,
   }) async {
     try {
       final url =
-          'discover/movie?api_key=${AppConfig.apiKey}&language=${language.locale.languageCode}-${language.locale.countryCode}&sort_by=release_date.desc&include_adult=false&include_video=false&page=$page';
+          'movie/now_playing?api_key=${AppConfig.apiKey}&language=${language.locale.languageCode}-${language.locale.countryCode}&page=$page';
 
       final response = await ApiService().request(
         url: url,
@@ -18,15 +18,33 @@ class ApiMovies {
         isToken: false,
       );
 
-      final List data = response['results'];
-
-      return data;
+      return response;
     } catch (e) {
       rethrow;
     }
   }
 
-  static Future<void> getMovieDetail({
+  static Future<Map<String, dynamic>> getMovieComingSoon({
+    required AppLanguageModel language,
+    required int page,
+  }) async {
+    try {
+      final url =
+          'movie/upcoming?api_key=${AppConfig.apiKey}&language=${language.locale.languageCode}-${language.locale.countryCode}&page=$page';
+
+      final response = await ApiService().request(
+        url: url,
+        method: Method.GET,
+        isToken: false,
+      );
+
+      return response;
+    } catch (e) {
+      rethrow;
+    }
+  }
+
+  static Future<Map<String, dynamic>> getMovieDetail({
     required AppLanguageModel language,
     required MovieModel movieModel,
   }) async {
@@ -39,6 +57,8 @@ class ApiMovies {
         method: Method.GET,
         isToken: false,
       );
+
+      return response;
     } catch (e) {
       rethrow;
     }

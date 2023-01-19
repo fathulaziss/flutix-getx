@@ -20,7 +20,7 @@ class MovieComingSoon extends GetView<MovieController> {
             padding: EdgeInsets.symmetric(horizontal: Insets.xl),
             child: Text('comingSoon'.tr, style: TextStyles.title),
           ),
-          if (controller.isLoadingMovie.value)
+          if (controller.isLoadingMovieComingSoon.value)
             SizedBox(
               width: double.infinity,
               height: 180.w,
