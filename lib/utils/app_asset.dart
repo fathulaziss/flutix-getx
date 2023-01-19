@@ -13,21 +13,21 @@ class AppAsset {
 
   static String browseMovieIcon(int value) {
     switch (value) {
-      case 1:
+      case 27:
         return AppAsset.icon('ic_horror.png');
-      case 2:
+      case 28:
         return AppAsset.icon('ic_action.png');
-      case 3:
+      case 35:
         return AppAsset.icon('ic_comedy.png');
-      case 4:
+      case 878:
         return AppAsset.icon('ic_scifi.png');
-      case 5:
+      case 10749:
         return AppAsset.icon('ic_romance.png');
-      case 6:
+      case 53:
         return AppAsset.icon('ic_thriller.png');
-      case 7:
+      case 10402:
         return AppAsset.icon('ic_musical.png');
-      case 8:
+      case 9648:
         return AppAsset.icon('ic_mystery.png');
       default:
         return AppAsset.icon('ic_horror.png');
@@ -36,21 +36,21 @@ class AppAsset {
 
   static String browseMovieName(int value) {
     switch (value) {
-      case 1:
+      case 27:
         return 'Horror';
-      case 2:
+      case 28:
         return 'Action';
-      case 3:
+      case 35:
         return 'Comedy';
-      case 4:
+      case 878:
         return 'Sci-Fi';
-      case 5:
+      case 10749:
         return 'Romance';
-      case 6:
+      case 53:
         return 'Thriller';
-      case 7:
+      case 10402:
         return 'Musical';
-      case 8:
+      case 9648:
         return 'Mystery';
       default:
         return 'Horror';

@@ -1,10 +1,10 @@
 List genreData = [
-  {'id': 1, 'name': 'Horror'},
-  {'id': 2, 'name': 'Action'},
-  {'id': 3, 'name': 'Comedy'},
-  {'id': 4, 'name': 'Sci-Fi'},
-  {'id': 5, 'name': 'Romance'},
-  {'id': 6, 'name': 'Thriller'},
-  {'id': 7, 'name': 'Musical'},
-  {'id': 8, 'name': 'Mystery'}
+  {'id': 27, 'name': 'Horror'},
+  {'id': 28, 'name': 'Action'},
+  {'id': 35, 'name': 'Comedy'},
+  {'id': 878, 'name': 'Sci-Fi'},
+  {'id': 10749, 'name': 'Romance'},
+  {'id': 53, 'name': 'Thriller'},
+  {'id': 10402, 'name': 'Musical'},
+  {'id': 9648, 'name': 'Mystery'}
 ];
