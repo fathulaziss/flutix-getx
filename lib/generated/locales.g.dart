@@ -36,6 +36,13 @@ class LocaleKeys {
   static const comingSoon = 'comingSoon';
   static const browseMovie = 'browseMovie';
   static const dataNotFound = 'dataNotFound';
+  static const voucher = 'voucher';
+  static const voucherTitle1 = 'voucherTitle1';
+  static const voucherTitle2 = 'voucherTitle2';
+  static const voucherTitle3 = 'voucherTitle3';
+  static const voucherDesc1 = 'voucherDesc1';
+  static const voucherDesc2 = 'voucherDesc2';
+  static const voucherDesc3 = 'voucherDesc3';
   static const pinVerification = 'pinVerification';
   static const enterYourPin = 'enterYourPin';
   static const forgotPin = 'forgotPin';
@@ -108,6 +115,13 @@ class Locales {
     'comingSoon': 'Segera Tayang',
     'browseMovie': 'Jelajahi Film',
     'dataNotFound': 'Data Tidak Ditemukan',
+    'voucher': 'Kupon',
+    'voucherTitle1': 'Spesial Tahun Baru',
+    'voucherTitle2': 'Spesial Hari Kemerdekaan',
+    'voucherTitle3': 'Spesial Natal',
+    'voucherDesc1': 'Rayakan Tahun Baru bersama kami',
+    'voucherDesc2': 'Rayakan Hari Kemerdekaan bersama kami',
+    'voucherDesc3': 'Rayakan Natal bersama kami',
     'pinVerification': 'PIN Verifikasi',
     'enterYourPin': 'Masukkan PIN',
     'forgotPin': 'Lupa PIN',
@@ -179,6 +193,13 @@ class Locales {
     'comingSoon': 'Coming Soon',
     'browseMovie': 'Browse Movie',
     'dataNotFound': 'Data Not Found',
+    'voucher': 'Voucher',
+    'voucherTitle1': 'Special New Year',
+    'voucherTitle2': 'Special Independence Day',
+    'voucherTitle3': 'Special Christmas',
+    'voucherDesc1': 'Celebrate New Year with us',
+    'voucherDesc2': 'Celebrate Independence Day with us',
+    'voucherDesc3': 'Celebrate Christmas with us',
     'pinVerification': 'Verification PIN',
     'enterYourPin': 'Enter PIN',
     'forgotPin': 'Forgot PIN',

@@ -2,6 +2,7 @@ import 'package:flutix/app/modules/home/components/movie_browse.dart';
 import 'package:flutix/app/modules/home/components/movie_coming_soon.dart';
 import 'package:flutix/app/modules/home/components/movie_header.dart';
 import 'package:flutix/app/modules/home/components/movie_showing.dart';
+import 'package:flutix/app/modules/home/components/movie_voucher.dart';
 import 'package:flutix/styles/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,6 +23,7 @@ class TabMovie extends StatelessWidget {
                 const MovieShowing(),
                 const MovieBrowse(),
                 const MovieComingSoon(),
+                const MovieVoucher(),
                 verticalSpace(100.w),
               ],
             ),

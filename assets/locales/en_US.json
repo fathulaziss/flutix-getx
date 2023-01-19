@@ -27,6 +27,13 @@
     "comingSoon": "Coming Soon",
     "browseMovie": "Browse Movie",
     "dataNotFound": "Data Not Found",
+    "voucher": "Voucher",
+    "voucherTitle1": "Special New Year",
+    "voucherTitle2": "Special Independence Day",
+    "voucherTitle3": "Special Christmas",
+    "voucherDesc1": "Celebrate New Year with us",
+    "voucherDesc2": "Celebrate Independence Day with us",
+    "voucherDesc3": "Celebrate Christmas with us",
 
     "pinVerification": "Verification PIN",
     "enterYourPin": "Enter PIN",

@@ -1,7 +1,9 @@
 import 'package:flutix/app/api/api_movies.dart';
 import 'package:flutix/app/controllers/user_info_controller.dart';
 import 'package:flutix/app/controllers/utility_controller.dart';
+import 'package:flutix/app/data/voucher_data.dart';
 import 'package:flutix/app/models/movie_model.dart';
+import 'package:flutix/app/models/voucher_model.dart';
 import 'package:flutix/utils/app_utils.dart';
 import 'package:get/get.dart';
 
@@ -11,14 +13,17 @@ class MovieController extends GetxController {
 
   RxList<MovieModel> listMovieShowing = <MovieModel>[].obs;
   RxList<MovieModel> listMovieComingSoon = <MovieModel>[].obs;
+  RxList<VoucherModel> listMovieVoucher = <VoucherModel>[].obs;
 
   RxBool isLoadingDataUser = false.obs;
   RxBool isLoadingMovie = false.obs;
+  RxBool isLoadingMovieVoucher = false.obs;
 
   @override
   void onInit() {
     getDataUser();
     getMovies();
+    getMovieVoucher();
     super.onInit();
   }
 
@@ -60,6 +65,22 @@ class MovieController extends GetxController {
       isLoadingMovie(false);
     } catch (e) {
       isLoadingMovie(false);
+      logSys(e.toString());
+    }
+  }
+
+  Future<void> getMovieVoucher() async {
+    try {
+      isLoadingMovieVoucher(true);
+
+      final data = voucherData;
+      listMovieVoucher(RxList.from(data.map((e) => VoucherModel.fromJson(e))));
+
+      await Future.delayed(const Duration(seconds: 3));
+
+      isLoadingMovieVoucher(false);
+    } catch (e) {
+      isLoadingMovieVoucher(false);
       logSys(e.toString());
     }
   }
