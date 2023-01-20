@@ -17,6 +17,7 @@ class SignupTwoView extends GetView<SignupController> {
     return Obx(() {
       return PageDefault(
         title: 'signUpTitle'.tr,
+        backgroundColor: AppColor.backgroundColor1,
         isScrollable: true,
         bottomBarHeight: 90.w,
         bottomBar: Padding(

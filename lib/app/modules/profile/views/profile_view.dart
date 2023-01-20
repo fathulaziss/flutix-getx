@@ -4,6 +4,7 @@ import 'package:flutix/app/modules/profile/components/profile_menu.dart';
 import 'package:flutix/app/modules/profile/controllers/profile_controller.dart';
 import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/services/app_cycle_service.dart';
+import 'package:flutix/styles/colors.dart';
 import 'package:flutix/styles/styles.dart';
 import 'package:flutix/widgets/others/bottomsheet_custom.dart';
 import 'package:flutix/widgets/others/show_dialog.dart';
@@ -19,6 +20,7 @@ class ProfileView extends GetView<ProfileController> {
     return Obx(() {
       return PageDefault(
         title: 'profile'.tr,
+        backgroundColor: AppColor.backgroundColor1,
         shadowColor: Colors.transparent,
         child: Flex(
           direction: Axis.vertical,

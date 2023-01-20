@@ -4,9 +4,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RatingStar extends StatelessWidget {
-  const RatingStar({super.key, required this.voteAverage});
+  const RatingStar({
+    super.key,
+    required this.voteAverage,
+    this.mainAxisAlignment = MainAxisAlignment.start,
+    this.textColor = Colors.white,
+  });
 
   final double voteAverage;
+  final MainAxisAlignment mainAxisAlignment;
+  final Color textColor;
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +31,14 @@ class RatingStar extends StatelessWidget {
       ..add(horizontalSpace(Insets.xs))
       ..add(
         Text(
-          '$voteAverage/10.0',
-          style: TextStyles.desc.copyWith(color: Colors.white),
+          '${voteAverage.toStringAsFixed(1)}/10.0',
+          style: TextStyles.desc.copyWith(color: textColor),
         ),
       );
 
-    return Row(children: widgets);
+    return Row(
+      mainAxisAlignment: mainAxisAlignment,
+      children: widgets,
+    );
   }
 }

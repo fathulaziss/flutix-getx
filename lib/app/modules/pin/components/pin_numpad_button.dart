@@ -22,7 +22,7 @@ class PinNumpadButton extends StatelessWidget {
               onPressed: onPressed,
               style: ElevatedButton.styleFrom(
                 padding: EdgeInsets.all(Insets.med),
-                backgroundColor: Colors.white,
+                backgroundColor: AppColor.backgroundColor1,
                 elevation: 2,
                 shadowColor: AppColor.primaryColor1.withOpacity(0.2),
                 shape: const CircleBorder(),

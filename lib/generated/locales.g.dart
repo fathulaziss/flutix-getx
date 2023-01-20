@@ -44,6 +44,8 @@ class LocaleKeys {
   static const voucherDesc2 = 'voucherDesc2';
   static const voucherDesc3 = 'voucherDesc3';
   static const movieDetail = 'movieDetail';
+  static const cast = 'cast';
+  static const storyline = 'storyline';
   static const pinVerification = 'pinVerification';
   static const enterYourPin = 'enterYourPin';
   static const forgotPin = 'forgotPin';
@@ -124,6 +126,8 @@ class Locales {
     'voucherDesc2': 'Rayakan Hari Kemerdekaan bersama kami',
     'voucherDesc3': 'Rayakan Natal bersama kami',
     'movieDetail': 'Detil Film',
+    'cast': 'Pemeran',
+    'storyline': 'Alur Cerita',
     'pinVerification': 'PIN Verifikasi',
     'enterYourPin': 'Masukkan PIN',
     'forgotPin': 'Lupa PIN',
@@ -203,6 +207,8 @@ class Locales {
     'voucherDesc2': 'Celebrate Independence Day with us',
     'voucherDesc3': 'Celebrate Christmas with us',
     'movieDetail': 'Movie Detail',
+    'cast': 'Cast',
+    'storyline': 'Storyline',
     'pinVerification': 'Verification PIN',
     'enterYourPin': 'Enter PIN',
     'forgotPin': 'Forgot PIN',

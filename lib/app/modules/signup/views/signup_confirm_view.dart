@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutix/app/modules/signup/controllers/signup_controller.dart';
+import 'package:flutix/styles/colors.dart';
 import 'package:flutix/styles/styles.dart';
 import 'package:flutix/utils/app_asset.dart';
 import 'package:flutix/utils/regex.dart';
@@ -18,6 +19,7 @@ class SignupConfirmView extends GetView<SignupController> {
     return Obx(() {
       return PageDefault(
         title: 'signUpTitle'.tr,
+        backgroundColor: AppColor.backgroundColor1,
         bottomBarHeight: 90.w,
         bottomBar: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.w),

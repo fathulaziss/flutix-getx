@@ -1,6 +1,7 @@
 import 'package:flutix/app/data/topup_data.dart';
 import 'package:flutix/app/modules/topup/components/topup_item.dart';
 import 'package:flutix/app/modules/topup/controllers/topup_controller.dart';
+import 'package:flutix/styles/colors.dart';
 import 'package:flutix/styles/styles.dart';
 import 'package:flutix/utils/format_currency.dart';
 import 'package:flutix/widgets/buttons/button_primary.dart';
@@ -18,6 +19,7 @@ class TopupView extends GetView<TopupController> {
     return Obx(() {
       return PageDefault(
         title: 'topup'.tr,
+        backgroundColor: AppColor.backgroundColor1,
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: Insets.xl),
           child: Column(

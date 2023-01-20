@@ -2,6 +2,7 @@ import 'package:flutix/app/models/movie_model.dart';
 import 'package:flutix/app_config.dart';
 import 'package:flutix/styles/colors.dart';
 import 'package:flutix/styles/styles.dart';
+import 'package:flutix/utils/app_asset.dart';
 import 'package:flutix/widgets/cards/card_app.dart';
 import 'package:flutix/widgets/others/rating_star.dart';
 import 'package:flutter/material.dart';
@@ -33,17 +34,25 @@ class MovieItem extends StatelessWidget {
         width: width ?? 200.w,
         margin: margin,
         padding: EdgeInsets.zero,
-        color: AppColor.backgroundColor1,
+        color: AppColor.backgroundColor2,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(Corners.med),
           child: Stack(
             children: [
-              Image.network(
-                '${AppConfig.imageBaseUrl}w500${isShowTitleAndRating ? data.backdropPath : data.posterPath}',
-                fit: BoxFit.cover,
-                width: width ?? 200.w,
-                height: height ?? 150.w,
-              ),
+              if (data.backdropPath.isNotEmpty)
+                Image.network(
+                  '${AppConfig.imageBaseUrl}w500${isShowTitleAndRating ? data.backdropPath : data.posterPath}',
+                  fit: BoxFit.cover,
+                  width: width ?? 200.w,
+                  height: height ?? 150.w,
+                )
+              else
+                Center(
+                  child: Padding(
+                    padding: EdgeInsets.all(Insets.med),
+                    child: Image.asset(AppAsset.logo('logo_app.png')),
+                  ),
+                ),
               if (isShowTitleAndRating)
                 Container(
                   width: width ?? 200.w,

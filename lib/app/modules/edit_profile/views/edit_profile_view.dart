@@ -1,6 +1,7 @@
 import 'package:flutix/app/modules/edit_profile/components/edit_profile_form.dart';
 import 'package:flutix/app/modules/edit_profile/components/edit_profile_header.dart';
 import 'package:flutix/app/modules/edit_profile/controllers/edit_profile_controller.dart';
+import 'package:flutix/styles/colors.dart';
 import 'package:flutix/widgets/buttons/button_primary.dart';
 import 'package:flutix/widgets/pages/page_default.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,7 @@ class EditProfileView extends GetView<EditProfileController> {
     return Obx(() {
       return PageDefault(
         title: 'editProfile'.tr,
+        backgroundColor: AppColor.backgroundColor1,
         shadowColor: Colors.transparent,
         bottomBarHeight: 90.w,
         bottomBar: Padding(
