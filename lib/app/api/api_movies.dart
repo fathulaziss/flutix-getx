@@ -63,4 +63,20 @@ class ApiMovies {
       rethrow;
     }
   }
+
+  static Future<Map<String, dynamic>> getCredits({required int movieId}) async {
+    try {
+      final url = 'movie/$movieId/credits?api_key=${AppConfig.apiKey}';
+
+      final response = await ApiService().request(
+        url: url,
+        method: Method.GET,
+        isToken: false,
+      );
+
+      return response;
+    } catch (e) {
+      rethrow;
+    }
+  }
 }

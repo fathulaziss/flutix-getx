@@ -53,17 +53,24 @@ class MovieDetailView extends GetView<MovieDetailController> {
                 child: Text('storyline'.tr, style: TextStyles.text),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: Insets.xl),
-              child: SizedBox(
-                width: Get.width,
-                child: Text(
-                  controller.movieDetailData.value.overview,
-                  style:
-                      TextStyles.text.copyWith(color: AppColor.disabledColor2),
+            if (controller.movieDetailData.value.overview.isNotEmpty)
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: Insets.xl),
+                child: SizedBox(
+                  width: Get.width,
+                  child: Text(
+                    controller.movieDetailData.value.overview,
+                    style: TextStyles.text
+                        .copyWith(color: AppColor.disabledColor2),
+                  ),
                 ),
+              )
+            else
+              Text(
+                'dataNotFound'.tr,
+                style: TextStyles.text.copyWith(color: AppColor.disabledColor2),
               ),
-            ),
+            verticalSpace(Insets.xl),
           ],
         ),
       );
