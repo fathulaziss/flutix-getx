@@ -25,7 +25,6 @@ class MovieVoucherItem extends StatelessWidget {
       onTap: onTap,
       child: CardApp(
         width: double.infinity,
-        height: 80.w,
         padding: EdgeInsets.zero,
         margin: EdgeInsets.only(
           bottom: Insets.lg,
@@ -33,6 +32,7 @@ class MovieVoucherItem extends StatelessWidget {
           right: Insets.xl,
         ),
         child: Stack(
+          alignment: AlignmentDirectional.center,
           children: [
             ClipRRect(
               borderRadius: Corners.medBorder,
@@ -44,22 +44,26 @@ class MovieVoucherItem extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: Insets.xl),
+              padding: EdgeInsets.symmetric(horizontal: Insets.lg),
               child: Row(
                 children: [
                   Expanded(
-                    flex: 2,
+                    flex: 3,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
                           title,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyles.text
                               .copyWith(color: AppColor.disabledColor2),
                         ),
                         Text(
                           desc,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyles.desc
                               .copyWith(color: AppColor.primaryColor3),
                         ),
@@ -68,7 +72,7 @@ class MovieVoucherItem extends StatelessWidget {
                   ),
                   Expanded(
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Text(
                           'OFF ',
