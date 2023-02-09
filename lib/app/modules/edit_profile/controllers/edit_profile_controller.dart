@@ -11,6 +11,7 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:path/path.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class EditProfileController extends GetxController {
   final cUserInfo = Get.find<UserInfoController>();
@@ -65,6 +66,43 @@ class EditProfileController extends GetxController {
       isValidForm(true);
     } else {
       isValidForm(false);
+    }
+  }
+
+  Future<void> checkPermission(ImageSource source) async {
+    final isCameraGranted = await Permission.camera.isGranted;
+    if (isCameraGranted) {
+      await changePhotoProfile(source);
+    } else {
+      showPopUpInfo(
+        title: 'requestPermission'.tr,
+        description: 'requestPermissionCamera'.tr,
+        onPress: () async {
+          Get.back();
+          await requestCameraPermission(source);
+        },
+      );
+    }
+  }
+
+  Future<void> requestCameraPermission(ImageSource source) async {
+    final cameraStatus = await Permission.camera.request();
+    if (cameraStatus.isGranted) {
+      if (cameraStatus.isGranted) {
+        await changePhotoProfile(source);
+      }
+    } else if (cameraStatus.isPermanentlyDenied || cameraStatus.isRestricted) {
+      showPopUpInfo(
+        title: 'information'.tr,
+        description: 'requestPermissionCameraDenyPermanent'.tr,
+        labelButton: 'OK',
+        onPress: () async {
+          Get.back();
+          await openAppSettings();
+        },
+      );
+    } else {
+      showToast(message: 'requestPermissionCameraDeny'.tr);
     }
   }
 

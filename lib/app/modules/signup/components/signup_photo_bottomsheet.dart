@@ -27,7 +27,7 @@ class SignupPhotoBottomSheet extends GetView<SignupController> {
                 children: [
                   IconButton(
                     onPressed: () {
-                      controller.changePhotoProfile(ImageSource.camera);
+                      controller.checkPermission(ImageSource.camera);
                       Get.back();
                     },
                     padding: EdgeInsets.zero,
@@ -50,7 +50,7 @@ class SignupPhotoBottomSheet extends GetView<SignupController> {
                 children: [
                   IconButton(
                     onPressed: () {
-                      controller.changePhotoProfile(ImageSource.gallery);
+                      controller.checkPermission(ImageSource.gallery);
                       Get.back();
                     },
                     padding: EdgeInsets.zero,

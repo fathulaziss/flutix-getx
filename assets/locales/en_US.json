@@ -81,6 +81,10 @@
     "choose": "Choose",
     "success": "Success",
     "information": "Information",
+    "requestPermission": "Request Permission",
+    "requestPermissionCamera": "The application requests permission to access the Camera, Flutix guarantees data usage for application purposes only",
+    "requestPermissionCameraDeny": "Camera Permission Not Granted",
+    "requestPermissionCameraDenyPermanent": "Camera permission not granted, go to settings",
     "underDevelopment": "This Feature is Under Development",
     "jailbreakDevice": "This App Blocked For You Because Your Device has been Rooted"
 }

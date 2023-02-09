@@ -81,6 +81,10 @@
     "choose": "Pilih",
     "success": "Berhasil",
     "information": "Informasi",
+    "requestPermission": "Permintaan Perizinan",
+    "requestPermissionCamera": "Aplikasi meminta izin untuk mengakses Kamera, Flutix menjamin penggunaan data hanya untuk keperluan aplikasi",
+    "requestPermissionCameraDeny": "Akses Kamera Tidak Diberikan",
+    "requestPermissionCameraDenyPermanent": "Izin Kamera tidak diberikan, buka pengaturan",
     "underDevelopment": "Fitur ini Sedang Dalam Pengembangan",
     "jailbreakDevice": "Aplikasi Ini Diblokir Untuk Anda Karena Perangkat Anda Telah Di-Root"
 }
