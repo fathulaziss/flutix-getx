@@ -23,7 +23,7 @@
     "signUpTwoTitle": "Select Your\nFavorite Genre",
     "signUpConfirmTitle": "Confirm\nNew Account",
 
-    "currentShowing": "Current Showing",
+    "nowShowing": "Now Showing",
     "comingSoon": "Coming Soon",
     "browseMovie": "Browse Movie",
     "dataNotFound": "Data Not Found",
@@ -38,6 +38,7 @@
     "movieDetail": "Movie Detail",
     "cast": "Cast",
     "storyline": "Storyline",
+    "letsWatch": "Let's Watch!",
 
     "pinVerification": "Verification PIN",
     "enterYourPin": "Enter PIN",

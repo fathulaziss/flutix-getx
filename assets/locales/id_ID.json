@@ -23,7 +23,7 @@
     "signUpTwoTitle": "Pilih Aliran\nKesukaanmu",
     "signUpConfirmTitle": "Konfirmasi\nAkun Baru",
 
-    "currentShowing": "Sedang Tayang",
+    "nowShowing": "Sedang Tayang",
     "comingSoon": "Segera Tayang",
     "browseMovie": "Jelajahi Film",
     "dataNotFound": "Data Tidak Ditemukan",
@@ -38,6 +38,7 @@
     "movieDetail": "Detil Film",
     "cast": "Pemeran",
     "storyline": "Alur Cerita",
+    "letsWatch": "Nonton Yuk!",
 
     "pinVerification": "PIN Verifikasi",
     "enterYourPin": "Masukkan PIN",

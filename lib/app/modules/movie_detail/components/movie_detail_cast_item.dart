@@ -22,13 +22,13 @@ class MovieDetailCastItem extends StatelessWidget {
     return Padding(
       padding: margin,
       child: SizedBox(
-        width: 80.w,
+        width: 70.w,
         child: Column(
           children: [
             if (data.profilePath.isNotEmpty)
               CardApp(
-                width: 80.w,
-                height: 80.w,
+                width: 70.w,
+                height: 100.w,
                 padding: EdgeInsets.zero,
                 child: ClipRRect(
                   borderRadius: Corners.medBorder,
@@ -40,8 +40,8 @@ class MovieDetailCastItem extends StatelessWidget {
               )
             else
               CardApp(
-                width: 80.w,
-                height: 80.w,
+                width: 70.w,
+                height: 100.w,
                 color: AppColor.backgroundColor2,
                 padding: EdgeInsets.all(Insets.sm),
                 child: ClipRRect(

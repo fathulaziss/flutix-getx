@@ -13,12 +13,12 @@ class MovieDetailCastShimmerItem extends StatelessWidget {
     return Padding(
       padding: margin,
       child: SizedBox(
-        width: 80.w,
+        width: 70.w,
         child: Column(
           children: [
             ShimmerIndicator(
-              width: 80.w,
-              height: 80.w,
+              width: 70.w,
+              height: 100.w,
               borderRadius: Insets.med,
             ),
             verticalSpace(Insets.xs),

@@ -18,7 +18,7 @@ class MovieShowing extends GetView<MovieController> {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: Insets.xl),
-            child: Text('currentShowing'.tr, style: TextStyles.title),
+            child: Text('nowShowing'.tr, style: TextStyles.title),
           ),
           if (controller.isLoadingMovie.value)
             SizedBox(

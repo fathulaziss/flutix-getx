@@ -1,11 +1,12 @@
-import 'package:flutix/app/modules/movie_detail/components/movie_detail_cast.dart';
+import 'package:flutix/app/modules/movie_detail/components/movie_detail_body.dart';
 import 'package:flutix/app/modules/movie_detail/components/movie_detail_poster.dart';
 import 'package:flutix/app/modules/movie_detail/controllers/movie_detail_controller.dart';
 import 'package:flutix/styles/colors.dart';
 import 'package:flutix/styles/styles.dart';
-import 'package:flutix/widgets/others/rating_star.dart';
+import 'package:flutix/widgets/buttons/button_primary.dart';
 import 'package:flutix/widgets/pages/page_default.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class MovieDetailView extends GetView<MovieDetailController> {
@@ -13,67 +14,45 @@ class MovieDetailView extends GetView<MovieDetailController> {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(() {
-      return PageDefault(
-        title: 'movieDetail'.tr,
-        isScrollable: true,
-        backgroundColor: AppColor.backgroundColor1,
-        child: Column(
-          children: [
-            MovieDetailPoster(
-              backdropPath: controller.movieDetailData.value.backdropPath,
-            ),
-            verticalSpace(Insets.lg),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: Insets.xl),
-              child: Text(
-                controller.movieDetailData.value.title,
-                style: TextStyles.title.copyWith(fontWeight: FontWeight.normal),
+    return PageDefault(
+      title: 'movieDetail'.tr,
+      backgroundColor: AppColor.backgroundColor1,
+      bottomBarHeight: (DateTime.parse(controller.movieData.value.releaseDate)
+              .isBefore(DateTime.now()))
+          ? 70.w
+          : 0,
+      bottomBar: (DateTime.parse(controller.movieData.value.releaseDate)
+              .isBefore(DateTime.now()))
+          ? Container(
+              padding: EdgeInsets.symmetric(horizontal: 24.w),
+              decoration: BoxDecoration(
+                boxShadow: Shadows.small,
+                color: AppColor.backgroundColor1,
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: Insets.xl),
-              child: Text(
-                controller.movieDetailData.value.genres
-                    .map((e) => e.name)
-                    .join(', '),
-                style: TextStyles.desc.copyWith(color: AppColor.disabledColor2),
+              child: ButtonPrimary(
+                onTap: () {},
+                label: 'letsWatch'.tr,
+                margin: EdgeInsets.symmetric(horizontal: 24.w),
               ),
-            ),
-            RatingStar(
-              voteAverage: controller.movieDetailData.value.voteAverage,
-              mainAxisAlignment: MainAxisAlignment.center,
-              textColor: AppColor.disabledColor2,
-            ),
-            const MovieDetailCast(),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: Insets.xl),
-              child: SizedBox(
-                width: Get.width,
-                child: Text('storyline'.tr, style: TextStyles.text),
-              ),
-            ),
-            if (controller.movieDetailData.value.overview.isNotEmpty)
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: Insets.xl),
-                child: SizedBox(
-                  width: Get.width,
-                  child: Text(
-                    controller.movieDetailData.value.overview,
-                    style: TextStyles.text
-                        .copyWith(color: AppColor.disabledColor2),
-                  ),
-                ),
-              )
-            else
-              Text(
-                'dataNotFound'.tr,
-                style: TextStyles.text.copyWith(color: AppColor.disabledColor2),
-              ),
-            verticalSpace(Insets.xl),
-          ],
-        ),
-      );
-    });
+            )
+          : const SizedBox(),
+      child: CustomScrollView(
+        shrinkWrap: true,
+        slivers: [
+          SliverAppBar(
+            backgroundColor: Colors.white,
+            shadowColor: Colors.transparent,
+            elevation: 0,
+            expandedHeight: 270.w,
+            toolbarHeight: 180.w,
+            pinned: true,
+            floating: true,
+            automaticallyImplyLeading: false,
+            flexibleSpace: const MovieDetailPoster(),
+          ),
+          const SliverToBoxAdapter(child: MovieDetailBody())
+        ],
+      ),
+    );
   }
 }

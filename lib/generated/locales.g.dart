@@ -32,7 +32,7 @@ class LocaleKeys {
   static const pinTransactionValidationText = 'pinTransactionValidationText';
   static const signUpTwoTitle = 'signUpTwoTitle';
   static const signUpConfirmTitle = 'signUpConfirmTitle';
-  static const currentShowing = 'currentShowing';
+  static const nowShowing = 'nowShowing';
   static const comingSoon = 'comingSoon';
   static const browseMovie = 'browseMovie';
   static const dataNotFound = 'dataNotFound';
@@ -46,6 +46,7 @@ class LocaleKeys {
   static const movieDetail = 'movieDetail';
   static const cast = 'cast';
   static const storyline = 'storyline';
+  static const letsWatch = 'letsWatch';
   static const pinVerification = 'pinVerification';
   static const enterYourPin = 'enterYourPin';
   static const forgotPin = 'forgotPin';
@@ -119,7 +120,7 @@ class Locales {
     'pinTransactionValidationText': 'Pin harus 6 karakter numerik',
     'signUpTwoTitle': 'Pilih Aliran\nKesukaanmu',
     'signUpConfirmTitle': 'Konfirmasi\nAkun Baru',
-    'currentShowing': 'Sedang Tayang',
+    'nowShowing': 'Sedang Tayang',
     'comingSoon': 'Segera Tayang',
     'browseMovie': 'Jelajahi Film',
     'dataNotFound': 'Data Tidak Ditemukan',
@@ -133,6 +134,7 @@ class Locales {
     'movieDetail': 'Detil Film',
     'cast': 'Pemeran',
     'storyline': 'Alur Cerita',
+    'letsWatch': 'Nonton Yuk!',
     'pinVerification': 'PIN Verifikasi',
     'enterYourPin': 'Masukkan PIN',
     'forgotPin': 'Lupa PIN',
@@ -206,7 +208,7 @@ class Locales {
     'pinTransactionValidationText': 'Pin must be 6 numeric character',
     'signUpTwoTitle': 'Select Your\nFavorite Genre',
     'signUpConfirmTitle': 'Confirm\nNew Account',
-    'currentShowing': 'Current Showing',
+    'nowShowing': 'Now Showing',
     'comingSoon': 'Coming Soon',
     'browseMovie': 'Browse Movie',
     'dataNotFound': 'Data Not Found',
@@ -220,6 +222,7 @@ class Locales {
     'movieDetail': 'Movie Detail',
     'cast': 'Cast',
     'storyline': 'Storyline',
+    'letsWatch': 'Let\'s Watch!',
     'pinVerification': 'Verification PIN',
     'enterYourPin': 'Enter PIN',
     'forgotPin': 'Forgot PIN',

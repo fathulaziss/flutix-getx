@@ -21,10 +21,10 @@ class MovieDetailCast extends GetView<MovieDetailController> {
             child: Text('cast'.tr, style: TextStyles.text),
           ),
           Padding(
-            padding: EdgeInsets.only(bottom: Insets.lg),
+            padding: EdgeInsets.only(bottom: Insets.med),
             child: SizedBox(
               width: Get.width,
-              height: 121.w,
+              height: 141.w,
               child: controller.isLoadingCast.value
                   ? ListView.builder(
                       itemCount: 8,
@@ -32,7 +32,7 @@ class MovieDetailCast extends GetView<MovieDetailController> {
                       itemBuilder: (context, index) {
                         return MovieDetailCastShimmerItem(
                           margin: EdgeInsets.only(
-                            left: index == 0 ? 20.w : 16.w,
+                            left: index == 0 ? 20.w : 10.w,
                             right: index == 8 ? 20.w : 0,
                           ),
                         );
@@ -46,7 +46,7 @@ class MovieDetailCast extends GetView<MovieDetailController> {
                             return MovieDetailCastItem(
                               data: controller.listCast[index],
                               margin: EdgeInsets.only(
-                                left: index == 0 ? 20.w : 16.w,
+                                left: index == 0 ? 20.w : 10.w,
                                 right: index == controller.listCast.length - 1
                                     ? 20.w
                                     : 0,

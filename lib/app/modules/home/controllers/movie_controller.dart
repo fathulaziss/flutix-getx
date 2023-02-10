@@ -70,12 +70,10 @@ class MovieController extends GetxController {
         i++;
       }
 
-      tempMovieShowing
-        ..sort(
-          (a, b) => DateTime.parse(a.releaseDate)
-              .compareTo(DateTime.parse(b.releaseDate)),
-        )
-        ..sort((a, b) => b.popularity.compareTo(a.popularity));
+      tempMovieShowing.sort(
+        (a, b) => DateTime.parse(b.releaseDate)
+            .compareTo(DateTime.parse(a.releaseDate)),
+      );
 
       final dataMovieShowing = tempMovieShowing.sublist(0, 10);
 
@@ -116,10 +114,10 @@ class MovieController extends GetxController {
 
       tempMovieComingSoon
         ..sort(
-          (a, b) => DateTime.parse(a.releaseDate)
-              .compareTo(DateTime.parse(b.releaseDate)),
+          (a, b) => DateTime.parse(b.releaseDate)
+              .compareTo(DateTime.parse(a.releaseDate)),
         )
-        ..sort((a, b) => b.voteAverage.compareTo(a.voteAverage));
+        ..sort((a, b) => b.popularity.compareTo(a.popularity));
 
       final dataMovieComingSoon = tempMovieComingSoon.sublist(0, 10);
 
