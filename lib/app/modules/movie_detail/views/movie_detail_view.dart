@@ -1,6 +1,7 @@
 import 'package:flutix/app/modules/movie_detail/components/movie_detail_body.dart';
 import 'package:flutix/app/modules/movie_detail/components/movie_detail_poster.dart';
 import 'package:flutix/app/modules/movie_detail/controllers/movie_detail_controller.dart';
+import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/styles/colors.dart';
 import 'package:flutix/styles/styles.dart';
 import 'package:flutix/widgets/buttons/button_primary.dart';
@@ -30,7 +31,7 @@ class MovieDetailView extends GetView<MovieDetailController> {
                 color: AppColor.backgroundColor1,
               ),
               child: ButtonPrimary(
-                onTap: () {},
+                onTap: () => Get.toNamed(Routes.ORDER),
                 label: 'letsWatch'.tr,
                 margin: EdgeInsets.symmetric(horizontal: 24.w),
               ),

@@ -9,6 +9,8 @@ import 'package:flutix/app/modules/movie_detail/bindings/movie_detail_binding.da
 import 'package:flutix/app/modules/movie_detail/views/movie_detail_view.dart';
 import 'package:flutix/app/modules/onboarding/bindings/onboarding_binding.dart';
 import 'package:flutix/app/modules/onboarding/views/onboarding_view.dart';
+import 'package:flutix/app/modules/order/bindings/order_binding.dart';
+import 'package:flutix/app/modules/order/views/order_view.dart';
 import 'package:flutix/app/modules/pin/bindings/pin_binding.dart';
 import 'package:flutix/app/modules/pin/views/pin_view.dart';
 import 'package:flutix/app/modules/profile/bindings/profile_binding.dart';
@@ -111,6 +113,11 @@ class AppPages {
       name: _Paths.MOVIE_DETAIL,
       page: () => const MovieDetailView(),
       binding: MovieDetailBinding(),
+    ),
+    GetPage(
+      name: _Paths.ORDER,
+      page: () => const OrderView(),
+      binding: OrderBinding(),
     ),
   ];
 }

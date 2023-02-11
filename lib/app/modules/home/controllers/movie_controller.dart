@@ -62,8 +62,8 @@ class MovieController extends GetxController {
         final data = res['results'] as List;
         final dataFilter = data.where((item) {
           return DateTime.parse(item['release_date'])
-                  .isBefore(DateTime.now()) ==
-              true;
+                  .isBefore(DateTime.now()) &&
+              item['vote_average'] >= 6.0;
         }).toList();
         tempMovieShowing
             .addAll(dataFilter.map((e) => MovieModel.fromJson(e)).toList());
@@ -104,8 +104,7 @@ class MovieController extends GetxController {
         );
         final data = res['results'] as List;
         final dataFilter = data.where((item) {
-          return DateTime.parse(item['release_date']).isAfter(DateTime.now()) ==
-              true;
+          return DateTime.parse(item['release_date']).isAfter(DateTime.now());
         }).toList();
         tempMovieComingSoon
             .addAll(dataFilter.map((e) => MovieModel.fromJson(e)).toList());
