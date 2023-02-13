@@ -40,6 +40,18 @@
     "storyline": "Storyline",
     "letsWatch": "Let's Watch!",
 
+    "ticketOrder": "Ticket Order",
+    "chooseDate": "Choose Date",
+    "chooseCinema": "Choose Cinema",
+
+    "mondayShort": "Mon",
+    "tuesdayShort": "Tue",
+    "wednesdayShort": "Wed",
+    "thursdayShort": "Thu",
+    "fridayShort": "Fri",
+    "saturdayShort": "Sat",
+    "sundayShort": "Sun",
+
     "pinVerification": "Verification PIN",
     "enterYourPin": "Enter PIN",
     "forgotPin": "Forgot PIN",

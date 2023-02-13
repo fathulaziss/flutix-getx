@@ -40,6 +40,18 @@
     "storyline": "Alur Cerita",
     "letsWatch": "Nonton Yuk!",
 
+    "ticketOrder": "Pesan Tiket",
+    "chooseDate": "Pilih Tanggal",
+    "chooseCinema": "Pilih Bioskop",
+
+    "mondayShort": "Sen",
+    "tuesdayShort": "Sel",
+    "wednesdayShort": "Rab",
+    "thursdayShort": "Kam",
+    "fridayShort": "Jum",
+    "saturdayShort": "Sab",
+    "sundayShort": "Min",
+
     "pinVerification": "PIN Verifikasi",
     "enterYourPin": "Masukkan PIN",
     "forgotPin": "Lupa PIN",

@@ -53,18 +53,22 @@ class MovieController extends GetxController {
       );
       final int totalPages = response['total_pages'];
       final tempMovieShowing = <MovieModel>[];
+      final dataMovieShowing = <MovieModel>[];
 
       for (var i = 1; i < totalPages;) {
         final res = await ApiMovies.getMovieShowing(
           language: cUtility.appLanguage.value,
           page: i,
         );
+
         final data = res['results'] as List;
+
         final dataFilter = data.where((item) {
           return DateTime.parse(item['release_date'])
                   .isBefore(DateTime.now()) &&
-              item['vote_average'] >= 6.0;
+              item['vote_average'] >= 6.5;
         }).toList();
+
         tempMovieShowing
             .addAll(dataFilter.map((e) => MovieModel.fromJson(e)).toList());
         i++;
@@ -75,7 +79,9 @@ class MovieController extends GetxController {
             .compareTo(DateTime.parse(a.releaseDate)),
       );
 
-      final dataMovieShowing = tempMovieShowing.sublist(0, 10);
+      dataMovieShowing
+        ..addAll(tempMovieShowing.sublist(0, 10))
+        ..sort((a, b) => b.popularity.compareTo(a.popularity));
 
       listMovieShowing(dataMovieShowing);
 
@@ -96,16 +102,20 @@ class MovieController extends GetxController {
       );
       final int totalPages = response['total_pages'];
       final tempMovieComingSoon = <MovieModel>[];
+      final dataMovieComingSoon = <MovieModel>[];
 
       for (var i = 1; i < totalPages;) {
         final res = await ApiMovies.getMovieComingSoon(
           language: cUtility.appLanguage.value,
           page: i,
         );
+
         final data = res['results'] as List;
+
         final dataFilter = data.where((item) {
           return DateTime.parse(item['release_date']).isAfter(DateTime.now());
         }).toList();
+
         tempMovieComingSoon
             .addAll(dataFilter.map((e) => MovieModel.fromJson(e)).toList());
         i++;
@@ -118,7 +128,7 @@ class MovieController extends GetxController {
         )
         ..sort((a, b) => b.popularity.compareTo(a.popularity));
 
-      final dataMovieComingSoon = tempMovieComingSoon.sublist(0, 10);
+      dataMovieComingSoon.addAll(tempMovieComingSoon.sublist(0, 10));
 
       listMovieComingSoon(dataMovieComingSoon);
 

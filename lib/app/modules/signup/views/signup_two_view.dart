@@ -35,7 +35,10 @@ class SignupTwoView extends GetView<SignupController> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('signUpTwoTitle'.tr, style: TextStyles.title),
+              Text(
+                'signUpTwoTitle'.tr,
+                style: TextStyles.text.copyWith(fontWeight: FontWeight.bold),
+              ),
               verticalSpace(24.w),
               GridView.builder(
                 physics: const NeverScrollableScrollPhysics(),

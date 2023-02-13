@@ -47,6 +47,16 @@ class LocaleKeys {
   static const cast = 'cast';
   static const storyline = 'storyline';
   static const letsWatch = 'letsWatch';
+  static const ticketOrder = 'ticketOrder';
+  static const chooseDate = 'chooseDate';
+  static const chooseCinema = 'chooseCinema';
+  static const mondayShort = 'mondayShort';
+  static const tuesdayShort = 'tuesdayShort';
+  static const wednesdayShort = 'wednesdayShort';
+  static const thursdayShort = 'thursdayShort';
+  static const fridayShort = 'fridayShort';
+  static const saturdayShort = 'saturdayShort';
+  static const sundayShort = 'sundayShort';
   static const pinVerification = 'pinVerification';
   static const enterYourPin = 'enterYourPin';
   static const forgotPin = 'forgotPin';
@@ -135,6 +145,16 @@ class Locales {
     'cast': 'Pemeran',
     'storyline': 'Alur Cerita',
     'letsWatch': 'Nonton Yuk!',
+    'ticketOrder': 'Pesan Tiket',
+    'chooseDate': 'Pilih Tanggal',
+    'chooseCinema': 'Pilih Bioskop',
+    'mondayShort': 'Sen',
+    'tuesdayShort': 'Sel',
+    'wednesdayShort': 'Rab',
+    'thursdayShort': 'Kam',
+    'fridayShort': 'Jum',
+    'saturdayShort': 'Sab',
+    'sundayShort': 'Min',
     'pinVerification': 'PIN Verifikasi',
     'enterYourPin': 'Masukkan PIN',
     'forgotPin': 'Lupa PIN',
@@ -223,6 +243,16 @@ class Locales {
     'cast': 'Cast',
     'storyline': 'Storyline',
     'letsWatch': 'Let\'s Watch!',
+    'ticketOrder': 'Ticket Order',
+    'chooseDate': 'Choose Date',
+    'chooseCinema': 'Choose Cinema',
+    'mondayShort': 'Mon',
+    'tuesdayShort': 'Tue',
+    'wednesdayShort': 'Wed',
+    'thursdayShort': 'Thu',
+    'fridayShort': 'Fri',
+    'saturdayShort': 'Sat',
+    'sundayShort': 'Sun',
     'pinVerification': 'Verification PIN',
     'enterYourPin': 'Enter PIN',
     'forgotPin': 'Forgot PIN',

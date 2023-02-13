@@ -27,7 +27,7 @@ class MovieDetailView extends GetView<MovieDetailController> {
           ? Container(
               padding: EdgeInsets.symmetric(horizontal: 24.w),
               decoration: BoxDecoration(
-                boxShadow: Shadows.small,
+                boxShadow: Shadows.shadowsUp,
                 color: AppColor.backgroundColor1,
               ),
               child: ButtonPrimary(

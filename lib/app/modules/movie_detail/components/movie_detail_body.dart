@@ -20,6 +20,7 @@ class MovieDetailBody extends GetView<MovieDetailController> {
             child: Text(
               controller.movieDetailData.value.title,
               style: TextStyles.title.copyWith(fontWeight: FontWeight.normal),
+              textAlign: TextAlign.center,
             ),
           ),
           Padding(
@@ -32,7 +33,7 @@ class MovieDetailBody extends GetView<MovieDetailController> {
             ),
           ),
           RatingStar(
-            voteAverage: controller.movieDetailData.value.voteAverage,
+            voteAverage: controller.movieData.value.voteAverage,
             mainAxisAlignment: MainAxisAlignment.center,
             textColor: AppColor.disabledColor2,
           ),
