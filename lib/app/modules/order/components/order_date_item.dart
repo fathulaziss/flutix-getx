@@ -24,19 +24,28 @@ class OrderDateItem extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: CardApp(
-        width: 55.w,
-        padding: EdgeInsets.all(Insets.sm),
+        width: 80.w,
+        padding: EdgeInsets.zero,
         margin: margin,
-        color: isSelected ? AppColor.yellowColor1 : Colors.white,
+        color: isSelected ? AppColor.primaryColor1 : AppColor.backgroundColor1,
         isOutlined: true,
         outlineColor:
-            isSelected ? AppColor.yellowColor1 : AppColor.disabledColor2,
+            isSelected ? AppColor.primaryColor1 : AppColor.disabledColor2,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(FormatDateTime.shortDayName(data), style: TextStyles.text),
-            verticalSpace(Insets.xs),
-            Text('${data.day}', style: TextStyles.text),
+            Text(
+              '${data.day} ${FormatDateTime.shortMonthName(data)}',
+              style: TextStyles.text.copyWith(
+                color: isSelected ? Colors.white : Colors.black,
+              ),
+            ),
+            Text(
+              FormatDateTime.shortDayName(data).toUpperCase(),
+              style: TextStyles.title.copyWith(
+                color: isSelected ? Colors.white : Colors.black,
+              ),
+            ),
           ],
         ),
       ),

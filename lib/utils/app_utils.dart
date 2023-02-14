@@ -1,10 +1,13 @@
 import 'dart:convert';
 import 'dart:developer' as d;
 
+import 'package:flutix/utils/convert_type.dart';
+import 'package:flutix/utils/format_date_time.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_jailbreak_detection/flutter_jailbreak_detection.dart';
+import 'package:intl/intl.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
@@ -33,6 +36,26 @@ class AppUtils {
       logSys(e.toString());
       return false;
     }
+  }
+
+  static bool checkAvailShowtime({
+    required DateTime selectedDate,
+    required String showtime,
+  }) {
+    final dataShowtime = showtime.split(':');
+
+    final dataShowtimeConvert = FormatDateTime.format(
+      value: DateTime(
+        selectedDate.year,
+        selectedDate.month,
+        selectedDate.day,
+        ConvertType.toInt(dataShowtime[0]),
+        ConvertType.toInt(dataShowtime[1]),
+      ),
+      format: DateFormat('yyyy-MM-dd HH:mm'),
+    );
+
+    return DateTime.now().isBefore(DateTime.parse(dataShowtimeConvert));
   }
 
   static bool isJsonSting(String s) {

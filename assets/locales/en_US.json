@@ -42,7 +42,7 @@
 
     "ticketOrder": "Ticket Order",
     "chooseDate": "Choose Date",
-    "chooseCinema": "Choose Cinema",
+    "showtimes": "Showtimes",
 
     "mondayShort": "Mon",
     "tuesdayShort": "Tue",
@@ -51,6 +51,19 @@
     "fridayShort": "Fri",
     "saturdayShort": "Sat",
     "sundayShort": "Sun",
+
+    "januaryShort": "Jan",
+    "februaryShort": "Feb",
+    "marchShort": "Mar",
+    "AprilShort": "Apr",
+    "meyShort": "Mey",
+    "juneShort": "Jun",
+    "julyShort": "Jul",
+    "augustShort": "Aug",
+    "septemberShort": "Sep",
+    "octoberShort": "Oct",
+    "novemberShort": "Nov",
+    "decemberShort": "Dec",
 
     "pinVerification": "Verification PIN",
     "enterYourPin": "Enter PIN",

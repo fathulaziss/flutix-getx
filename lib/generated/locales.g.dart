@@ -49,7 +49,7 @@ class LocaleKeys {
   static const letsWatch = 'letsWatch';
   static const ticketOrder = 'ticketOrder';
   static const chooseDate = 'chooseDate';
-  static const chooseCinema = 'chooseCinema';
+  static const showtimes = 'showtimes';
   static const mondayShort = 'mondayShort';
   static const tuesdayShort = 'tuesdayShort';
   static const wednesdayShort = 'wednesdayShort';
@@ -57,6 +57,18 @@ class LocaleKeys {
   static const fridayShort = 'fridayShort';
   static const saturdayShort = 'saturdayShort';
   static const sundayShort = 'sundayShort';
+  static const januaryShort = 'januaryShort';
+  static const februaryShort = 'februaryShort';
+  static const marchShort = 'marchShort';
+  static const AprilShort = 'AprilShort';
+  static const meyShort = 'meyShort';
+  static const juneShort = 'juneShort';
+  static const julyShort = 'julyShort';
+  static const augustShort = 'augustShort';
+  static const septemberShort = 'septemberShort';
+  static const octoberShort = 'octoberShort';
+  static const novemberShort = 'novemberShort';
+  static const decemberShort = 'decemberShort';
   static const pinVerification = 'pinVerification';
   static const enterYourPin = 'enterYourPin';
   static const forgotPin = 'forgotPin';
@@ -147,7 +159,7 @@ class Locales {
     'letsWatch': 'Nonton Yuk!',
     'ticketOrder': 'Pesan Tiket',
     'chooseDate': 'Pilih Tanggal',
-    'chooseCinema': 'Pilih Bioskop',
+    'showtimes': 'Jadwal Tayang',
     'mondayShort': 'Sen',
     'tuesdayShort': 'Sel',
     'wednesdayShort': 'Rab',
@@ -155,6 +167,18 @@ class Locales {
     'fridayShort': 'Jum',
     'saturdayShort': 'Sab',
     'sundayShort': 'Min',
+    'januaryShort': 'Jan',
+    'februaryShort': 'Feb',
+    'marchShort': 'Mar',
+    'AprilShort': 'Apr',
+    'meyShort': 'Mei',
+    'juneShort': 'Jun',
+    'julyShort': 'Jul',
+    'augustShort': 'Agu',
+    'septemberShort': 'Sep',
+    'octoberShort': 'Okt',
+    'novemberShort': 'Nov',
+    'decemberShort': 'Des',
     'pinVerification': 'PIN Verifikasi',
     'enterYourPin': 'Masukkan PIN',
     'forgotPin': 'Lupa PIN',
@@ -245,7 +269,7 @@ class Locales {
     'letsWatch': 'Let\'s Watch!',
     'ticketOrder': 'Ticket Order',
     'chooseDate': 'Choose Date',
-    'chooseCinema': 'Choose Cinema',
+    'showtimes': 'Showtimes',
     'mondayShort': 'Mon',
     'tuesdayShort': 'Tue',
     'wednesdayShort': 'Wed',
@@ -253,6 +277,18 @@ class Locales {
     'fridayShort': 'Fri',
     'saturdayShort': 'Sat',
     'sundayShort': 'Sun',
+    'januaryShort': 'Jan',
+    'februaryShort': 'Feb',
+    'marchShort': 'Mar',
+    'AprilShort': 'Apr',
+    'meyShort': 'Mey',
+    'juneShort': 'Jun',
+    'julyShort': 'Jul',
+    'augustShort': 'Aug',
+    'septemberShort': 'Sep',
+    'octoberShort': 'Oct',
+    'novemberShort': 'Nov',
+    'decemberShort': 'Dec',
     'pinVerification': 'Verification PIN',
     'enterYourPin': 'Enter PIN',
     'forgotPin': 'Forgot PIN',

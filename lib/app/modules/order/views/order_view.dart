@@ -1,5 +1,5 @@
-import 'package:flutix/app/modules/order/components/order_cinema.dart';
 import 'package:flutix/app/modules/order/components/order_date.dart';
+import 'package:flutix/app/modules/order/components/order_showtime.dart';
 import 'package:flutix/app/modules/order/controllers/order_controller.dart';
 import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/styles/colors.dart';
@@ -35,7 +35,7 @@ class OrderView extends GetView<OrderController> {
         direction: Axis.vertical,
         children: const [
           OrderDate(),
-          OrderCinema(),
+          OrderShowtime(),
         ],
       ),
     );

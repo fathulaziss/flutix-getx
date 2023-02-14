@@ -42,7 +42,7 @@
 
     "ticketOrder": "Pesan Tiket",
     "chooseDate": "Pilih Tanggal",
-    "chooseCinema": "Pilih Bioskop",
+    "showtimes": "Jadwal Tayang",
 
     "mondayShort": "Sen",
     "tuesdayShort": "Sel",
@@ -51,6 +51,19 @@
     "fridayShort": "Jum",
     "saturdayShort": "Sab",
     "sundayShort": "Min",
+
+    "januaryShort": "Jan",
+    "februaryShort": "Feb",
+    "marchShort": "Mar",
+    "AprilShort": "Apr",
+    "meyShort": "Mei",
+    "juneShort": "Jun",
+    "julyShort": "Jul",
+    "augustShort": "Agu",
+    "septemberShort": "Sep",
+    "octoberShort": "Okt",
+    "novemberShort": "Nov",
+    "decemberShort": "Des",
 
     "pinVerification": "PIN Verifikasi",
     "enterYourPin": "Masukkan PIN",

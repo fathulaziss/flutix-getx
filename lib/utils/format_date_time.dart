@@ -32,4 +32,33 @@ class FormatDateTime {
         return 'sundayShort'.tr;
     }
   }
+
+  static String shortMonthName(DateTime value) {
+    switch (value.month) {
+      case 1:
+        return 'januaryShort'.tr;
+      case 2:
+        return 'februaryShort'.tr;
+      case 3:
+        return 'marchShort'.tr;
+      case 4:
+        return 'AprilShort'.tr;
+      case 5:
+        return 'meyShort'.tr;
+      case 6:
+        return 'juneShort'.tr;
+      case 7:
+        return 'julyShort'.tr;
+      case 8:
+        return 'augustShort'.tr;
+      case 9:
+        return 'septemberShort'.tr;
+      case 10:
+        return 'octoberShort'.tr;
+      case 11:
+        return 'novemberShort'.tr;
+      default:
+        return 'decemberShort'.tr;
+    }
+  }
 }
