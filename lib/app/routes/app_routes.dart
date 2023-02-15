@@ -22,6 +22,7 @@ abstract class Routes {
   static const TRANSACTION_HISTORY = _Paths.TRANSACTION_HISTORY;
   static const MOVIE_DETAIL = _Paths.MOVIE_DETAIL;
   static const ORDER = _Paths.ORDER;
+  static const ORDER_SEAT = _Paths.ORDER_SEAT;
 }
 
 abstract class _Paths {
@@ -43,4 +44,5 @@ abstract class _Paths {
   static const TRANSACTION_HISTORY = '/transaction-history';
   static const MOVIE_DETAIL = '/movie-detail';
   static const ORDER = '/order';
+  static const ORDER_SEAT = '/order-seat';
 }

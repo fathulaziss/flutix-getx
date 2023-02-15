@@ -50,6 +50,8 @@ class OrderController extends GetxController {
 
   void setDate(DateTime value) {
     selectedDate(value);
+    selectedCinema('');
+    selectedShowtime('');
     validateSchedule();
   }
 

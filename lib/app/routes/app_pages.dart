@@ -10,6 +10,7 @@ import 'package:flutix/app/modules/movie_detail/views/movie_detail_view.dart';
 import 'package:flutix/app/modules/onboarding/bindings/onboarding_binding.dart';
 import 'package:flutix/app/modules/onboarding/views/onboarding_view.dart';
 import 'package:flutix/app/modules/order/bindings/order_binding.dart';
+import 'package:flutix/app/modules/order/views/order_seat_view.dart';
 import 'package:flutix/app/modules/order/views/order_view.dart';
 import 'package:flutix/app/modules/pin/bindings/pin_binding.dart';
 import 'package:flutix/app/modules/pin/views/pin_view.dart';
@@ -117,6 +118,11 @@ class AppPages {
     GetPage(
       name: _Paths.ORDER,
       page: () => const OrderView(),
+      binding: OrderBinding(),
+    ),
+    GetPage(
+      name: _Paths.ORDER_SEAT,
+      page: () => const OrderSeatView(),
       binding: OrderBinding(),
     ),
   ];

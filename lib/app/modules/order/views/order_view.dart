@@ -27,7 +27,7 @@ class OrderView extends GetView<OrderController> {
             color: AppColor.backgroundColor1,
           ),
           child: ButtonPrimary(
-            onTap: () => Get.toNamed(Routes.ORDER),
+            onTap: () => Get.toNamed(Routes.ORDER_SEAT),
             label: 'continuee'.tr,
             margin: EdgeInsets.symmetric(horizontal: 24.w),
             enabled: controller.isValidSchedule.value,
