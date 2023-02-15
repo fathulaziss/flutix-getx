@@ -16,7 +16,10 @@ class OrderShowtime extends GetView<OrderController> {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: Insets.xl),
-            child: Text('showtimes'.tr, style: TextStyles.title),
+            child: Text(
+              'showtimes'.tr,
+              style: TextStyles.text.copyWith(fontWeight: FontWeight.bold),
+            ),
           ),
           verticalSpace(Insets.sm),
           Expanded(
@@ -27,10 +30,6 @@ class OrderShowtime extends GetView<OrderController> {
                 return Obx(() {
                   return OrderShowtimeItem(
                     data: controller.listShowtime[index],
-                    onChangeCinema: controller.setCinema,
-                    onChangeShowtime: controller.setShowtime,
-                    selectedDate: controller.selectedDate.value,
-                    selectedShowtime: controller.selectedShowtime.value,
                   );
                 });
               },

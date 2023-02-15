@@ -15,14 +15,18 @@ class MovieBrowse extends GetView<MovieController> {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          verticalSpace(Insets.sm),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: Insets.xl),
-            child: Text('browseMovie'.tr, style: TextStyles.title),
+            child: Text(
+              'browseMovie'.tr,
+              style: TextStyles.text.copyWith(fontWeight: FontWeight.bold),
+            ),
           ),
           Padding(
             padding: EdgeInsets.symmetric(
               horizontal: Insets.xl,
-              vertical: Insets.lg,
+              vertical: Insets.sm,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

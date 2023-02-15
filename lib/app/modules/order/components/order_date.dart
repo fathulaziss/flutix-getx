@@ -17,12 +17,15 @@ class OrderDate extends GetView<OrderController> {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: Insets.xl),
-            child: Text('chooseDate'.tr, style: TextStyles.title),
+            child: Text(
+              'chooseDate'.tr,
+              style: TextStyles.text.copyWith(fontWeight: FontWeight.bold),
+            ),
           ),
           verticalSpace(Insets.sm),
           SizedBox(
             width: Get.width,
-            height: 55.w,
+            height: 50.w,
             child: ListView.builder(
               itemCount: controller.listDate.length,
               scrollDirection: Axis.horizontal,

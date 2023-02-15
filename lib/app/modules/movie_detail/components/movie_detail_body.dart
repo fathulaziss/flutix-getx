@@ -19,7 +19,7 @@ class MovieDetailBody extends GetView<MovieDetailController> {
             padding: EdgeInsets.symmetric(horizontal: Insets.xl),
             child: Text(
               controller.movieDetailData.value.title,
-              style: TextStyles.title.copyWith(fontWeight: FontWeight.normal),
+              style: TextStyles.title,
               textAlign: TextAlign.center,
             ),
           ),
@@ -42,7 +42,10 @@ class MovieDetailBody extends GetView<MovieDetailController> {
             padding: EdgeInsets.symmetric(horizontal: Insets.xl),
             child: SizedBox(
               width: Get.width,
-              child: Text('storyline'.tr, style: TextStyles.text),
+              child: Text(
+                'storyline'.tr,
+                style: TextStyles.text.copyWith(fontWeight: FontWeight.bold),
+              ),
             ),
           ),
           if (controller.movieDetailData.value.overview.isNotEmpty)

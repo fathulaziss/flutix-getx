@@ -56,7 +56,7 @@ class ButtonPrimary extends StatelessWidget {
                   isLoading ? 24.w : radius ?? Insets.sm,
                 ),
                 color: enabled
-                    ? color ?? AppColor.primaryColor2
+                    ? color ?? AppColor.primaryColor1
                     : Colors.transparent,
                 border: Border.all(color: outlineColor ?? Colors.white),
               )
@@ -65,7 +65,7 @@ class ButtonPrimary extends StatelessWidget {
                   isLoading ? 24.w : radius ?? Insets.sm,
                 ),
                 color: enabled
-                    ? color ?? AppColor.primaryColor2
+                    ? color ?? AppColor.primaryColor1
                     : AppColor.disabledColor1,
               ),
         child: Align(

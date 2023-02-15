@@ -1,7 +1,10 @@
 import 'package:flutix/app/data/showtime_data.dart';
 import 'package:flutix/app/models/showtime_model.dart';
 import 'package:flutix/utils/app_utils.dart';
+import 'package:flutix/utils/convert_type.dart';
+import 'package:flutix/utils/format_date_time.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 
 class OrderController extends GetxController {
   RxList<DateTime> listDate = <DateTime>[].obs;
@@ -10,6 +13,8 @@ class OrderController extends GetxController {
   RxList<ShowtimeModel> listShowtime = <ShowtimeModel>[].obs;
   RxString selectedCinema = ''.obs;
   RxString selectedShowtime = ''.obs;
+
+  RxBool isValidSchedule = false.obs;
 
   @override
   void onInit() {
@@ -43,7 +48,10 @@ class OrderController extends GetxController {
     }
   }
 
-  void setDate(DateTime value) => selectedDate(value);
+  void setDate(DateTime value) {
+    selectedDate(value);
+    validateSchedule();
+  }
 
   Future<void> getShowtimes() async {
     try {
@@ -54,13 +62,34 @@ class OrderController extends GetxController {
     }
   }
 
-  void setCinema(String value) => selectedCinema(value);
-
-  void setShowtime(String value) {
-    selectedShowtime(value);
+  void setShowtime({required String cinema, required String showtime}) {
+    selectedCinema(cinema);
+    selectedShowtime(showtime);
+    validateSchedule();
   }
 
-  bool availShowtime() {
-    return false;
+  bool availShowtime(String showtime) {
+    final dataShowtime = showtime.split(':');
+
+    final dataShowtimeConvert = FormatDateTime.format(
+      value: DateTime(
+        selectedDate.value.year,
+        selectedDate.value.month,
+        selectedDate.value.day,
+        ConvertType.toInt(dataShowtime[0]),
+        ConvertType.toInt(dataShowtime[1]),
+      ),
+      format: DateFormat('yyyy-MM-dd HH:mm'),
+    );
+
+    return DateTime.now().isBefore(DateTime.parse(dataShowtimeConvert));
+  }
+
+  void validateSchedule() {
+    if (selectedCinema.value.isNotEmpty && selectedShowtime.value.isNotEmpty) {
+      isValidSchedule(true);
+    } else {
+      isValidSchedule(false);
+    }
   }
 }

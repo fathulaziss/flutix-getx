@@ -27,7 +27,7 @@ class MovieVoucherItem extends StatelessWidget {
         width: double.infinity,
         padding: EdgeInsets.zero,
         margin: EdgeInsets.only(
-          bottom: Insets.lg,
+          bottom: Insets.med,
           left: Insets.xl,
           right: Insets.xl,
         ),

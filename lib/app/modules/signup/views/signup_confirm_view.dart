@@ -38,7 +38,7 @@ class SignupConfirmView extends GetView<SignupController> {
               children: [
                 Text(
                   'signUpConfirmTitle'.tr,
-                  style: TextStyles.title,
+                  style: TextStyles.text.copyWith(fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),
                 verticalSpace(24.w),
@@ -55,13 +55,12 @@ class SignupConfirmView extends GetView<SignupController> {
                 else
                   Image.asset(
                     AppAsset.image('img_photo_profile.png'),
-                    width: 120.w,
+                    width: 100.w,
                   ),
                 verticalSpace(24.w),
                 Text(
                   convertTitleCase(controller.fullName.value),
-                  style:
-                      TextStyles.title.copyWith(fontWeight: FontWeight.normal),
+                  style: TextStyles.text.copyWith(fontWeight: FontWeight.bold),
                 ),
                 Text(controller.email.value, style: TextStyles.text),
               ],

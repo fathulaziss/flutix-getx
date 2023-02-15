@@ -17,8 +17,11 @@ class MovieDetailCast extends GetView<MovieDetailController> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.only(left: 20.w, top: 16.w, bottom: 4.w),
-            child: Text('cast'.tr, style: TextStyles.text),
+            padding: EdgeInsets.only(left: 20.w, top: 16.w, bottom: 8.w),
+            child: Text(
+              'cast'.tr,
+              style: TextStyles.text.copyWith(fontWeight: FontWeight.bold),
+            ),
           ),
           Padding(
             padding: EdgeInsets.only(bottom: Insets.med),

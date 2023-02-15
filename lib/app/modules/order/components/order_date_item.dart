@@ -24,7 +24,7 @@ class OrderDateItem extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: CardApp(
-        width: 80.w,
+        width: 70.w,
         padding: EdgeInsets.zero,
         margin: margin,
         color: isSelected ? AppColor.primaryColor1 : AppColor.backgroundColor1,
@@ -36,13 +36,14 @@ class OrderDateItem extends StatelessWidget {
           children: [
             Text(
               '${data.day} ${FormatDateTime.shortMonthName(data)}',
-              style: TextStyles.text.copyWith(
+              style: TextStyles.desc.copyWith(
                 color: isSelected ? Colors.white : Colors.black,
               ),
             ),
             Text(
               FormatDateTime.shortDayName(data).toUpperCase(),
-              style: TextStyles.title.copyWith(
+              style: TextStyles.text.copyWith(
+                fontWeight: FontWeight.bold,
                 color: isSelected ? Colors.white : Colors.black,
               ),
             ),

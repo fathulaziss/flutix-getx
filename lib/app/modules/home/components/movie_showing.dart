@@ -18,12 +18,15 @@ class MovieShowing extends GetView<MovieController> {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: Insets.xl),
-            child: Text('nowShowing'.tr, style: TextStyles.title),
+            child: Text(
+              'nowShowing'.tr,
+              style: TextStyles.text.copyWith(fontWeight: FontWeight.bold),
+            ),
           ),
           if (controller.isLoadingMovie.value)
             SizedBox(
               width: double.infinity,
-              height: 150.w,
+              height: 134.w,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: 10,
@@ -32,8 +35,8 @@ class MovieShowing extends GetView<MovieController> {
                     padding: EdgeInsets.only(
                       left: index == 0 ? 20.w : 16.w,
                       right: index == 10 ? 20 : 0,
-                      top: 16.w,
-                      bottom: 16.w,
+                      top: 8.w,
+                      bottom: 8.w,
                     ),
                     child: ShimmerIndicator(
                       width: 200.w,
@@ -47,7 +50,7 @@ class MovieShowing extends GetView<MovieController> {
           else
             SizedBox(
               width: double.infinity,
-              height: 150.w,
+              height: 134.w,
               child: controller.listMovieShowing.isNotEmpty
                   ? ListView.builder(
                       scrollDirection: Axis.horizontal,
@@ -61,8 +64,8 @@ class MovieShowing extends GetView<MovieController> {
                                 index == controller.listMovieShowing.length - 1
                                     ? 20
                                     : 0,
-                            top: 16.w,
-                            bottom: 16.w,
+                            top: 8.w,
+                            bottom: 8.w,
                           ),
                           onTap: () => Get.toNamed(
                             Routes.MOVIE_DETAIL,

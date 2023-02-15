@@ -242,6 +242,8 @@ class SignupController extends GetxController {
 
       isLoading(false);
 
+      await Future.delayed(const Duration(milliseconds: 250));
+
       await Get.offAllNamed(Routes.HOME);
     } catch (e) {
       isLoading(false);

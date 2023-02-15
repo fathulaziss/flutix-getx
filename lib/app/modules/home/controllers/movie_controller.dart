@@ -15,6 +15,8 @@ class MovieController extends GetxController {
   RxList<MovieModel> listMovieComingSoon = <MovieModel>[].obs;
   RxList<VoucherModel> listMovieVoucher = <VoucherModel>[].obs;
 
+  double minimumRating = 6.5;
+
   RxBool isLoadingDataUser = false.obs;
   RxBool isLoadingMovie = false.obs;
   RxBool isLoadingMovieComingSoon = false.obs;
@@ -66,7 +68,7 @@ class MovieController extends GetxController {
         final dataFilter = data.where((item) {
           return DateTime.parse(item['release_date'])
                   .isBefore(DateTime.now()) &&
-              item['vote_average'] >= 6.5;
+              item['vote_average'] >= minimumRating;
         }).toList();
 
         tempMovieShowing

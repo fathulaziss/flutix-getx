@@ -16,14 +16,18 @@ class MovieComingSoon extends GetView<MovieController> {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          verticalSpace(Insets.sm),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: Insets.xl),
-            child: Text('comingSoon'.tr, style: TextStyles.title),
+            child: Text(
+              'comingSoon'.tr,
+              style: TextStyles.text.copyWith(fontWeight: FontWeight.bold),
+            ),
           ),
           if (controller.isLoadingMovieComingSoon.value)
             SizedBox(
               width: double.infinity,
-              height: 180.w,
+              height: 164.w,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: 10,
@@ -32,12 +36,12 @@ class MovieComingSoon extends GetView<MovieController> {
                     padding: EdgeInsets.only(
                       left: index == 0 ? 20.w : 16.w,
                       right: index == 10 ? 20 : 0,
-                      top: 16.w,
-                      bottom: 16.w,
+                      top: 8.w,
+                      bottom: 8.w,
                     ),
                     child: ShimmerIndicator(
                       width: 100.w,
-                      height: 180.w,
+                      height: 164.w,
                       borderRadius: Insets.med,
                     ),
                   );
@@ -47,7 +51,7 @@ class MovieComingSoon extends GetView<MovieController> {
           else
             SizedBox(
               width: double.infinity,
-              height: 180.w,
+              height: 164.w,
               child: controller.listMovieComingSoon.isNotEmpty
                   ? ListView.builder(
                       scrollDirection: Axis.horizontal,
@@ -57,15 +61,15 @@ class MovieComingSoon extends GetView<MovieController> {
                           data: controller.listMovieComingSoon[index],
                           isShowTitleAndRating: false,
                           width: 100.w,
-                          height: 180.w,
+                          height: 164.w,
                           margin: EdgeInsets.only(
                             left: index == 0 ? 20.w : 16.w,
                             right: index ==
                                     controller.listMovieComingSoon.length - 1
                                 ? 20
                                 : 0,
-                            top: 16.w,
-                            bottom: 16.w,
+                            top: 8.w,
+                            bottom: 8.w,
                           ),
                           onTap: () => Get.toNamed(
                             Routes.MOVIE_DETAIL,

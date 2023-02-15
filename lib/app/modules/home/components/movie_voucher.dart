@@ -16,16 +16,21 @@ class MovieVoucher extends GetView<MovieController> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: Insets.xl),
-            child: Text('voucher'.tr, style: TextStyles.title),
+            padding: EdgeInsets.symmetric(
+              horizontal: Insets.xl,
+              vertical: Insets.sm,
+            ),
+            child: Text(
+              'voucher'.tr,
+              style: TextStyles.text.copyWith(fontWeight: FontWeight.bold),
+            ),
           ),
-          verticalSpace(Insets.lg),
           if (controller.isLoadingMovieVoucher.value)
             ...List.generate(
               3,
               (index) => Padding(
                 padding: EdgeInsets.only(
-                  bottom: Insets.lg,
+                  bottom: Insets.med,
                   left: Insets.xl,
                   right: Insets.xl,
                 ),

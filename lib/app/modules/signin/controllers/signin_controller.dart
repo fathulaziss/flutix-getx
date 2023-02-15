@@ -64,7 +64,7 @@ class SigninController extends GetxController {
 
       isLoading(false);
 
-      await Future.delayed(const Duration(milliseconds: 300));
+      await Future.delayed(const Duration(milliseconds: 250));
 
       await Get.offNamed(Routes.HOME);
     } catch (e) {
