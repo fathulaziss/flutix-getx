@@ -24,10 +24,10 @@ class MovieDetailCast extends GetView<MovieDetailController> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(bottom: Insets.med),
+            padding: EdgeInsets.only(bottom: Insets.sm),
             child: SizedBox(
               width: Get.width,
-              height: 141.w,
+              height: 145.w,
               child: controller.isLoadingCast.value
                   ? ListView.builder(
                       itemCount: 8,

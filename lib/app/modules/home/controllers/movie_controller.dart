@@ -63,16 +63,16 @@ class MovieController extends GetxController {
           page: i,
         );
 
-        final data = res['results'] as List;
+        final data = (res['results'] as List)
+            .map((e) => MovieModel.fromJson(e))
+            .toList();
 
         final dataFilter = data.where((item) {
-          return DateTime.parse(item['release_date'])
-                  .isBefore(DateTime.now()) &&
-              item['vote_average'] >= minimumRating;
+          return DateTime.parse(item.releaseDate).isBefore(DateTime.now()) &&
+              item.voteAverage >= minimumRating;
         }).toList();
 
-        tempMovieShowing
-            .addAll(dataFilter.map((e) => MovieModel.fromJson(e)).toList());
+        tempMovieShowing.addAll(dataFilter);
         i++;
       }
 
@@ -91,6 +91,7 @@ class MovieController extends GetxController {
     } catch (e) {
       isLoadingMovie(false);
       logSys(e.toString());
+      rethrow;
     }
   }
 
@@ -112,14 +113,15 @@ class MovieController extends GetxController {
           page: i,
         );
 
-        final data = res['results'] as List;
+        final data = (res['results'] as List)
+            .map((e) => MovieModel.fromJson(e))
+            .toList();
 
         final dataFilter = data.where((item) {
-          return DateTime.parse(item['release_date']).isAfter(DateTime.now());
+          return DateTime.parse(item.releaseDate).isAfter(DateTime.now());
         }).toList();
 
-        tempMovieComingSoon
-            .addAll(dataFilter.map((e) => MovieModel.fromJson(e)).toList());
+        tempMovieComingSoon.addAll(dataFilter);
         i++;
       }
 

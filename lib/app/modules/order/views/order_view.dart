@@ -1,7 +1,6 @@
 import 'package:flutix/app/modules/order/components/order_date.dart';
 import 'package:flutix/app/modules/order/components/order_showtime.dart';
 import 'package:flutix/app/modules/order/controllers/order_controller.dart';
-import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/styles/colors.dart';
 import 'package:flutix/styles/styles.dart';
 import 'package:flutix/widgets/buttons/button_primary.dart';
@@ -27,7 +26,7 @@ class OrderView extends GetView<OrderController> {
             color: AppColor.backgroundColor1,
           ),
           child: ButtonPrimary(
-            onTap: () => Get.toNamed(Routes.ORDER_SEAT),
+            onTap: controller.onSubmit,
             label: 'continuee'.tr,
             margin: EdgeInsets.symmetric(horizontal: 24.w),
             enabled: controller.isValidSchedule.value,

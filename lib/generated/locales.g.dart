@@ -50,6 +50,12 @@ class LocaleKeys {
   static const ticketOrder = 'ticketOrder';
   static const chooseDate = 'chooseDate';
   static const showtimes = 'showtimes';
+  static const yourSeat = 'yourSeat';
+  static const totalPrice = 'totalPrice';
+  static const showtimeEnded = 'showtimeEnded';
+  static const available = 'available';
+  static const booked = 'booked';
+  static const selected = 'selected';
   static const mondayShort = 'mondayShort';
   static const tuesdayShort = 'tuesdayShort';
   static const wednesdayShort = 'wednesdayShort';
@@ -105,6 +111,7 @@ class LocaleKeys {
   static const cancel = 'cancel';
   static const yes = 'yes';
   static const no = 'no';
+  static const sorry = 'sorry';
   static const update = 'update';
   static const choose = 'choose';
   static const success = 'success';
@@ -160,6 +167,13 @@ class Locales {
     'ticketOrder': 'Pesan Tiket',
     'chooseDate': 'Pilih Tanggal',
     'showtimes': 'Jadwal Tayang',
+    'yourSeat': 'Tempat Dudukmu',
+    'totalPrice': 'Total Harga',
+    'showtimeEnded':
+        'Jadwal tayang yang kamu pilih telah berakhir, silahkan periksa jadwal tayang lainnya.',
+    'available': 'Tersedia',
+    'booked': 'Terpesan',
+    'selected': 'Terpilih',
     'mondayShort': 'Sen',
     'tuesdayShort': 'Sel',
     'wednesdayShort': 'Rab',
@@ -202,7 +216,7 @@ class Locales {
     'editPhoto': 'Ubah Foto',
     'camera': 'Kamera',
     'gallery': 'Galeri',
-    'continuee': 'Selanjutnya',
+    'continuee': 'Lanjutkan',
     'movie': 'Film',
     'ticket': 'Tiket',
     'topup': 'Isi Saldo',
@@ -215,6 +229,7 @@ class Locales {
     'cancel': 'batal',
     'yes': 'ya',
     'no': 'tidak',
+    'sorry': 'Maaf',
     'update': 'Perbarui',
     'choose': 'Pilih',
     'success': 'Berhasil',
@@ -270,6 +285,13 @@ class Locales {
     'ticketOrder': 'Ticket Order',
     'chooseDate': 'Choose Date',
     'showtimes': 'Showtimes',
+    'yourSeat': 'Your Seat',
+    'totalPrice': 'Total Price',
+    'showtimeEnded':
+        'Your selected showtime has been ended, please check other showtimes.',
+    'available': 'Available',
+    'booked': 'Booked',
+    'selected': 'Selected',
     'mondayShort': 'Mon',
     'tuesdayShort': 'Tue',
     'wednesdayShort': 'Wed',
@@ -325,6 +347,7 @@ class Locales {
     'cancel': 'cancel',
     'yes': 'yes',
     'no': 'no',
+    'sorry': 'Sorry',
     'update': 'Update',
     'choose': 'Choose',
     'success': 'Success',

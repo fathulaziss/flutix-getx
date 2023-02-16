@@ -1,8 +1,10 @@
 import 'package:flutix/app/data/showtime_data.dart';
 import 'package:flutix/app/models/showtime_model.dart';
+import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/utils/app_utils.dart';
 import 'package:flutix/utils/convert_type.dart';
 import 'package:flutix/utils/format_date_time.dart';
+import 'package:flutix/widgets/others/show_dialog.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
@@ -13,6 +15,8 @@ class OrderController extends GetxController {
   RxList<ShowtimeModel> listShowtime = <ShowtimeModel>[].obs;
   RxString selectedCinema = ''.obs;
   RxString selectedShowtime = ''.obs;
+
+  RxInt ticketPrice = 0.obs;
 
   RxBool isValidSchedule = false.obs;
 
@@ -43,6 +47,7 @@ class OrderController extends GetxController {
       );
       listDate(data);
       selectedDate.value = listDate[0];
+      await getTicketPrice();
     } catch (e) {
       logSys(e.toString());
     }
@@ -52,7 +57,35 @@ class OrderController extends GetxController {
     selectedDate(value);
     selectedCinema('');
     selectedShowtime('');
+    getTicketPrice();
     validateSchedule();
+  }
+
+  Future<void> getTicketPrice() async {
+    try {
+      final data = selectedDate.value.weekday;
+      switch (data) {
+        case 1:
+          ticketPrice(35000);
+          break;
+        case 2:
+          ticketPrice(35000);
+          break;
+        case 3:
+          ticketPrice(35000);
+          break;
+        case 4:
+          ticketPrice(35000);
+          break;
+        case 5:
+          ticketPrice(40000);
+          break;
+        default:
+          ticketPrice(50000);
+      }
+    } catch (e) {
+      logSys(e.toString());
+    }
   }
 
   Future<void> getShowtimes() async {
@@ -92,6 +125,21 @@ class OrderController extends GetxController {
       isValidSchedule(true);
     } else {
       isValidSchedule(false);
+    }
+  }
+
+  void onSubmit() {
+    if (isValidSchedule.value && availShowtime(selectedShowtime.value)) {
+      Get.toNamed(Routes.ORDER_SEAT);
+    } else {
+      showPopUpInfo(
+        title: 'sorry'.tr,
+        description: 'showtimeEnded'.tr,
+        onPress: () {
+          setShowtime(cinema: '', showtime: '');
+          Get.back();
+        },
+      );
     }
   }
 }
