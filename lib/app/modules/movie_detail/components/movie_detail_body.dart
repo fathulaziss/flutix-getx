@@ -48,6 +48,7 @@ class MovieDetailBody extends GetView<MovieDetailController> {
               ),
             ),
           ),
+          verticalSpace(Insets.xs),
           if (controller.movieDetailData.value.overview.isNotEmpty)
             Padding(
               padding: EdgeInsets.symmetric(horizontal: Insets.xl),

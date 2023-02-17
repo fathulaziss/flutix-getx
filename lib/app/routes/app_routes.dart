@@ -23,6 +23,7 @@ abstract class Routes {
   static const MOVIE_DETAIL = _Paths.MOVIE_DETAIL;
   static const ORDER = _Paths.ORDER;
   static const ORDER_SEAT = _Paths.ORDER_SEAT;
+  static const ORDER_CONFIRM = _Paths.ORDER_CONFIRM;
 }
 
 abstract class _Paths {
@@ -45,4 +46,5 @@ abstract class _Paths {
   static const MOVIE_DETAIL = '/movie-detail';
   static const ORDER = '/order';
   static const ORDER_SEAT = '/order-seat';
+  static const ORDER_CONFIRM = '/order-confirm';
 }

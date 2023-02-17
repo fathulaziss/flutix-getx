@@ -56,6 +56,15 @@ class LocaleKeys {
   static const available = 'available';
   static const booked = 'booked';
   static const selected = 'selected';
+  static const ticketConfirm = 'ticketConfirm';
+  static const orderId = 'orderId';
+  static const cinema = 'cinema';
+  static const dateAndTime = 'dateAndTime';
+  static const seats = 'seats';
+  static const price = 'price';
+  static const fee = 'fee';
+  static const paymentMethod = 'paymentMethod';
+  static const payNow = 'payNow';
   static const mondayShort = 'mondayShort';
   static const tuesdayShort = 'tuesdayShort';
   static const wednesdayShort = 'wednesdayShort';
@@ -174,6 +183,15 @@ class Locales {
     'available': 'Tersedia',
     'booked': 'Terpesan',
     'selected': 'Terpilih',
+    'ticketConfirm': 'Konfirmasi Tiket',
+    'orderId': 'ID Pemesanan',
+    'cinema': 'Bioskop',
+    'dateAndTime': 'Tanggal & Waktu',
+    'seats': 'Tempat Duduk',
+    'price': 'Harga',
+    'fee': 'Biaya',
+    'paymentMethod': 'Cara Pembayaran',
+    'payNow': 'Bayar Sekarang',
     'mondayShort': 'Sen',
     'tuesdayShort': 'Sel',
     'wednesdayShort': 'Rab',
@@ -292,6 +310,15 @@ class Locales {
     'available': 'Available',
     'booked': 'Booked',
     'selected': 'Selected',
+    'ticketConfirm': 'Ticket Confirm',
+    'orderId': 'Order ID',
+    'cinema': 'Cinema',
+    'dateAndTime': 'Date & Time',
+    'seats': 'Seats',
+    'price': 'Price',
+    'fee': 'Fee',
+    'paymentMethod': 'Payment Method',
+    'payNow': 'Pay Now',
     'mondayShort': 'Mon',
     'tuesdayShort': 'Tue',
     'wednesdayShort': 'Wed',

@@ -1,4 +1,6 @@
 import 'package:flutix/app/data/showtime_data.dart';
+import 'package:flutix/app/models/movie_detail_model.dart';
+import 'package:flutix/app/models/movie_model.dart';
 import 'package:flutix/app/models/showtime_model.dart';
 import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/utils/app_utils.dart';
@@ -9,6 +11,9 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 class OrderController extends GetxController {
+  Rx<MovieModel> movieData = const MovieModel().obs;
+  Rx<MovieDetailModel> movieDetailData = const MovieDetailModel().obs;
+
   RxList<DateTime> listDate = <DateTime>[].obs;
   Rx<DateTime> selectedDate = DateTime(DateTime.now().year).obs;
 
@@ -35,6 +40,13 @@ class OrderController extends GetxController {
   // void onClose() {}
 
   void initData() {
+    final args = Get.arguments;
+
+    if (args != null) {
+      movieData.value = args['movie_data'];
+      movieDetailData.value = args['movie_detail_data'];
+    }
+
     getDates();
     getShowtimes();
   }

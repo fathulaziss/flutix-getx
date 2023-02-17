@@ -31,7 +31,13 @@ class MovieDetailView extends GetView<MovieDetailController> {
                 color: AppColor.backgroundColor1,
               ),
               child: ButtonPrimary(
-                onTap: () => Get.toNamed(Routes.ORDER),
+                onTap: () => Get.toNamed(
+                  Routes.ORDER,
+                  arguments: {
+                    'movie_data': controller.movieData.value,
+                    'movie_detail_data': controller.movieDetailData.value
+                  },
+                ),
                 label: 'letsWatch'.tr,
                 margin: EdgeInsets.symmetric(horizontal: 24.w),
               ),

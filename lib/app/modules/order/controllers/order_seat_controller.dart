@@ -1,4 +1,6 @@
 import 'package:flutix/app/modules/order/controllers/order_controller.dart';
+import 'package:flutix/app/routes/app_pages.dart';
+import 'package:flutix/widgets/others/show_dialog.dart';
 import 'package:get/get.dart';
 
 class OrderSeatController extends GetxController {
@@ -27,6 +29,24 @@ class OrderSeatController extends GetxController {
       isValidSeat(true);
     } else {
       isValidSeat(false);
+    }
+  }
+
+  void onSubmit() {
+    if (isValidSeat.value &&
+        cOrder.availShowtime(cOrder.selectedShowtime.value)) {
+      Get.toNamed(Routes.ORDER_CONFIRM);
+    } else {
+      showPopUpInfo(
+        title: 'sorry'.tr,
+        description: 'showtimeEnded'.tr,
+        onPress: () {
+          cOrder.setShowtime(cinema: '', showtime: '');
+          Get
+            ..back()
+            ..back();
+        },
+      );
     }
   }
 }

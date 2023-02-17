@@ -1,11 +1,10 @@
 import 'package:flutix/app/modules/order/controllers/order_seat_controller.dart';
-import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/styles/colors.dart';
 import 'package:flutix/styles/styles.dart';
 import 'package:flutix/utils/format_currency.dart';
 import 'package:flutix/widgets/buttons/button_primary.dart';
+import 'package:flutix/widgets/cards/card_app.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class OrderSeatButton extends GetView<OrderSeatController> {
@@ -14,15 +13,15 @@ class OrderSeatButton extends GetView<OrderSeatController> {
   @override
   Widget build(BuildContext context) {
     return Obx(() {
-      return Container(
-        padding: EdgeInsets.symmetric(horizontal: 24.w),
-        decoration: BoxDecoration(
-          boxShadow: Shadows.shadowsUp,
-          color: AppColor.backgroundColor1,
-        ),
+      return CardApp(
+        padding:
+            EdgeInsets.symmetric(horizontal: Insets.xl, vertical: Insets.sm),
+        isShowShadows: true,
+        shadows: Shadows.shadowsUp,
+        color: AppColor.backgroundColor1,
+        radius: 0,
         child: Column(
           children: [
-            verticalSpace(Insets.sm),
             Row(
               children: [
                 Text(
@@ -61,9 +60,8 @@ class OrderSeatButton extends GetView<OrderSeatController> {
             ),
             verticalSpace(Insets.sm),
             ButtonPrimary(
-              onTap: () => Get.toNamed(Routes.ORDER),
+              onTap: controller.onSubmit,
               label: 'continuee'.tr,
-              margin: EdgeInsets.symmetric(horizontal: 24.w),
               enabled: controller.isValidSeat.value,
             ),
           ],
