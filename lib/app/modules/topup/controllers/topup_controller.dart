@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutix/app/controllers/user_info_controller.dart';
 import 'package:flutix/app/models/user_model.dart';
+import 'package:flutix/app/modules/transaction_history/controllers/transaction_history_controller.dart';
 import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/utils/app_utils.dart';
 import 'package:flutix/utils/format_currency.dart';
@@ -10,7 +11,7 @@ import 'package:get/get.dart';
 
 class TopupController extends GetxController {
   final cUserInfo = Get.find<UserInfoController>();
-  // final cHistory = Get.find<HistoryController>();
+  final cHistory = Get.find<TransactionHistoryController>();
 
   final cNominal = TextEditingController();
   RxInt nominal = 0.obs;
@@ -84,7 +85,7 @@ class TopupController extends GetxController {
 
       await cUserInfo.updateDataUser(data: dataUser);
       await cUserInfo.getDataUser();
-      // await cHistory.getHistoryTransaction();
+      await cHistory.getTransactionHistory();
 
       isLoading(false);
 
