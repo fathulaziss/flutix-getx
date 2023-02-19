@@ -43,7 +43,7 @@ class TransactionHistoryItem extends StatelessWidget {
                 ),
                 verticalSpace(Insets.xs),
                 Text(
-                  priceFormat(data.amount),
+                  '${(data.transactionType == 'Ticket') ? '-' : '+'} ${priceFormat(data.amount)}',
                   style: (data.transactionType == 'Ticket')
                       ? TextStyles.title
                           .copyWith(fontSize: 12.w, color: AppColor.redColor)
