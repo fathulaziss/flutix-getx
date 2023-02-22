@@ -5,6 +5,7 @@ import 'package:flutix/app/modules/order/controllers/order_controller.dart';
 import 'package:flutix/app/modules/order/controllers/order_seat_controller.dart';
 import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/utils/app_utils.dart';
+import 'package:flutix/widgets/others/show_dialog.dart';
 import 'package:get/get.dart';
 import 'package:random_string/random_string.dart';
 
@@ -37,9 +38,23 @@ class OrderConfirmController extends GetxController {
 
   Future<void> submit() async {
     if (cUserInfo.dataUser.value.balance > totalPrice.value) {
-      final pin = await Get.toNamed(Routes.PIN);
-      if (pin != null) {
-        await payment();
+      if (cOrder.availShowtime(cOrder.selectedShowtime.value)) {
+        final pin = await Get.toNamed(Routes.PIN);
+        if (pin != null) {
+          await payment();
+        }
+      } else {
+        showPopUpInfo(
+          title: 'sorry'.tr,
+          description: 'showtimeEnded'.tr,
+          onPress: () {
+            cOrder.setShowtime(cinema: '', showtime: '');
+            Get
+              ..back()
+              ..back()
+              ..back();
+          },
+        );
       }
     } else {
       await Get.toNamed(Routes.TOPUP);
@@ -92,7 +107,7 @@ class OrderConfirmController extends GetxController {
 
       isLoading(false);
 
-      // await Get.offAllNamed(Routes.ORDER_SUCCESS);
+      await Get.offAllNamed(Routes.ORDER_SUCCESS);
     } catch (e) {
       isLoading(false);
       logSys(e.toString());

@@ -58,6 +58,9 @@
     "fee": "Fee",
     "paymentMethod": "Payment Method",
     "payNow": "Pay Now",
+    "ticketOrderSuccessTitle": "Happy Watching!",
+    "ticketOrderSuccessDesc": "You have successfully\npurchased the ticket",
+    "checkTicket": "Check Ticket",
 
     "mondayShort": "Mon",
     "tuesdayShort": "Tue",

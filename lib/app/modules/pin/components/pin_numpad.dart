@@ -23,6 +23,7 @@ class PinNumpad extends GetView<PinController> {
           )
         ],
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Row(
               children: [

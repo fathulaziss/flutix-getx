@@ -58,6 +58,9 @@
     "fee": "Biaya",
     "paymentMethod": "Cara Pembayaran",
     "payNow": "Bayar Sekarang",
+    "ticketOrderSuccessTitle": "Selamat Menonton!",
+    "ticketOrderSuccessDesc": "Kamu telah berhasil\nmembeli ticket",
+    "checkTicket": "Cek Tiket",
 
     "mondayShort": "Sen",
     "tuesdayShort": "Sel",

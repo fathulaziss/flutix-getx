@@ -12,6 +12,7 @@ import 'package:flutix/app/modules/onboarding/views/onboarding_view.dart';
 import 'package:flutix/app/modules/order/bindings/order_binding.dart';
 import 'package:flutix/app/modules/order/views/order_confirm_view.dart';
 import 'package:flutix/app/modules/order/views/order_seat_view.dart';
+import 'package:flutix/app/modules/order/views/order_success_view.dart';
 import 'package:flutix/app/modules/order/views/order_view.dart';
 import 'package:flutix/app/modules/pin/bindings/pin_binding.dart';
 import 'package:flutix/app/modules/pin/views/pin_view.dart';
@@ -129,6 +130,11 @@ class AppPages {
     GetPage(
       name: _Paths.ORDER_CONFIRM,
       page: () => const OrderConfirmView(),
+      binding: OrderBinding(),
+    ),
+    GetPage(
+      name: _Paths.ORDER_SUCCESS,
+      page: () => const OrderSuccessView(),
       binding: OrderBinding(),
     ),
   ];

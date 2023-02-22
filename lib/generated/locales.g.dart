@@ -65,6 +65,9 @@ class LocaleKeys {
   static const fee = 'fee';
   static const paymentMethod = 'paymentMethod';
   static const payNow = 'payNow';
+  static const ticketOrderSuccessTitle = 'ticketOrderSuccessTitle';
+  static const ticketOrderSuccessDesc = 'ticketOrderSuccessDesc';
+  static const checkTicket = 'checkTicket';
   static const mondayShort = 'mondayShort';
   static const tuesdayShort = 'tuesdayShort';
   static const wednesdayShort = 'wednesdayShort';
@@ -192,6 +195,9 @@ class Locales {
     'fee': 'Biaya',
     'paymentMethod': 'Cara Pembayaran',
     'payNow': 'Bayar Sekarang',
+    'ticketOrderSuccessTitle': 'Selamat Menonton!',
+    'ticketOrderSuccessDesc': 'Kamu telah berhasil\nmembeli ticket',
+    'checkTicket': 'Cek Tiket',
     'mondayShort': 'Sen',
     'tuesdayShort': 'Sel',
     'wednesdayShort': 'Rab',
@@ -319,6 +325,9 @@ class Locales {
     'fee': 'Fee',
     'paymentMethod': 'Payment Method',
     'payNow': 'Pay Now',
+    'ticketOrderSuccessTitle': 'Happy Watching!',
+    'ticketOrderSuccessDesc': 'You have successfully\npurchased the ticket',
+    'checkTicket': 'Check Ticket',
     'mondayShort': 'Mon',
     'tuesdayShort': 'Tue',
     'wednesdayShort': 'Wed',

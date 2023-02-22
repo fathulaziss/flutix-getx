@@ -20,6 +20,7 @@ class TopupView extends GetView<TopupController> {
       return PageDefault(
         title: 'topup'.tr,
         backgroundColor: AppColor.backgroundColor1,
+        isScrollable: true,
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: Insets.xl),
           child: Column(

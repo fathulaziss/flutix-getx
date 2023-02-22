@@ -51,6 +51,7 @@ class TopupController extends GetxController {
   }
 
   Future<void> submit() async {
+    AppUtils.dismissKeyboard();
     final pin = await Get.toNamed(Routes.PIN);
     if (pin != null) {
       await topup();
@@ -59,7 +60,6 @@ class TopupController extends GetxController {
 
   Future<void> topup() async {
     try {
-      AppUtils.dismissKeyboard();
       isLoading(true);
       final collectionTransaction =
           FirebaseFirestore.instance.collection('transactions');
