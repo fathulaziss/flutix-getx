@@ -72,9 +72,10 @@ class OrderConfirmController extends GetxController {
       await Future.delayed(const Duration(seconds: 2));
 
       await collectionTicketTransaction.add({
+        'movie': cOrder.movieData.value.toJson(),
         'cinema': cOrder.selectedCinema.value,
         'showtime': cOrder.selectedShowtime.value,
-        'selected_date': cOrder.selectedDate.value,
+        'selected_date': cOrder.selectedDate.value.millisecondsSinceEpoch,
         'seats': cOrderSeat.selectedSeats,
         'ticket_price': cOrder.ticketPrice.value,
         'transaction_date': DateTime.now().millisecondsSinceEpoch,
@@ -100,6 +101,7 @@ class OrderConfirmController extends GetxController {
         imageProfile: cUserInfo.dataUser.value.imageProfile,
         pinTransaction: cUserInfo.dataUser.value.pinTransaction,
         userId: cUserInfo.dataUser.value.userId,
+        favoriteGenres: cUserInfo.dataUser.value.favoriteGenres,
       );
 
       await cUserInfo.updateDataUser(data: dataUser);

@@ -1,7 +1,9 @@
+import 'package:flutix/app/modules/home/controllers/ticket_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
+  final cTicket = Get.find<TicketController>();
   PageController pageController = PageController();
   RxInt selectedPage = 0.obs;
 
@@ -12,11 +14,11 @@ class HomeController extends GetxController {
       final pageIndex = args['index'];
       pageController = PageController(initialPage: pageIndex);
       selectedPage(pageIndex);
-      // switch (pageIndex) {
-      //   case 1:
-      //     cTicket.getTicket();
-      //     break;
-      // }
+      switch (pageIndex) {
+        case 1:
+          cTicket.getTicket();
+          break;
+      }
     }
     super.onInit();
   }
@@ -24,5 +26,11 @@ class HomeController extends GetxController {
   void navigation(int index) {
     selectedPage(index);
     pageController.jumpToPage(index);
+
+    switch (index) {
+      case 1:
+        cTicket.getTicket();
+        break;
+    }
   }
 }
