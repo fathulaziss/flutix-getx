@@ -62,6 +62,9 @@
     "ticketOrderSuccessDesc": "You have successfully\npurchased the ticket",
     "checkTicket": "Check Ticket",
 
+    "active": "Active",
+    "complete": "Complete",
+
     "mondayShort": "Mon",
     "tuesdayShort": "Tue",
     "wednesdayShort": "Wed",
