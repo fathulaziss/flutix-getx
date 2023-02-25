@@ -1,3 +1,4 @@
+import 'package:flutix/styles/colors.dart';
 import 'package:flutix/utils/app_asset.dart';
 import 'package:flutix/widgets/cards/card_app.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,7 @@ class TransactionHistoryTicket extends StatelessWidget {
       constraints: BoxConstraints(minHeight: 80.w),
       padding: EdgeInsets.all(10.w),
       radius: 10.w,
+      color: AppColor.backgroundColor2,
       child: Center(
         child: Image.asset(AppAsset.logo('logo_app.png')),
       ),
