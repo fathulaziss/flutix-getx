@@ -70,6 +70,7 @@ class LocaleKeys {
   static const checkTicket = 'checkTicket';
   static const active = 'active';
   static const complete = 'complete';
+  static const dontHaveTicket = 'dontHaveTicket';
   static const mondayShort = 'mondayShort';
   static const tuesdayShort = 'tuesdayShort';
   static const wednesdayShort = 'wednesdayShort';
@@ -202,6 +203,7 @@ class Locales {
     'checkTicket': 'Cek Tiket',
     'active': 'Aktif',
     'complete': 'Selesai',
+    'dontHaveTicket': 'Kamu tidak memiliki tiket.',
     'mondayShort': 'Sen',
     'tuesdayShort': 'Sel',
     'wednesdayShort': 'Rab',
@@ -334,6 +336,7 @@ class Locales {
     'checkTicket': 'Check Ticket',
     'active': 'Active',
     'complete': 'Complete',
+    'dontHaveTicket': 'You don\'t have ticket.',
     'mondayShort': 'Mon',
     'tuesdayShort': 'Tue',
     'wednesdayShort': 'Wed',

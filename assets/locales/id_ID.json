@@ -64,6 +64,7 @@
 
     "active": "Aktif",
     "complete": "Selesai",
+    "dontHaveTicket": "Kamu tidak memiliki tiket.",
 
     "mondayShort": "Sen",
     "tuesdayShort": "Sel",

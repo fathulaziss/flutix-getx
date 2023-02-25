@@ -64,6 +64,7 @@
 
     "active": "Active",
     "complete": "Complete",
+    "dontHaveTicket": "You don't have ticket.",
 
     "mondayShort": "Mon",
     "tuesdayShort": "Tue",

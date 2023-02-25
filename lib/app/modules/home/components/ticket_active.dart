@@ -1,5 +1,7 @@
+import 'package:flutix/app/modules/home/components/ticket_empty.dart';
 import 'package:flutix/app/modules/home/components/ticket_item.dart';
 import 'package:flutix/app/modules/home/controllers/ticket_controller.dart';
+import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/widgets/others/loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -21,30 +23,26 @@ class TicketActive extends GetView<TicketController> {
                     itemCount: controller.listTicketActive.length,
                     itemBuilder: (context, index) {
                       return Padding(
-                          padding: EdgeInsets.only(
-                            bottom:
-                                index == controller.listTicketActive.length - 1
-                                    ? 70.w
-                                    : 0,
+                        padding: EdgeInsets.only(
+                          bottom:
+                              index == controller.listTicketActive.length - 1
+                                  ? 70.w
+                                  : 0,
+                        ),
+                        child: TicketItem(
+                          onTap: () => Get.toNamed(
+                            Routes.TICKET_DETAIL,
+                            arguments: {
+                              'data': controller.listTicketActive[index]
+                            },
                           ),
-                          child: TicketItem(
-                            data: controller.listTicketActive[index],
-                          )
-                          // child: TicketItem(
-                          //   data: controller.listTicketActive[index],
-                          //   onTap: () => Get.toNamed(
-                          //     Routes.TICKET_DETAIL,
-                          //     arguments: {
-                          //       'data': controller.listTicketActive[index]
-                          //     },
-                          //   ),
-                          // ),
-                          );
+                          data: controller.listTicketActive[index],
+                        ),
+                      );
                     },
                   ),
                 )
-              // : TicketEmpty(desc: 'dontHaveTicket'.tr);
-              : const Center(child: Text('Data Tidak Ada'));
+              : const TicketEmpty();
     });
   }
 }

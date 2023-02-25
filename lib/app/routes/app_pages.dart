@@ -25,6 +25,8 @@ import 'package:flutix/app/modules/signup/views/signup_confirm_view.dart';
 import 'package:flutix/app/modules/signup/views/signup_two_view.dart';
 import 'package:flutix/app/modules/signup/views/signup_view.dart';
 import 'package:flutix/app/modules/splash_screen_view.dart';
+import 'package:flutix/app/modules/ticket_detail/bindings/ticket_detail_binding.dart';
+import 'package:flutix/app/modules/ticket_detail/views/ticket_detail_view.dart';
 import 'package:flutix/app/modules/topup/bindings/topup_binding.dart';
 import 'package:flutix/app/modules/topup/views/topup_view.dart';
 import 'package:flutix/app/modules/transaction_history/bindings/transaction_history_binding.dart';
@@ -136,6 +138,11 @@ class AppPages {
       name: _Paths.ORDER_SUCCESS,
       page: () => const OrderSuccessView(),
       binding: OrderBinding(),
+    ),
+    GetPage(
+      name: _Paths.TICKET_DETAIL,
+      page: () => const TicketDetailView(),
+      binding: TicketDetailBinding(),
     ),
   ];
 }
