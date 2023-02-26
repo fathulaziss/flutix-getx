@@ -71,6 +71,8 @@ class LocaleKeys {
   static const active = 'active';
   static const complete = 'complete';
   static const dontHaveTicket = 'dontHaveTicket';
+  static const scanQr = 'scanQr';
+  static const ticketDetail = 'ticketDetail';
   static const mondayShort = 'mondayShort';
   static const tuesdayShort = 'tuesdayShort';
   static const wednesdayShort = 'wednesdayShort';
@@ -204,6 +206,9 @@ class Locales {
     'active': 'Aktif',
     'complete': 'Selesai',
     'dontHaveTicket': 'Kamu tidak memiliki tiket.',
+    'scanQr':
+        'Pindai kode QR di bawah\nuntuk mendapatkan tiket kamu di bioskop.',
+    'ticketDetail': 'Detil Tiket',
     'mondayShort': 'Sen',
     'tuesdayShort': 'Sel',
     'wednesdayShort': 'Rab',
@@ -337,6 +342,8 @@ class Locales {
     'active': 'Active',
     'complete': 'Complete',
     'dontHaveTicket': 'You don\'t have ticket.',
+    'scanQr': 'Scan QR code below\nto collect your ticket at cinema.',
+    'ticketDetail': 'Ticket Detail',
     'mondayShort': 'Mon',
     'tuesdayShort': 'Tue',
     'wednesdayShort': 'Wed',

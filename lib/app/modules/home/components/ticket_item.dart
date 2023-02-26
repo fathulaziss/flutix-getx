@@ -67,7 +67,10 @@ class TicketItem extends StatelessWidget {
                     style: TextStyles.text
                         .copyWith(color: AppColor.disabledColor2),
                   ),
-                  RatingStar(voteAverage: data.movie.voteAverage),
+                  RatingStar(
+                    voteAverage: data.movie.voteAverage,
+                    textColor: Colors.black,
+                  ),
                 ],
               ),
             )

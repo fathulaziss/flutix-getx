@@ -65,6 +65,8 @@
     "active": "Aktif",
     "complete": "Selesai",
     "dontHaveTicket": "Kamu tidak memiliki tiket.",
+    "scanQr": "Pindai kode QR di bawah\nuntuk mendapatkan tiket kamu di bioskop.",
+    "ticketDetail": "Detil Tiket",
 
     "mondayShort": "Sen",
     "tuesdayShort": "Sel",

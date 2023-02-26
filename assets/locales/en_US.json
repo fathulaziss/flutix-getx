@@ -65,6 +65,8 @@
     "active": "Active",
     "complete": "Complete",
     "dontHaveTicket": "You don't have ticket.",
+    "scanQr": "Scan QR code below\nto collect your ticket at cinema.",
+    "ticketDetail": "Ticket Detail",
 
     "mondayShort": "Mon",
     "tuesdayShort": "Tue",
