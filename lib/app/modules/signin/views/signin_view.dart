@@ -53,6 +53,23 @@ class SigninView extends GetView<SigninController> {
                       validation: (value) => value.isNotEmpty,
                       validationText: 'passwordValidationText'.tr,
                     ),
+                    verticalSpace(Insets.xs),
+                    Row(
+                      children: [
+                        IconButton(
+                          onPressed: controller.setRememberMe,
+                          padding: EdgeInsets.zero,
+                          constraints:
+                              BoxConstraints(minWidth: 24.w, minHeight: 24.w),
+                          highlightColor: Colors.transparent,
+                          icon: controller.isRememberMe.value
+                              ? const Icon(Icons.check_box)
+                              : const Icon(Icons.check_box_outline_blank),
+                        ),
+                        horizontalSpace(Insets.xs),
+                        Text('rememberMe'.tr, style: TextStyles.text),
+                      ],
+                    ),
                     verticalSpace(30.w),
                     ButtonPrimary(
                       label: 'signIn'.tr,

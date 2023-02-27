@@ -1,6 +1,8 @@
 // ignore_for_file: constant_identifier_names
 
 const String CACHE_ACCESS_TOKEN = 'access_token';
+const String CACHE_ACCESS_USERNAME = 'access_username';
+const String CACHE_ACCESS_PASSWORD = 'access_password';
 const String CACHE_API_LOG = 'log_api';
 const String CACHE_PIN = 'pin';
 const String LOG_BUTTON = 'log_button';

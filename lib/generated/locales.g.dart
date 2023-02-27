@@ -104,6 +104,7 @@ class LocaleKeys {
   static const dontHaveTransaction = 'dontHaveTransaction';
   static const start = 'start';
   static const signIn = 'signIn';
+  static const rememberMe = 'rememberMe';
   static const signOut = 'signOut';
   static const signUp = 'signUp';
   static const profile = 'profile';
@@ -240,6 +241,7 @@ class Locales {
     'dontHaveTransaction': 'Kamu tidak memiliki transaksi.',
     'start': 'Mulai',
     'signIn': 'Masuk',
+    'rememberMe': 'Ingat Saya',
     'signOut': 'Keluar',
     'signUp': 'Daftar',
     'profile': 'Profil',
@@ -375,6 +377,7 @@ class Locales {
     'dontHaveTransaction': 'You don\'t have transaction.',
     'start': 'Get Started',
     'signIn': 'Sign In',
+    'rememberMe': 'Remember Me',
     'signOut': 'Sign Out',
     'signUp': 'Sign Up',
     'profile': 'Profile',

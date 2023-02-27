@@ -31,9 +31,10 @@ class SignupView extends GetView<SignupController> {
             color: AppColor.backgroundColor1,
           ),
           child: ButtonPrimary(
-            onTap: () => controller.goToFormtwo(),
+            onTap: controller.goToFormtwo,
             label: 'continuee'.tr,
             margin: EdgeInsets.symmetric(horizontal: 24.w),
+            enabled: controller.isValidFormOne.value,
           ),
         ),
         child: Padding(
