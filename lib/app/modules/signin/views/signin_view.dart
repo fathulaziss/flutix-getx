@@ -1,6 +1,7 @@
 import 'package:flutix/app/models/app_language_model.dart';
 import 'package:flutix/app/modules/signin/controllers/signin_controller.dart';
 import 'package:flutix/app/routes/app_pages.dart';
+import 'package:flutix/styles/colors.dart';
 import 'package:flutix/styles/styles.dart';
 import 'package:flutix/utils/app_asset.dart';
 import 'package:flutix/widgets/buttons/button_primary.dart';
@@ -86,7 +87,7 @@ class SigninView extends GetView<SigninController> {
                     width: 72.w,
                     child: InputDropdown(
                       hintText: '',
-                      borderColor: Colors.blueGrey[200],
+                      borderColor: AppColor.backgroundColor2,
                       outlinedBorderColor: Colors.transparent,
                       textAlign: TextAlign.center,
                       items: [

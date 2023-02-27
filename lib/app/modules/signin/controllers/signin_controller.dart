@@ -69,7 +69,11 @@ class SigninController extends GetxController {
       await Get.offNamed(Routes.HOME);
     } catch (e) {
       isLoading(false);
-      showPopUpInfo(title: 'Error', description: e.toString());
+      showPopUpInfo(
+        title: 'Error',
+        description:
+            e.toString().replaceAll('[firebase_auth/wrong-password] ', ''),
+      );
       logSys(e.toString());
     }
   }

@@ -4,6 +4,7 @@ import 'package:flutix/styles/styles.dart';
 import 'package:flutix/utils/format_currency.dart';
 import 'package:flutix/widgets/buttons/button_primary.dart';
 import 'package:flutix/widgets/cards/card_app.dart';
+import 'package:flutix/widgets/others/show_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -30,16 +31,24 @@ class OrderConfirmButton extends GetView<OrderConfirmController> {
                   'paymentMethod'.tr,
                   style: TextStyles.desc.copyWith(fontWeight: FontWeight.bold),
                 ),
-                CardApp(
-                  width: 18.w,
-                  constraints: BoxConstraints(minHeight: 18.w),
-                  padding: EdgeInsets.zero,
-                  color: AppColor.disabledColor2,
-                  radius: 50.w,
-                  child: Icon(
-                    Icons.more_horiz,
-                    color: Colors.white,
-                    size: 18.w,
+                InkWell(
+                  onTap: () {
+                    showPopUpInfo(
+                      title: 'information'.tr,
+                      description: 'underDevelopment'.tr,
+                    );
+                  },
+                  child: CardApp(
+                    width: 18.w,
+                    constraints: BoxConstraints(minHeight: 18.w),
+                    padding: EdgeInsets.zero,
+                    color: AppColor.disabledColor2,
+                    radius: 50.w,
+                    child: Icon(
+                      Icons.more_horiz,
+                      color: Colors.white,
+                      size: 18.w,
+                    ),
                   ),
                 )
               ],

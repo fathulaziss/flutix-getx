@@ -20,7 +20,7 @@ class TicketItem extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: CardApp(
-        margin: EdgeInsets.symmetric(horizontal: Insets.xl),
+        margin: EdgeInsets.fromLTRB(Insets.xl, 0, Insets.xl, Insets.med),
         radius: Insets.med,
         isShowShadows: true,
         child: Row(

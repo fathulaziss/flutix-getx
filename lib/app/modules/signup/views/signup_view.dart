@@ -1,10 +1,8 @@
 import 'package:flutix/app/modules/signup/components/signup_photo.dart';
 import 'package:flutix/app/modules/signup/controllers/signup_controller.dart';
-import 'package:flutix/app/routes/app_pages.dart';
 import 'package:flutix/styles/colors.dart';
 import 'package:flutix/styles/styles.dart';
 import 'package:flutix/widgets/buttons/button_primary.dart';
-import 'package:flutix/widgets/buttons/button_text_rich.dart';
 import 'package:flutix/widgets/inputs/input_date.dart';
 import 'package:flutix/widgets/inputs/input_email.dart';
 import 'package:flutix/widgets/inputs/input_password.dart';
@@ -25,25 +23,18 @@ class SignupView extends GetView<SignupController> {
         title: 'signUpTitle'.tr,
         backgroundColor: AppColor.backgroundColor1,
         isScrollable: true,
-        bottomBarHeight: 90.w,
-        bottomBar: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24.w),
-              child: ButtonPrimary(
-                onTap: () => Get.toNamed(Routes.SIGNUP_TWO),
-                label: 'continuee'.tr,
-                margin: EdgeInsets.symmetric(horizontal: 24.w),
-                enabled: controller.isValidFormOne.value,
-              ),
-            ),
-            ButtonTextRich(
-              label1: 'haveAccount'.tr,
-              label2: 'signIn'.tr,
-              onPressed: Get.back,
-            ),
-          ],
+        bottomBarHeight: 70.w,
+        bottomBar: Container(
+          padding: EdgeInsets.symmetric(horizontal: 24.w),
+          decoration: BoxDecoration(
+            boxShadow: Shadows.shadowsUp,
+            color: AppColor.backgroundColor1,
+          ),
+          child: ButtonPrimary(
+            onTap: () => controller.goToFormtwo(),
+            label: 'continuee'.tr,
+            margin: EdgeInsets.symmetric(horizontal: 24.w),
+          ),
         ),
         child: Padding(
           padding: EdgeInsets.all(24.w),

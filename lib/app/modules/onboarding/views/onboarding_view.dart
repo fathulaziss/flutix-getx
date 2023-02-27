@@ -57,7 +57,7 @@ class OnboardingView extends GetView<OnboardingController> {
                     width: 72.w,
                     child: InputDropdown(
                       hintText: '',
-                      borderColor: Colors.blueGrey[200],
+                      borderColor: AppColor.backgroundColor2,
                       outlinedBorderColor: Colors.transparent,
                       textAlign: TextAlign.center,
                       items: [

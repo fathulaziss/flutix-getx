@@ -2,6 +2,7 @@ import 'package:flutix/app/modules/home/components/ticket_empty.dart';
 import 'package:flutix/app/modules/home/components/ticket_item.dart';
 import 'package:flutix/app/modules/home/controllers/ticket_controller.dart';
 import 'package:flutix/app/routes/app_pages.dart';
+import 'package:flutix/styles/styles.dart';
 import 'package:flutix/widgets/others/loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -17,7 +18,7 @@ class TicketActive extends GetView<TicketController> {
           ? LoadingIndicatorBounce(size: 25.w)
           : controller.listTicketActive.isNotEmpty
               ? Padding(
-                  padding: EdgeInsets.only(top: 10.w),
+                  padding: EdgeInsets.only(top: Insets.med),
                   child: ListView.builder(
                     padding: EdgeInsets.zero,
                     itemCount: controller.listTicketActive.length,

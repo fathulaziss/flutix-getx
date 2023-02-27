@@ -175,6 +175,12 @@ class SignupController extends GetxController {
     }
   }
 
+  Future<void> goToFormtwo() async {
+    selectedGenre.clear();
+    validateFormTwo();
+    await Get.toNamed(Routes.SIGNUP_TWO);
+  }
+
   void selectGenre(GenreModel value) {
     if (!selectedGenre.contains(value)) {
       if (selectedGenre.length < 4) {
@@ -247,7 +253,12 @@ class SignupController extends GetxController {
       await Get.offAllNamed(Routes.HOME);
     } catch (e) {
       isLoading(false);
-      showPopUpInfo(title: 'Error', description: e.toString());
+      showPopUpInfo(
+        title: 'Error',
+        description: e
+            .toString()
+            .replaceAll('[firebase_auth/email-already-in-use] ', ''),
+      );
       logSys(e.toString());
     }
   }

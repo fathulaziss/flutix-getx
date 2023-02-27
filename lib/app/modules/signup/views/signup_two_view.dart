@@ -19,9 +19,13 @@ class SignupTwoView extends GetView<SignupController> {
         title: 'signUpTitle'.tr,
         backgroundColor: AppColor.backgroundColor1,
         isScrollable: true,
-        bottomBarHeight: 90.w,
-        bottomBar: Padding(
+        bottomBarHeight: 70.w,
+        bottomBar: Container(
           padding: EdgeInsets.symmetric(horizontal: 24.w),
+          decoration: BoxDecoration(
+            boxShadow: Shadows.shadowsUp,
+            color: AppColor.backgroundColor1,
+          ),
           child: ButtonPrimary(
             onTap: () => Get.toNamed(Routes.SIGNUP_CONFIRM),
             label: 'continuee'.tr,

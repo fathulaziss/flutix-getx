@@ -13,6 +13,7 @@ class TicketDetailController extends GetxController {
     final args = Get.arguments;
     if (args != null) {
       data.value = args['data'];
+      checkTicketActive();
     }
     super.onInit();
   }
