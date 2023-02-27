@@ -20,7 +20,7 @@ class TransactionHistoryItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return CardApp(
       margin: EdgeInsets.fromLTRB(20.w, 0, 20.w, 20.w),
-      radius: 16.w,
+      radius: Insets.med,
       isShowShadows: true,
       shadows: Shadows.shadowsUp,
       child: Row(
