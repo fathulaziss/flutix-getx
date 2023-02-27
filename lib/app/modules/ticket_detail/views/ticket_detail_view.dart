@@ -16,37 +16,40 @@ class TicketDetailView extends GetView<TicketDetailController> {
 
   @override
   Widget build(BuildContext context) {
-    return PageDefault(
-      title: 'ticketDetail'.tr,
-      backgroundColor: AppColor.backgroundColor1,
-      isScrollable: true,
-      child: CardApp(
-        margin: EdgeInsets.all(Insets.xl),
-        padding: EdgeInsets.zero,
-        color: Colors.white,
-        radius: Insets.med,
-        isShowShadows: true,
-        child: Column(
-          children: [
-            TicketDetailPoster(data: controller.data.value),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: Insets.xl),
-              child: Text(
-                controller.data.value.movie.title,
-                style: TextStyles.title.copyWith(fontSize: 14.w),
-                textAlign: TextAlign.center,
+    return Obx(() {
+      return PageDefault(
+        title: 'ticketDetail'.tr,
+        backgroundColor: AppColor.backgroundColor1,
+        isScrollable: true,
+        child: CardApp(
+          margin: EdgeInsets.all(Insets.xl),
+          padding: EdgeInsets.zero,
+          color: Colors.white,
+          radius: Insets.med,
+          isShowShadows: true,
+          child: Column(
+            children: [
+              TicketDetailPoster(data: controller.data.value),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: Insets.xl),
+                child: Text(
+                  controller.data.value.movie.title,
+                  style: TextStyles.title.copyWith(fontSize: 14.w),
+                  textAlign: TextAlign.center,
+                ),
               ),
-            ),
-            RatingStar(
-              voteAverage: controller.data.value.movie.voteAverage,
-              textColor: Colors.black,
-              mainAxisAlignment: MainAxisAlignment.center,
-            ),
-            TicketDetailInformation(data: controller.data.value),
-            const TicketDetailQr(),
-          ],
+              RatingStar(
+                voteAverage: controller.data.value.movie.voteAverage,
+                textColor: Colors.black,
+                mainAxisAlignment: MainAxisAlignment.center,
+              ),
+              TicketDetailInformation(data: controller.data.value),
+              if (controller.isTicketActive.value)
+                TicketDetailQr(data: controller.data.value),
+            ],
+          ),
         ),
-      ),
-    );
+      );
+    });
   }
 }

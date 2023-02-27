@@ -59,7 +59,8 @@ class _TicketTabBarState extends State<TicketTabBar>
                 unselectedLabelColor: AppColor.disabledColor2,
                 indicator: BoxDecoration(
                   border: Border(
-                    bottom: BorderSide(width: 2.w, color: Colors.white),
+                    bottom:
+                        BorderSide(width: 2.w, color: AppColor.yellowColor1),
                   ),
                   boxShadow: Shadows.shadowsDown,
                 ),
