@@ -1,7 +1,7 @@
 name: flutix
-version: 1.0.0+2
+version: 1.0.0+6
 publish_to: none
-description: Booking Ticket Cinema Application.
+description: Cinema Ticket Booking Application.
 environment:
   sdk: ">=2.17.6 <3.0.0"
 
