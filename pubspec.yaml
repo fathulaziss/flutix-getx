@@ -1,5 +1,5 @@
 name: flutix
-version: 1.0.0+1
+version: 1.0.0+2
 publish_to: none
 description: Booking Ticket Cinema Application.
 environment:
