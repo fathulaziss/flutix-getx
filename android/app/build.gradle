@@ -27,11 +27,11 @@ apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 // Uncomment below when build App Bundle
-// def keystoreProperties = new Properties()
-// def keystorePropertiesFile = rootProject.file('key.properties')
-// if (keystorePropertiesFile.exists()) {
-//     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
-// }
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
 
 android {
     flavorDimensions "flavor-dimension"
@@ -87,20 +87,20 @@ android {
     }
 
     // Uncomment below when build App Bundle
-    // signingConfigs {
-    //    release {
-    //        keyAlias keystoreProperties['keyAlias']
-    //        keyPassword keystoreProperties['keyPassword']
-    //        storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
-    //        storePassword keystoreProperties['storePassword']
-    //    }
-    // }
+    signingConfigs {
+       release {
+           keyAlias keystoreProperties['keyAlias']
+           keyPassword keystoreProperties['keyPassword']
+           storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+           storePassword keystoreProperties['storePassword']
+       }
+    }
 
     buildTypes {
         release {
             // Change to signingConfigs.release when build App Bundle
             // Don't Forget change to signingConfigs.debug when run App
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             // Enables code shrinking, obfuscation, and optimization for only
             // your project's release build type.
             minifyEnabled true
