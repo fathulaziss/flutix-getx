@@ -31,14 +31,6 @@ class OrderController extends GetxController {
     super.onInit();
   }
 
-  // @override
-  // void onReady() {
-  //   super.onReady();
-  // }
-
-  // @override
-  // void onClose() {}
-
   void initData() {
     final args = Get.arguments;
 

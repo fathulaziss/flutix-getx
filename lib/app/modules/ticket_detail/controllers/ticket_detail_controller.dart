@@ -18,14 +18,6 @@ class TicketDetailController extends GetxController {
     super.onInit();
   }
 
-  // @override
-  // void onReady() {
-  //   super.onReady();
-  // }
-
-  // @override
-  // void onClose() {}
-
   void checkTicketActive() {
     final dataShowtime = data.value.showtime.split(':');
     final selectedDate =
