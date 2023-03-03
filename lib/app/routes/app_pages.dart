@@ -1,6 +1,8 @@
 import 'package:flutix/app/modules/api_log/bindings/api_log_binding.dart';
 import 'package:flutix/app/modules/api_log/views/api_log_view.dart';
 import 'package:flutix/app/modules/blocked_view.dart';
+import 'package:flutix/app/modules/browse_movie/bindings/browse_movie_binding.dart';
+import 'package:flutix/app/modules/browse_movie/views/browse_movie_view.dart';
 import 'package:flutix/app/modules/edit_profile/bindings/edit_profile_binding.dart';
 import 'package:flutix/app/modules/edit_profile/views/edit_profile_view.dart';
 import 'package:flutix/app/modules/home/bindings/home_binding.dart';
@@ -143,6 +145,11 @@ class AppPages {
       name: _Paths.TICKET_DETAIL,
       page: () => const TicketDetailView(),
       binding: TicketDetailBinding(),
+    ),
+    GetPage(
+      name: _Paths.BROWSE_MOVIE,
+      page: () => const BrowseMovieView(),
+      binding: BrowseMovieBinding(),
     ),
   ];
 }

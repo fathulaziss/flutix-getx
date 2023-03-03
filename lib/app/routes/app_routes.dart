@@ -26,6 +26,7 @@ abstract class Routes {
   static const ORDER_CONFIRM = _Paths.ORDER_CONFIRM;
   static const ORDER_SUCCESS = _Paths.ORDER_SUCCESS;
   static const TICKET_DETAIL = _Paths.TICKET_DETAIL;
+  static const BROWSE_MOVIE = _Paths.BROWSE_MOVIE;
 }
 
 abstract class _Paths {
@@ -51,4 +52,5 @@ abstract class _Paths {
   static const ORDER_CONFIRM = '/order-confirm';
   static const ORDER_SUCCESS = '/order-success';
   static const TICKET_DETAIL = '/ticket-detail';
+  static const BROWSE_MOVIE = '/browse-movie';
 }

@@ -35,6 +35,7 @@ class LocaleKeys {
   static const nowShowing = 'nowShowing';
   static const comingSoon = 'comingSoon';
   static const browseMovie = 'browseMovie';
+  static const browseMovieEmpty = 'browseMovieEmpty';
   static const dataNotFound = 'dataNotFound';
   static const voucher = 'voucher';
   static const voucherTitle1 = 'voucherTitle1';
@@ -170,6 +171,7 @@ class Locales {
     'nowShowing': 'Sedang Tayang',
     'comingSoon': 'Segera Tayang',
     'browseMovie': 'Jelajahi Film',
+    'browseMovieEmpty': 'Maaf, film tidak tersedia\nuntuk genre ini.',
     'dataNotFound': 'Data Tidak Ditemukan',
     'voucher': 'Kupon',
     'voucherTitle1': 'Spesial Tahun Baru',
@@ -307,6 +309,7 @@ class Locales {
     'nowShowing': 'Now Showing',
     'comingSoon': 'Coming Soon',
     'browseMovie': 'Browse Movie',
+    'browseMovieEmpty': 'Sorry, movies are not available\nfor this genre.',
     'dataNotFound': 'Data Not Found',
     'voucher': 'Voucher',
     'voucherTitle1': 'Special New Year',

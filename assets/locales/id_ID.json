@@ -26,6 +26,7 @@
     "nowShowing": "Sedang Tayang",
     "comingSoon": "Segera Tayang",
     "browseMovie": "Jelajahi Film",
+    "browseMovieEmpty": "Maaf, film tidak tersedia\nuntuk genre ini.",
     "dataNotFound": "Data Tidak Ditemukan",
     "voucher": "Kupon",
     "voucherTitle1": "Spesial Tahun Baru",

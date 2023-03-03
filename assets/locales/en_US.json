@@ -26,6 +26,7 @@
     "nowShowing": "Now Showing",
     "comingSoon": "Coming Soon",
     "browseMovie": "Browse Movie",
+    "browseMovieEmpty": "Sorry, movies are not available\nfor this genre.",
     "dataNotFound": "Data Not Found",
     "voucher": "Voucher",
     "voucherTitle1": "Special New Year",
