@@ -1,7 +1,9 @@
 import 'package:flutix/app/models/movie_model.dart';
 import 'package:flutix/app/modules/browse_movie/controllers/browse_movie_controller.dart';
 import 'package:flutix/app_config.dart';
+import 'package:flutix/styles/colors.dart';
 import 'package:flutix/styles/styles.dart';
+import 'package:flutix/utils/app_asset.dart';
 import 'package:flutix/widgets/cards/card_app.dart';
 import 'package:flutix/widgets/others/rating_star.dart';
 import 'package:flutter/material.dart';
@@ -16,58 +18,57 @@ class BrowseMovieItem extends GetView<BrowseMovieController> {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(() {
-      return InkWell(
-        onTap: onTap,
-        child: CardApp(
-          isShowShadows: true,
-          padding: EdgeInsets.zero,
-          margin: EdgeInsets.fromLTRB(
-            Insets.xl,
-            0,
-            Insets.xl,
-            Insets.xl,
+    return InkWell(
+      onTap: onTap,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CardApp(
+            padding: EdgeInsets.zero,
+            color: AppColor.backgroundColor2,
+            width: 70.w,
+            height: 100.w,
+            radius: Insets.med,
+            child: data.posterPath.isNotEmpty
+                ? ClipRRect(
+                    borderRadius: BorderRadius.all(Corners.medRadius),
+                    child: Image.network(
+                      '${AppConfig.imageBaseUrl}w1280${data.posterPath}',
+                      fit: BoxFit.cover,
+                    ),
+                  )
+                : Padding(
+                    padding: EdgeInsets.all(Insets.med),
+                    child: Image.asset(AppAsset.image('logo_app.png')),
+                  ),
           ),
-          child: Column(
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.only(
-                  topLeft: Corners.smRadius,
-                  topRight: Corners.smRadius,
+          Padding(
+            padding: EdgeInsets.all(Insets.sm),
+            child: Column(
+              children: [
+                Text(
+                  data.title,
+                  style: TextStyles.title.copyWith(fontSize: 14.w),
+                  textAlign: TextAlign.center,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
-                child: Image.network(
-                  '${AppConfig.imageBaseUrl}w1280${data.backdropPath}',
-                  width: Get.width,
-                  height: 150.w,
-                  fit: BoxFit.fill,
+                RatingStar(
+                  voteAverage: data.voteAverage,
+                  textColor: Colors.black,
+                  mainAxisAlignment: MainAxisAlignment.center,
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.all(Insets.sm),
-                child: Column(
-                  children: [
-                    Text(
-                      data.title,
-                      style: TextStyles.title.copyWith(fontSize: 14.w),
-                    ),
-                    RatingStar(
-                      voteAverage: data.voteAverage,
-                      textColor: Colors.black,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                    ),
-                    Text(
-                      controller.cMovie.listMovieShowing.contains(data)
-                          ? 'nowShowing'.tr
-                          : 'comingSoon'.tr,
-                      style: TextStyles.text,
-                    ),
-                  ],
+                Text(
+                  controller.cMovie.listMovieShowing.contains(data)
+                      ? 'nowShowing'.tr
+                      : 'comingSoon'.tr,
+                  style: TextStyles.text,
                 ),
-              ),
-            ],
-          ),
-        ),
-      );
-    });
+              ],
+            ),
+          )
+        ],
+      ),
+    );
   }
 }

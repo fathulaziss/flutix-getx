@@ -25,20 +25,31 @@ class BrowseMovieView extends GetView<BrowseMovieController> {
               child: controller.isLoading.value
                   ? LoadingIndicatorBounce(size: 25.w)
                   : controller.listBrowseMovie.isNotEmpty
-                      ? ListView.builder(
-                          padding: EdgeInsets.only(top: Insets.xl),
-                          itemCount: controller.listBrowseMovie.length,
-                          itemBuilder: (context, index) {
-                            return BrowseMovieItem(
-                              data: controller.listBrowseMovie[index],
-                              onTap: () => Get.toNamed(
-                                Routes.MOVIE_DETAIL,
-                                arguments: {
-                                  'movie': controller.listBrowseMovie[index]
-                                },
-                              ),
-                            );
-                          },
+                      ? Padding(
+                          padding: EdgeInsets.symmetric(vertical: Insets.xl),
+                          child: GridView.builder(
+                            padding: EdgeInsets.zero,
+                            shrinkWrap: true,
+                            gridDelegate:
+                                SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              childAspectRatio: 1.07,
+                              mainAxisSpacing: Insets.med,
+                              crossAxisSpacing: Insets.med,
+                            ),
+                            itemCount: controller.listBrowseMovie.length,
+                            itemBuilder: (context, index) {
+                              return BrowseMovieItem(
+                                data: controller.listBrowseMovie[index],
+                                onTap: () => Get.toNamed(
+                                  Routes.MOVIE_DETAIL,
+                                  arguments: {
+                                    'movie': controller.listBrowseMovie[index]
+                                  },
+                                ),
+                              );
+                            },
+                          ),
                         )
                       : Center(
                           child: Text(
