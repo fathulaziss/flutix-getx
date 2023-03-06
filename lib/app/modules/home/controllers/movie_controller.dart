@@ -13,6 +13,7 @@ class MovieController extends GetxController {
 
   RxList<MovieModel> listMovieShowing = <MovieModel>[].obs;
   RxList<MovieModel> listMovieComingSoon = <MovieModel>[].obs;
+  RxList<MovieModel> listMovieTopRated = <MovieModel>[].obs;
   RxList<VoucherModel> listMovieVoucher = <VoucherModel>[].obs;
 
   double minimumRating = 6.5;
@@ -20,6 +21,7 @@ class MovieController extends GetxController {
   RxBool isLoadingDataUser = false.obs;
   RxBool isLoadingMovie = false.obs;
   RxBool isLoadingMovieComingSoon = false.obs;
+  RxBool isLoadingMovieTopRated = false.obs;
   RxBool isLoadingMovieVoucher = false.obs;
 
   @override
@@ -27,6 +29,7 @@ class MovieController extends GetxController {
     getDataUser();
     getMovieShowing();
     getMovieComingSoon();
+    getMovieTopRated();
     getMovieVoucher();
     super.onInit();
   }
@@ -139,6 +142,26 @@ class MovieController extends GetxController {
       isLoadingMovieComingSoon(false);
     } catch (e) {
       isLoadingMovieComingSoon(false);
+      logSys(e.toString());
+    }
+  }
+
+  Future<void> getMovieTopRated() async {
+    try {
+      isLoadingMovieTopRated(true);
+
+      final response = await ApiMovies.getMovieTopRated(
+        language: cUtility.appLanguage.value,
+        page: 1,
+      );
+
+      final data = response['results'] as List;
+
+      listMovieTopRated(RxList.from(data.map((e) => MovieModel.fromJson(e))));
+
+      isLoadingMovieTopRated(false);
+    } catch (e) {
+      isLoadingMovieTopRated(false);
       logSys(e.toString());
     }
   }

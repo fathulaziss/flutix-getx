@@ -15,6 +15,8 @@ class MovieDetailController extends GetxController {
 
   RxBool isLoading = false.obs;
   RxBool isLoadingCast = false.obs;
+  RxBool isShowButton = false.obs;
+  RxBool isMovieTopRated = false.obs;
 
   @override
   void onInit() {
@@ -28,6 +30,20 @@ class MovieDetailController extends GetxController {
     final args = Get.arguments;
     if (args != null) {
       movieData.value = args['movie'];
+      isMovieTopRated.value = args['is_movie_top_rated'] ?? false;
+    }
+  }
+
+  void checkMovie() {
+    if (isMovieTopRated.value) {
+      isShowButton(false);
+    } else {
+      if (DateTime.parse(movieData.value.releaseDate)
+          .isBefore(DateTime.now())) {
+        isShowButton(true);
+      } else {
+        isShowButton(false);
+      }
     }
   }
 

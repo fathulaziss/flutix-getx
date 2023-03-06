@@ -44,6 +44,26 @@ class ApiMovies {
     }
   }
 
+  static Future<Map<String, dynamic>> getMovieTopRated({
+    required AppLanguageModel language,
+    required int page,
+  }) async {
+    try {
+      final url =
+          'movie/top_rated?api_key=${AppConfig.apiKey}&language=${language.locale.languageCode}-${language.locale.countryCode}&page=$page';
+
+      final response = await ApiService().request(
+        url: url,
+        method: Method.GET,
+        isToken: false,
+      );
+
+      return response;
+    } catch (e) {
+      rethrow;
+    }
+  }
+
   static Future<Map<String, dynamic>> getMovieDetail({
     required AppLanguageModel language,
     required MovieModel movieModel,
