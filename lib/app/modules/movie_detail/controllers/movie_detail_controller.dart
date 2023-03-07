@@ -31,6 +31,7 @@ class MovieDetailController extends GetxController {
     if (args != null) {
       movieData.value = args['movie'];
       isMovieTopRated.value = args['is_movie_top_rated'] ?? false;
+      checkMovie();
     }
   }
 

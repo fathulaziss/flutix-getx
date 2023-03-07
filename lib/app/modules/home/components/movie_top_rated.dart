@@ -23,7 +23,7 @@ class MovieTopRated extends GetView<MovieController> {
               top: Insets.sm,
             ),
             child: Text(
-              'nowShowing'.tr,
+              'topMovie'.tr,
               style: TextStyles.text.copyWith(fontWeight: FontWeight.bold),
             ),
           ),
@@ -74,7 +74,8 @@ class MovieTopRated extends GetView<MovieController> {
                           onTap: () => Get.toNamed(
                             Routes.MOVIE_DETAIL,
                             arguments: {
-                              'movie': controller.listMovieTopRated[index]
+                              'movie': controller.listMovieTopRated[index],
+                              'is_movie_top_rated': true,
                             },
                           ),
                         );

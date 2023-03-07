@@ -15,51 +15,49 @@ class MovieDetailView extends GetView<MovieDetailController> {
 
   @override
   Widget build(BuildContext context) {
-    return PageDefault(
-      title: 'movieDetail'.tr,
-      backgroundColor: AppColor.backgroundColor1,
-      bottomBarHeight: (DateTime.parse(controller.movieData.value.releaseDate)
-              .isBefore(DateTime.now()))
-          ? 70.w
-          : 0,
-      bottomBar: (DateTime.parse(controller.movieData.value.releaseDate)
-              .isBefore(DateTime.now()))
-          ? Container(
-              padding: EdgeInsets.symmetric(horizontal: 24.w),
-              decoration: BoxDecoration(
-                boxShadow: Shadows.shadowsUp,
-                color: AppColor.backgroundColor1,
-              ),
-              child: ButtonPrimary(
-                onTap: () => Get.toNamed(
-                  Routes.ORDER,
-                  arguments: {
-                    'movie_data': controller.movieData.value,
-                    'movie_detail_data': controller.movieDetailData.value
-                  },
+    return Obx(() {
+      return PageDefault(
+        title: 'movieDetail'.tr,
+        backgroundColor: AppColor.backgroundColor1,
+        bottomBarHeight: controller.isShowButton.value ? 70.w : 0,
+        bottomBar: controller.isShowButton.value
+            ? Container(
+                padding: EdgeInsets.symmetric(horizontal: 24.w),
+                decoration: BoxDecoration(
+                  boxShadow: Shadows.shadowsUp,
+                  color: AppColor.backgroundColor1,
                 ),
-                label: 'letsWatch'.tr,
-                margin: EdgeInsets.symmetric(horizontal: 24.w),
-              ),
-            )
-          : const SizedBox(),
-      child: CustomScrollView(
-        shrinkWrap: true,
-        slivers: [
-          SliverAppBar(
-            backgroundColor: Colors.white,
-            shadowColor: Colors.transparent,
-            elevation: 0,
-            expandedHeight: 270.w,
-            toolbarHeight: 180.w,
-            pinned: true,
-            floating: true,
-            automaticallyImplyLeading: false,
-            flexibleSpace: const MovieDetailPoster(),
-          ),
-          const SliverToBoxAdapter(child: MovieDetailBody())
-        ],
-      ),
-    );
+                child: ButtonPrimary(
+                  onTap: () => Get.toNamed(
+                    Routes.ORDER,
+                    arguments: {
+                      'movie_data': controller.movieData.value,
+                      'movie_detail_data': controller.movieDetailData.value
+                    },
+                  ),
+                  label: 'letsWatch'.tr,
+                  margin: EdgeInsets.symmetric(horizontal: 24.w),
+                ),
+              )
+            : const SizedBox(),
+        child: CustomScrollView(
+          shrinkWrap: true,
+          slivers: [
+            SliverAppBar(
+              backgroundColor: Colors.white,
+              shadowColor: Colors.transparent,
+              elevation: 0,
+              expandedHeight: 270.w,
+              toolbarHeight: 180.w,
+              pinned: true,
+              floating: true,
+              automaticallyImplyLeading: false,
+              flexibleSpace: const MovieDetailPoster(),
+            ),
+            const SliverToBoxAdapter(child: MovieDetailBody())
+          ],
+        ),
+      );
+    });
   }
 }
