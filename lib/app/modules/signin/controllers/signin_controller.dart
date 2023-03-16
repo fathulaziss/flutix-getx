@@ -45,6 +45,12 @@ class SigninController extends GetxController {
     email(value);
     if (email.value.isNotEmpty) {
       isValidEmail = true;
+      if (value == OPEN_LOG) {
+        cUtility.showLogButton();
+      }
+      if (value == CLOSE_LOG) {
+        cUtility.hideLogButton();
+      }
     } else {
       isValidEmail = false;
     }
