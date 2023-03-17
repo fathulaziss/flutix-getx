@@ -24,7 +24,7 @@ class UtilityController extends GetxController {
   }
 
   Future<void> initData() async {
-    final b = await AppStorage.isContain(key: 'log-button');
+    final b = await AppStorage.isContain(key: LOG_BUTTON);
     isShowLog(b);
   }
 
