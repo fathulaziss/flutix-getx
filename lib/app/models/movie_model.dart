@@ -19,7 +19,7 @@ class MovieModel extends Equatable {
     this.voteCount = 0,
   });
 
-  factory MovieModel.fromJson(Map<String, dynamic> json) => MovieModel(
+  factory MovieModel.fromJson(dynamic json) => MovieModel(
         adult: json['adult'] ?? false,
         backdropPath: json['backdrop_path'] ?? '',
         genreIds: json['genre_ids'] ?? [],

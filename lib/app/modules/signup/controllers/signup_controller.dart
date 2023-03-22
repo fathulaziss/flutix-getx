@@ -58,7 +58,7 @@ class SignupController extends GetxController {
   Future<void> getGenre() async {
     try {
       final data = genreData;
-      listGenre(RxList.from(data.map((e) => GenreModel.fromJson(e))));
+      listGenre(RxList.from(data.map(GenreModel.fromJson)));
     } catch (e) {
       logSys(e.toString());
     }

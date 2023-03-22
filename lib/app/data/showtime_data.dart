@@ -1,4 +1,4 @@
-List showtimeData = [
+List<Map<String, dynamic>> showtimeData = [
   {
     'cinema': 'CGV',
     'schedule': [

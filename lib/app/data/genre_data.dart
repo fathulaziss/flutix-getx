@@ -1,4 +1,4 @@
-List genreData = [
+List<Map<String, dynamic>> genreData = [
   {'id': 27, 'name': 'Horror'},
   {'id': 28, 'name': 'Action'},
   {'id': 35, 'name': 'Comedy'},

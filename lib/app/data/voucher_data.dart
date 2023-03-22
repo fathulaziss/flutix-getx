@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-List voucherData = [
+List<Map<String, dynamic>> voucherData = [
   {
     'title': 'voucherTitle1'.tr,
     'desc': 'voucherDesc1'.tr,

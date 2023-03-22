@@ -95,7 +95,7 @@ class OrderController extends GetxController {
   Future<void> getShowtimes() async {
     try {
       final data = showtimeData;
-      listShowtime(RxList.from(data.map((e) => ShowtimeModel.fromJson(e))));
+      listShowtime(RxList.from(data.map(ShowtimeModel.fromJson)));
     } catch (e) {
       logSys(e.toString());
     }

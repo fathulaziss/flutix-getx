@@ -16,14 +16,12 @@ analyzer:
 
 linter:
   rules:
-    # - always_declare_return_types
     - always_require_non_null_named_parameters
     - always_use_package_imports
     - annotate_overrides
     - avoid_bool_literals_in_conditional_expressions
     - avoid_catching_errors
     - avoid_double_and_int_checks
-    # - avoid_dynamic_calls
     - avoid_empty_else
     - avoid_equals_and_hash_code_on_mutable_classes
     - avoid_escaping_inner_quotes
@@ -80,7 +78,6 @@ linter:
     - library_names
     - library_prefixes
     - library_private_types_in_public_api
-    # - lines_longer_than_80_chars
     - list_remove_unrelated_type
     - literal_only_boolean_expressions
     - missing_whitespace_between_adjacent_strings
@@ -147,14 +144,13 @@ linter:
     - test_types_in_equals
     - throw_in_finally
     - tighten_type_of_initializing_formals
-    # - type_annotate_public_apis
     - type_init_formals
     - unawaited_futures
     - unnecessary_await_in_return
     - unnecessary_brace_in_string_interps
     - unnecessary_const
     - unnecessary_getters_setters
-    # - unnecessary_lambdas
+    - unnecessary_lambdas
     - unnecessary_new
     - unnecessary_null_aware_assignments
     - unnecessary_null_checks

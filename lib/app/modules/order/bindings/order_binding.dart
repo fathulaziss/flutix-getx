@@ -7,8 +7,8 @@ class OrderBinding extends Bindings {
   @override
   void dependencies() {
     Get
-      ..lazyPut<OrderController>(() => OrderController())
-      ..lazyPut<OrderSeatController>(() => OrderSeatController())
-      ..lazyPut<OrderConfirmController>(() => OrderConfirmController());
+      ..lazyPut<OrderController>(OrderController.new)
+      ..lazyPut<OrderSeatController>(OrderSeatController.new)
+      ..lazyPut<OrderConfirmController>(OrderConfirmController.new);
   }
 }

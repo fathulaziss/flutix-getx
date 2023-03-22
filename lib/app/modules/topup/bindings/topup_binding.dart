@@ -6,9 +6,7 @@ class TopupBinding extends Bindings {
   @override
   void dependencies() {
     Get
-      ..lazyPut<TopupController>(() => TopupController())
-      ..lazyPut<TransactionHistoryController>(
-        () => TransactionHistoryController(),
-      );
+      ..lazyPut<TopupController>(TopupController.new)
+      ..lazyPut<TransactionHistoryController>(TransactionHistoryController.new);
   }
 }

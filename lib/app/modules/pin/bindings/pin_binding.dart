@@ -4,6 +4,6 @@ import 'package:get/get.dart';
 class PinBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<PinController>(() => PinController());
+    Get.lazyPut<PinController>(PinController.new);
   }
 }

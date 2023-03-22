@@ -31,8 +31,8 @@ class MovieDetailModel extends Equatable {
         adult: json['adult'] ?? false,
         backdropPath: json['backdrop_path'] ?? '',
         genres: json['genres'] != null
-            ? (json['genres'] as List)
-                .map((e) => GenreModel.fromJson(e))
+            ? (json['genres'] as List<Map<String, dynamic>>)
+                .map(GenreModel.fromJson)
                 .toList()
             : [],
         homepage: json['homepage'] ?? '',

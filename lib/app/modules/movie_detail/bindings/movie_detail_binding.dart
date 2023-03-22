@@ -4,6 +4,6 @@ import 'package:get/get.dart';
 class MovieDetailBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<MovieDetailController>(() => MovieDetailController());
+    Get.lazyPut<MovieDetailController>(MovieDetailController.new);
   }
 }

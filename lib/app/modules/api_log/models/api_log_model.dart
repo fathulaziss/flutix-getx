@@ -12,7 +12,8 @@ class ApiLogModel {
     DateTime? timestamp,
     this.error = '',
   }) : timestamp = timestamp ?? DateTime.now();
-  factory ApiLogModel.fromJson(String source) =>
+
+  factory ApiLogModel.fromJson(dynamic source) =>
       ApiLogModel.fromMap(json.decode(source));
 
   factory ApiLogModel.fromMap(Map<String, dynamic> map) {
@@ -25,6 +26,7 @@ class ApiLogModel {
       error: map['error'],
     );
   }
+
   final String url;
   final String payload;
   final String response;
@@ -60,6 +62,6 @@ class ApiLogger {
   Future<List<ApiLogModel>> apiLogs() async {
     final dataLog = await AppStorage.read(key: CACHE_API_LOG);
     final List data = dataLog.isNotEmpty ? jsonDecode(dataLog) : [];
-    return List.from(data.map((e) => ApiLogModel.fromJson(e)));
+    return List.from(data.map(ApiLogModel.fromJson));
   }
 }

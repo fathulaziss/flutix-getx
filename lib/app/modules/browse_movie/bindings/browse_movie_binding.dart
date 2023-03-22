@@ -4,6 +4,6 @@ import 'package:get/get.dart';
 class BrowseMovieBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<BrowseMovieController>(() => BrowseMovieController());
+    Get.lazyPut<BrowseMovieController>(BrowseMovieController.new);
   }
 }

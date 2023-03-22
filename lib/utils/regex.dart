@@ -29,7 +29,7 @@ String convertTitleCase(String text) {
   final newText = text
       .replaceAll(RegExp(' +'), ' ')
       .split(' ')
-      .map((str) => convertCapitalCase(str))
+      .map(convertCapitalCase)
       .join(' ');
   // ex : Hello World
   return newText;

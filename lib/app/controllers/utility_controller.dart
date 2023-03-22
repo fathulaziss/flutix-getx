@@ -44,7 +44,7 @@ class UtilityController extends GetxController {
 
   Future<void> getAppLanguageOptions() async {
     appLanguageOptions(
-      RxList.from(appLanguageData.map((e) => AppLanguageModel.fromJson(e))),
+      RxList.from(appLanguageData.map(AppLanguageModel.fromJson)),
     );
   }
 

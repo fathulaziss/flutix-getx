@@ -1,4 +1,4 @@
-const List appLanguageData = [
+const List<Map<String, dynamic>> appLanguageData = [
   {
     'language': 'EN',
     'locale': {'language_code': 'en', 'country_code': 'US'},

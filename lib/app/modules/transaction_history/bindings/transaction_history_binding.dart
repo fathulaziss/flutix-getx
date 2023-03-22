@@ -4,8 +4,6 @@ import 'package:get/get.dart';
 class TransactionHistoryBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<TransactionHistoryController>(
-      () => TransactionHistoryController(),
-    );
+    Get.lazyPut<TransactionHistoryController>(TransactionHistoryController.new);
   }
 }

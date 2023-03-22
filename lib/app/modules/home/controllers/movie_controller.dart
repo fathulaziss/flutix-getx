@@ -66,9 +66,7 @@ class MovieController extends GetxController {
           page: i,
         );
 
-        final data = (res['results'] as List)
-            .map((e) => MovieModel.fromJson(e))
-            .toList();
+        final data = (res['results'] as List).map(MovieModel.fromJson).toList();
 
         final dataFilter = data.where((item) {
           return DateTime.parse(item.releaseDate).isBefore(DateTime.now()) &&
@@ -116,9 +114,7 @@ class MovieController extends GetxController {
           page: i,
         );
 
-        final data = (res['results'] as List)
-            .map((e) => MovieModel.fromJson(e))
-            .toList();
+        final data = (res['results'] as List).map(MovieModel.fromJson).toList();
 
         final dataFilter = data.where((item) {
           return DateTime.parse(item.releaseDate).isAfter(DateTime.now());
@@ -157,7 +153,7 @@ class MovieController extends GetxController {
 
       final data = response['results'] as List;
 
-      listMovieTopRated(RxList.from(data.map((e) => MovieModel.fromJson(e))));
+      listMovieTopRated(RxList.from(data.map(MovieModel.fromJson)));
 
       isLoadingMovieTopRated(false);
     } catch (e) {
@@ -171,7 +167,7 @@ class MovieController extends GetxController {
       isLoadingMovieVoucher(true);
 
       final data = voucherData;
-      listMovieVoucher(RxList.from(data.map((e) => VoucherModel.fromJson(e))));
+      listMovieVoucher(RxList.from(data.map(VoucherModel.fromJson)));
 
       await Future.delayed(const Duration(seconds: 3));
 
