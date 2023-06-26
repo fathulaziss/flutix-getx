@@ -21,9 +21,9 @@ class OrderConfirmView extends GetView<OrderConfirmController> {
       bottomBar: const OrderConfirmButton(),
       child: Padding(
         padding: EdgeInsets.all(Insets.xl),
-        child: Column(
+        child: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
+          children: [
             OrderConfirmHeader(),
             OrderConfirmDetail(),
           ],

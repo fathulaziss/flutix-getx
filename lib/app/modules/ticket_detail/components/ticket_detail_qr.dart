@@ -30,7 +30,7 @@ class TicketDetailQr extends StatelessWidget {
                 child: CardApp(
                   padding: EdgeInsets.zero,
                   radius: Insets.med,
-                  child: QrImage(data: data.orderId),
+                  child: QrImageView(data: data.orderId),
                 ),
               ),
               barrierDismissible: true,
@@ -40,7 +40,7 @@ class TicketDetailQr extends StatelessWidget {
             width: 150.w,
             height: 150.w,
             padding: EdgeInsets.zero,
-            child: QrImage(data: data.orderId),
+            child: QrImageView(data: data.orderId),
           ),
         ),
         verticalSpace(Insets.med),

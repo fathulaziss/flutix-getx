@@ -71,7 +71,7 @@ class MovieDetailController extends GetxController {
       isLoadingCast(true);
 
       final response = await ApiMovies.getCredits(movieId: movieData.value.id);
-      final List<Map<String, dynamic>> data = response['cast'];
+      final List data = response['cast'];
 
       listCast(RxList.from(data.map(CreditModel.fromJson)));
 

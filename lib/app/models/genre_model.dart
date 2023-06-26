@@ -6,7 +6,7 @@ class GenreModel extends Equatable {
     this.name = '',
   });
 
-  factory GenreModel.fromJson(Map<String, dynamic> json) => GenreModel(
+  factory GenreModel.fromJson(dynamic json) => GenreModel(
         id: json['id'],
         name: json['name'],
       );

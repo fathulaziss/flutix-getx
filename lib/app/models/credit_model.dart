@@ -17,7 +17,7 @@ class CreditModel extends Equatable {
     this.order = 0,
   });
 
-  factory CreditModel.fromJson(Map<String, dynamic> json) => CreditModel(
+  factory CreditModel.fromJson(dynamic json) => CreditModel(
         adult: json['adult'] ?? false,
         gender: json['gender'] ?? 1,
         id: json['id'] ?? 0,

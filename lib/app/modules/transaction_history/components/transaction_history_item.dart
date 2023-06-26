@@ -55,7 +55,6 @@ class TransactionHistoryItem extends StatelessWidget {
                   FormatDateTime.format(
                     format: DateFormat(
                       'dd MMM yyyy',
-                      '${Get.locale!.languageCode}_${Get.locale!.countryCode}',
                     ),
                     value: data.transactionDate,
                   ),

@@ -32,9 +32,9 @@ class OrderView extends GetView<OrderController> {
             enabled: controller.isValidSchedule.value,
           ),
         ),
-        child: Flex(
+        child: const Flex(
           direction: Axis.vertical,
-          children: const [
+          children: [
             OrderDate(),
             OrderShowtime(),
           ],
