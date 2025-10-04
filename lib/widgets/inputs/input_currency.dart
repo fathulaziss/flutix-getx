@@ -7,7 +7,7 @@ import 'package:flutter/services.dart';
 
 class InputCurrency extends StatefulWidget {
   const InputCurrency({
-    Key? key,
+    super.key,
     this.controller,
     this.label,
     this.prefixIcon,
@@ -32,7 +32,7 @@ class InputCurrency extends StatefulWidget {
     this.outlineColor,
     this.borderRadius,
     this.hintColor,
-  }) : super(key: key);
+  });
 
   final bool? Function(String value)? validation;
   final Color? color;
@@ -81,7 +81,7 @@ class _InputCurrencyState extends State<InputCurrency> {
     }
   }
 
-  _onChanged(String value) {
+  void _onChanged(String value) {
     widget.value?.call(int.tryParse(value.replaceAll('.', '')) ?? 0);
   }
 

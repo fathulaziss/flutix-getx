@@ -8,8 +8,8 @@ class ButtonTextRich extends StatelessWidget {
     required this.label1,
     required this.label2,
     required this.onPressed,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final String label1;
   final String label2;
@@ -20,9 +20,10 @@ class ButtonTextRich extends StatelessWidget {
     return TextButton(
       onPressed: onPressed,
       style: ButtonStyle(
-        overlayColor: MaterialStateProperty.all(Colors.grey.withOpacity(0.1)),
-        shadowColor: MaterialStateProperty.all(Colors.transparent),
-        padding: MaterialStateProperty.all(EdgeInsets.zero),
+        overlayColor:
+            WidgetStateProperty.all(Colors.grey.withValues(alpha: 0.1)),
+        shadowColor: WidgetStateProperty.all(Colors.transparent),
+        padding: WidgetStateProperty.all(EdgeInsets.zero),
       ),
       child: RichText(
         text: TextSpan(

@@ -31,7 +31,7 @@ class OrderSeatIndicatorItem extends StatelessWidget {
           padding: EdgeInsets.zero,
           margin: EdgeInsets.only(right: Insets.sm),
         ),
-        Text(label, style: TextStyles.desc)
+        Text(label, style: TextStyles.desc),
       ],
     );
   }

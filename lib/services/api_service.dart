@@ -117,8 +117,8 @@ class ApiService {
     } on FormatException catch (e) {
       logSys(e.toString());
       throw Exception('Bad response format');
-    } on DioError catch (e) {
-      if (e.type == DioErrorType.badResponse) {
+    } on DioException catch (e) {
+      if (e.type == DioExceptionType.badResponse) {
         final response = e.response;
         try {
           if (response != null && response.data != null) {
@@ -129,9 +129,9 @@ class ApiService {
         } catch (e) {
           throw Exception('Internal Error');
         }
-      } else if (e.type == DioErrorType.connectionTimeout ||
-          e.type == DioErrorType.receiveTimeout ||
-          e.type == DioErrorType.sendTimeout) {
+      } else if (e.type == DioExceptionType.connectionTimeout ||
+          e.type == DioExceptionType.receiveTimeout ||
+          e.type == DioExceptionType.sendTimeout) {
         throw Exception('Request timeout');
       } else if (e.error is SocketException) {
         throw Exception('No Internet Connection!');

@@ -36,7 +36,7 @@ class TransactionHistoryTopup extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: AppColor.yellowColor1,
               ),
-            )
+            ),
           ],
         ),
       ),

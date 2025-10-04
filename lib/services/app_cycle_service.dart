@@ -50,12 +50,6 @@ class AppCycleService {
 
   Future<void> checkTokenAndRoute() async {
     try {
-      //* CHECK PHONE JAILBROKEN
-      if (await AppUtils.checkIsJailBroken()) {
-        await Get.offNamed(Routes.BLOCKED);
-        return;
-      }
-
       //* CHECK FIRST TIME OPEN APP
       final value = await AppStorage.read(key: APP_FIRST_TIME_OPEN);
       if (value.isEmpty) {

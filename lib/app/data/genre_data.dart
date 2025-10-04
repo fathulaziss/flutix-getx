@@ -6,5 +6,5 @@ List<Map<String, dynamic>> genreData = [
   {'id': 10749, 'name': 'Romance'},
   {'id': 53, 'name': 'Thriller'},
   {'id': 10402, 'name': 'Musical'},
-  {'id': 9648, 'name': 'Mystery'}
+  {'id': 9648, 'name': 'Mystery'},
 ];

@@ -24,7 +24,7 @@ class TrxItemRow extends StatelessWidget {
               style: TextStyles.desc.copyWith(fontWeight: FontWeight.bold),
               textAlign: TextAlign.end,
             ),
-          )
+          ),
         ],
       ),
     );

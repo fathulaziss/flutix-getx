@@ -7,7 +7,7 @@ import 'package:flutter/services.dart';
 
 class InputPassword extends StatefulWidget {
   const InputPassword({
-    Key? key,
+    super.key,
     this.label,
     this.controller,
     this.prefixIcon,
@@ -35,7 +35,7 @@ class InputPassword extends StatefulWidget {
     this.outlineColor,
     this.borderRadius,
     this.hintColor,
-  }) : super(key: key);
+  });
 
   final String? label;
   final TextEditingController? controller;
@@ -92,14 +92,14 @@ class _InputPasswordState extends State<InputPassword> {
     }
   }
 
-  _onChanged(String value) {
+  void _onChanged(String value) {
     if (widget.value != null) {
       widget.value?.call(value);
       // widget.value!(value);
     }
   }
 
-  _toggleVisible() {
+  void _toggleVisible() {
     setState(() {
       obsecureText = !obsecureText;
     });

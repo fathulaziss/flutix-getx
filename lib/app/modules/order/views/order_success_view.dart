@@ -37,7 +37,7 @@ class OrderSuccessView extends StatelessWidget {
               label: 'checkTicket'.tr,
               onTap: () =>
                   Get.offAllNamed(Routes.HOME, arguments: {'index': 1}),
-            )
+            ),
           ],
         ),
       ),

@@ -11,13 +11,13 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-start() {
+void start() {
   Get.put(UtilityController());
   runApp(const App());
 }
 
 class App extends StatefulWidget {
-  const App({Key? key}) : super(key: key);
+  const App({super.key});
 
   @override
   State<App> createState() => _AppState();
@@ -52,8 +52,9 @@ class _AppState extends State<App> {
           theme: AppStyle.appTheme(0xFF2C1F63, Colors.white),
           builder: (context, child) {
             return MediaQuery(
-              data: MediaQuery.of(context)
-                  .copyWith(textScaleFactor: Get.width <= 360 ? .85 : 1),
+              data: MediaQuery.of(context).copyWith(
+                textScaler: TextScaler.linear(Get.width <= 360 ? .85 : 1),
+              ),
               child: GestureDetector(
                 behavior: HitTestBehavior.translucent,
                 onTap: AppUtils.dismissKeyboard,

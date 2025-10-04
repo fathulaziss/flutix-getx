@@ -47,7 +47,7 @@ class OrderSeatView extends GetView<OrderSeatController> {
               ),
             ],
           ),
-          verticalSpace(Insets.lg)
+          verticalSpace(Insets.lg),
         ],
       ),
     );

@@ -24,7 +24,7 @@ class PinNumpadButton extends StatelessWidget {
                 padding: EdgeInsets.all(Insets.med),
                 backgroundColor: AppColor.backgroundColor1,
                 elevation: 2,
-                shadowColor: AppColor.primaryColor1.withOpacity(0.2),
+                shadowColor: AppColor.primaryColor1.withValues(alpha: 0.2),
                 shape: const CircleBorder(),
               ),
               child: Center(

@@ -16,11 +16,11 @@ class PinNumpad extends GetView<PinController> {
         isShowShadows: true,
         shadows: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.3),
+            color: Colors.grey.withValues(alpha: 0.3),
             spreadRadius: 5,
             blurRadius: 5,
             offset: const Offset(0, 5),
-          )
+          ),
         ],
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -50,7 +50,7 @@ class PinNumpad extends GetView<PinController> {
                       controller.setPin('3');
                     },
                   ),
-                )
+                ),
               ],
             ),
             Row(
@@ -78,7 +78,7 @@ class PinNumpad extends GetView<PinController> {
                       controller.setPin('6');
                     },
                   ),
-                )
+                ),
               ],
             ),
             Row(
@@ -106,7 +106,7 @@ class PinNumpad extends GetView<PinController> {
                       controller.setPin('9');
                     },
                   ),
-                )
+                ),
               ],
             ),
             Row(
@@ -129,7 +129,7 @@ class PinNumpad extends GetView<PinController> {
                       controller.deletePin();
                     },
                   ),
-                )
+                ),
               ],
             ),
           ],

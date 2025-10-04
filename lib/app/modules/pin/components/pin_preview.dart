@@ -131,7 +131,7 @@ class PinPreview extends StatelessWidget {
               color: Colors.white,
               outlineColor: AppColor.primaryColor1,
             ),
-          )
+          ),
         ],
       ),
     );

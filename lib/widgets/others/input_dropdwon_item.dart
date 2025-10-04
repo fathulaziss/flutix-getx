@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 class InputDropdownItem extends StatelessWidget {
   const InputDropdownItem({
-    Key? key,
+    super.key,
     required this.value,
-  }) : super(key: key);
+  });
 
   final String value;
 

@@ -41,7 +41,7 @@ class MovieBrowse extends GetView<MovieController> {
                           height: 55.w,
                           borderRadius: Insets.sm,
                         );
-                      })
+                      }),
                     ],
                   )
                 : Row(
@@ -63,7 +63,7 @@ class MovieBrowse extends GetView<MovieController> {
                           //   );
                           // },
                         );
-                      })
+                      }),
                     ],
                   ),
           ),

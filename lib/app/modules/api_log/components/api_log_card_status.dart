@@ -3,17 +3,17 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ApiLogCardStatus extends StatelessWidget {
-  const ApiLogCardStatus({Key? key, required this.status}) : super(key: key);
+  const ApiLogCardStatus({super.key, required this.status});
 
   final String status;
 
   Color getMethodColor(String method) {
     if (method.toLowerCase().contains('get')) {
-      return Colors.green.withOpacity(.3);
+      return Colors.green.withValues(alpha: .3);
     } else if (method.toLowerCase().contains('post')) {
-      return Colors.amber.withOpacity(.3);
+      return Colors.amber.withValues(alpha: .3);
     } else {
-      return Colors.grey.withOpacity(.3);
+      return Colors.grey.withValues(alpha: .3);
     }
   }
 

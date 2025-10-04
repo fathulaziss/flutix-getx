@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class InputDropdown extends StatelessWidget {
   const InputDropdown({
-    Key? key,
+    super.key,
     this.title = '',
     this.hintText,
     required this.items,
@@ -16,7 +16,7 @@ class InputDropdown extends StatelessWidget {
     this.borderColor,
     this.outlinedBorderColor,
     this.textAlign,
-  }) : super(key: key);
+  });
 
   final String title;
   final String? hintText;
@@ -63,14 +63,14 @@ class InputDropdown extends StatelessWidget {
                     style: TextStyles.text.copyWith(
                       color: selectedItem.isNotEmpty
                           ? AppColor.primaryColor1
-                          : AppColor.primaryColor1.withOpacity(.6),
+                          : AppColor.primaryColor1.withValues(alpha: .6),
                     ),
                   ),
                 ),
                 Icon(
                   Icons.arrow_drop_down,
-                  color: AppColor.primaryColor1.withOpacity(.6),
-                )
+                  color: AppColor.primaryColor1.withValues(alpha: .6),
+                ),
               ],
             ),
             items: items,

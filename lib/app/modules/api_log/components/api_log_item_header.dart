@@ -7,7 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ApiLogItemHeader extends StatelessWidget {
-  const ApiLogItemHeader({Key? key, required this.data}) : super(key: key);
+  const ApiLogItemHeader({super.key, required this.data});
 
   final ApiLogModel data;
 

@@ -64,7 +64,7 @@ class OrderConfirmHeader extends GetView<OrderConfirmController> {
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
         verticalSpace(Insets.sm),

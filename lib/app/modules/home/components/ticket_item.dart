@@ -73,7 +73,7 @@ class TicketItem extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

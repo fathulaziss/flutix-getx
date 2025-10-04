@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TabMovie extends StatelessWidget {
-  const TabMovie({Key? key}) : super(key: key);
+  const TabMovie({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class TabMovie extends StatelessWidget {
               ],
             ),
           ),
-        )
+        ),
       ],
     );
   }

@@ -9,10 +9,10 @@ import 'package:get/get.dart';
 
 class ApiLogTextCopy extends StatelessWidget {
   const ApiLogTextCopy({
-    Key? key,
+    super.key,
     required this.text,
     this.style,
-  }) : super(key: key);
+  });
 
   final String text;
   final TextStyle? style;

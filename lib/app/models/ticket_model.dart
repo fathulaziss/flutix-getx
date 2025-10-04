@@ -54,6 +54,6 @@ class TicketModel extends Equatable {
         fee,
         total,
         orderId,
-        userId
+        userId,
       ];
 }

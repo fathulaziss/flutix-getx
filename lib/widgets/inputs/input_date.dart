@@ -8,7 +8,7 @@ import 'package:intl/intl.dart';
 
 class InputDate extends StatefulWidget {
   const InputDate({
-    Key? key,
+    super.key,
     this.label,
     this.hint = 'DD-MM-YYYY',
     this.prefixIcon,
@@ -37,7 +37,7 @@ class InputDate extends StatefulWidget {
     this.dateFormat,
     this.outlineColor,
     this.hintColor,
-  }) : super(key: key);
+  });
 
   final bool? Function(String value)? validation;
   final Color? color;

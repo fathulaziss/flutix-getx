@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PageInfo extends StatelessWidget {
-  const PageInfo({Key? key, required this.pageName}) : super(key: key);
+  const PageInfo({super.key, required this.pageName});
 
   final String pageName;
 

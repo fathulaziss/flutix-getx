@@ -88,13 +88,13 @@ class MovieVoucherItem extends StatelessWidget {
                             color: AppColor.yellowColor1,
                             fontSize: 18.w,
                           ),
-                        )
+                        ),
                       ],
                     ),
-                  )
+                  ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

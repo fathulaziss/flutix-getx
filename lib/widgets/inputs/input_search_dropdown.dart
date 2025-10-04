@@ -8,10 +8,10 @@ import 'package:flutter_typeahead/flutter_typeahead.dart';
 class InputSearchDropdown extends StatefulWidget {
   const InputSearchDropdown({
     super.key,
-    required this.suggestionsCallback,
     required this.controller,
     required this.itemBuilder,
-    required this.onSuggestionSelected,
+    required this.onSelected,
+    required this.suggestionsCallback,
     this.hint = 'Search',
     this.label,
     this.textStyle,
@@ -26,10 +26,10 @@ class InputSearchDropdown extends StatefulWidget {
     this.borderRadius,
   });
 
-  final FutureOr<Iterable<dynamic>> Function(String) suggestionsCallback;
   final TextEditingController controller;
   final Widget Function(BuildContext, dynamic) itemBuilder;
-  final void Function(dynamic) onSuggestionSelected;
+  final void Function(dynamic)? onSelected;
+  final FutureOr<List<dynamic>> Function(String) suggestionsCallback;
   final String? label;
   final String hint;
   final TextStyle? textStyle;
@@ -52,7 +52,7 @@ class _InputSearchDropdownState extends State<InputSearchDropdown> {
   bool isFocus = false;
   bool isValid = true;
 
-  _decor() {
+  dynamic _decor() {
     if (widget.inputStyle == InputStyle.box) {
       switch (tState) {
         case TextFieldState.focus:
@@ -95,7 +95,7 @@ class _InputSearchDropdownState extends State<InputSearchDropdown> {
     }
   }
 
-  _box({required Color borderColor}) {
+  BoxDecoration _box({required Color borderColor}) {
     return BoxDecoration(
       color: widget.color ?? Colors.white,
       borderRadius: BorderRadius.circular(widget.borderRadius ?? Corners.lg),
@@ -103,7 +103,7 @@ class _InputSearchDropdownState extends State<InputSearchDropdown> {
     );
   }
 
-  _outline({required Color borderColor}) {
+  BoxDecoration _outline({required Color borderColor}) {
     return BoxDecoration(
       color: widget.color ?? const Color(0xFFF6F8FB),
       borderRadius: BorderRadius.circular(widget.borderRadius ?? Corners.lg),
@@ -111,14 +111,14 @@ class _InputSearchDropdownState extends State<InputSearchDropdown> {
     );
   }
 
-  _line({required Color borderColor, double width = 1}) {
+  BoxDecoration _line({required Color borderColor, double width = 1}) {
     return BoxDecoration(
       color: widget.color ?? Colors.transparent,
       border: Border(bottom: BorderSide(color: borderColor, width: width)),
     );
   }
 
-  _onFocusChange(bool value) {
+  void _onFocusChange(bool value) {
     setState(() {
       isFocus = value;
       if (!isValid) {
@@ -146,36 +146,51 @@ class _InputSearchDropdownState extends State<InputSearchDropdown> {
           child: Focus(
             onFocusChange: _onFocusChange,
             child: TypeAheadField(
-              suggestionsCallback: widget.suggestionsCallback,
-              textFieldConfiguration: TextFieldConfiguration(
-                controller: widget.controller,
-                style: widget.textStyle ??
-                    TextStyles.text.copyWith(color: widget.textColor),
-                decoration: inputDecoration(
-                  prefixIcon: widget.prefixIcon,
-                  hintText: widget.hint,
-                  suffixIcon: widget.suffixIcon,
-                  hintStyle: widget.hintStyle,
-                  hintColor: widget.hintColor,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: Insets.med,
-                    vertical: Insets.med,
+              builder: (context, controller, focusNode) {
+                return TextField(
+                  controller: controller,
+                  focusNode: focusNode,
+                  style: widget.textStyle ??
+                      TextStyles.text.copyWith(color: widget.textColor),
+                  decoration: inputDecoration(
+                    prefixIcon: widget.prefixIcon,
+                    hintText: widget.hint,
+                    suffixIcon: widget.suffixIcon,
+                    hintStyle: widget.hintStyle,
+                    hintColor: widget.hintColor,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: Insets.med,
+                      vertical: Insets.med,
+                    ),
                   ),
-                ),
-              ),
+                );
+              },
+              controller: widget.controller,
               itemBuilder: widget.itemBuilder,
-              noItemsFoundBuilder: (context) {
+              onSelected: widget.onSelected,
+              suggestionsCallback: (search) {
+                return widget.suggestionsCallback(search);
+              },
+              emptyBuilder: (context) {
                 return const SizedBox();
               },
-              suggestionsBoxDecoration: SuggestionsBoxDecoration(
-                shadowColor: Colors.transparent,
-                color: AppColor.primaryColor1,
-                constraints: BoxConstraints(
-                  minWidth: MediaQuery.of(context).size.width / 2,
-                  maxHeight: MediaQuery.of(context).size.width / 2,
-                ),
-              ),
-              onSuggestionSelected: widget.onSuggestionSelected,
+              decorationBuilder: (context, child) {
+                return ConstrainedBox(
+                  constraints: BoxConstraints(
+                    minWidth: MediaQuery.of(context).size.width / 2,
+                    maxHeight: MediaQuery.of(context).size.width / 2,
+                  ),
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      color: AppColor.primaryColor1,
+                      boxShadow: [
+                        BoxShadow(color: Colors.transparent),
+                      ],
+                    ),
+                    child: child,
+                  ),
+                );
+              },
             ),
           ),
         ),

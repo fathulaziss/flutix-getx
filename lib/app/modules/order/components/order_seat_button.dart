@@ -35,7 +35,7 @@ class OrderSeatButton extends GetView<OrderSeatController> {
                         TextStyles.desc.copyWith(fontWeight: FontWeight.bold),
                     textAlign: TextAlign.end,
                   ),
-                )
+                ),
               ],
             ),
             verticalSpace(Insets.xs),
@@ -55,7 +55,7 @@ class OrderSeatButton extends GetView<OrderSeatController> {
                         TextStyles.desc.copyWith(fontWeight: FontWeight.bold),
                     textAlign: TextAlign.end,
                   ),
-                )
+                ),
               ],
             ),
             verticalSpace(Insets.sm),

@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class TabTicket extends GetView<TicketController> {
-  const TabTicket({Key? key}) : super(key: key);
+  const TabTicket({super.key});
 
   @override
   Widget build(BuildContext context) {

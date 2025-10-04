@@ -45,7 +45,7 @@ class EditProfilePhoto extends StatelessWidget {
               AppAsset.icon('ic_camera.png'),
               color: Colors.blueGrey[200],
             ),
-          )
+          ),
         ],
       ),
     );

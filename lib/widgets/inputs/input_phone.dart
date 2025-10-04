@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 
 class InputPhone extends StatefulWidget {
   const InputPhone({
-    Key? key,
+    super.key,
     required this.controller,
     this.label,
     this.prefixIcon,
@@ -32,7 +32,7 @@ class InputPhone extends StatefulWidget {
     this.outlineColor,
     this.borderRadius,
     this.hintColor,
-  }) : super(key: key);
+  });
   final TextEditingController controller;
   final String? label;
   final Widget? prefixIcon;
@@ -82,7 +82,7 @@ class InputPhoneState extends State<InputPhone> {
     }
   }
 
-  _onChanged(String value) {
+  void _onChanged(String value) {
     if (value.isNotEmpty) {
       final val = value.removeAllWhitespace;
       if (widget.value != null) {
@@ -102,7 +102,7 @@ class InputPhoneState extends State<InputPhone> {
       hint: widget.hint,
       inputFormatters: [
         FilteringTextInputFormatter.digitsOnly,
-        TextInputMask(mask: '9999 9999 9999 9999 9999')
+        TextInputMask(mask: '9999 9999 9999 9999 9999'),
       ],
       keyboardType: TextInputType.number,
       label: widget.label,
@@ -125,7 +125,7 @@ class InputPhoneState extends State<InputPhone> {
                     const Icon(
                       Icons.keyboard_arrow_down,
                       size: 20,
-                    )
+                    ),
                   ],
                 ),
               ),

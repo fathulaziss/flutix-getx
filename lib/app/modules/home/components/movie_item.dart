@@ -63,8 +63,8 @@ class MovieItem extends StatelessWidget {
                       begin: Alignment.bottomCenter,
                       end: Alignment.topCenter,
                       colors: [
-                        Colors.black.withOpacity(0.61),
-                        Colors.black.withOpacity(0)
+                        Colors.black.withValues(alpha: 0.61),
+                        Colors.black.withValues(alpha: 0),
                       ],
                     ),
                   ),
@@ -78,10 +78,10 @@ class MovieItem extends StatelessWidget {
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                       ),
-                      RatingStar(voteAverage: data.voteAverage)
+                      RatingStar(voteAverage: data.voteAverage),
                     ],
                   ),
-                )
+                ),
             ],
           ),
         ),

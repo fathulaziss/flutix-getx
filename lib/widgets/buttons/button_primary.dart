@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 
 class ButtonPrimary extends StatelessWidget {
   const ButtonPrimary({
-    Key? key,
+    super.key,
     this.height,
     this.width,
     this.radius,
@@ -24,7 +24,7 @@ class ButtonPrimary extends StatelessWidget {
     this.isOutline = false,
     this.outlineColor,
     this.textColor,
-  }) : super(key: key);
+  });
 
   final double? height;
   final double? width;

@@ -44,7 +44,7 @@ class BrowseMovieView extends GetView<BrowseMovieController> {
                                 onTap: () => Get.toNamed(
                                   Routes.MOVIE_DETAIL,
                                   arguments: {
-                                    'movie': controller.listBrowseMovie[index]
+                                    'movie': controller.listBrowseMovie[index],
                                   },
                                 ),
                               );

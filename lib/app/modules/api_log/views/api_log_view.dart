@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ApiLogView extends GetView<ApiLogController> {
-  const ApiLogView({Key? key}) : super(key: key);
+  const ApiLogView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class ApiLogView extends GetView<ApiLogController> {
                           expansionCallback: (i, isOpen) {
                             controller.isOpen[i] = !isOpen;
                           },
-                        )
+                        ),
                       ],
                     ),
                   ),

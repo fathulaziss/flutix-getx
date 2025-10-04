@@ -11,7 +11,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class OnboardingView extends GetView<OnboardingController> {
-  const OnboardingView({Key? key}) : super(key: key);
+  const OnboardingView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class OnboardingView extends GetView<OnboardingController> {
                     label: 'start'.tr,
                     onTap: controller.getStarted,
                   ),
-                )
+                ),
               ],
             ),
             Positioned(
@@ -66,7 +66,7 @@ class OnboardingView extends GetView<OnboardingController> {
                             value: item,
                             child: InputDropdownItem(value: item.language),
                           );
-                        })
+                        }),
                       ],
                       selectedItem:
                           controller.cUtility.appLanguage.value.language,
@@ -80,7 +80,7 @@ class OnboardingView extends GetView<OnboardingController> {
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

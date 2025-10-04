@@ -20,7 +20,7 @@ class TransactionHistoryWallet extends GetView<TransactionHistoryController> {
         isShowShadows: true,
         shadows: [
           BoxShadow(
-            color: AppColor.primaryColor1.withOpacity(.5),
+            color: AppColor.primaryColor1.withValues(alpha: .5),
             blurRadius: 5,
             offset: const Offset(0, 5),
           ),
@@ -36,7 +36,7 @@ class TransactionHistoryWallet extends GetView<TransactionHistoryController> {
                 margin: EdgeInsets.only(right: 4.w),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.white.withOpacity(0.08),
+                  color: Colors.white.withValues(alpha: 0.08),
                 ),
               ),
             ),
@@ -65,7 +65,7 @@ class TransactionHistoryWallet extends GetView<TransactionHistoryController> {
                           shape: BoxShape.circle,
                           color: AppColor.yellowColor1,
                         ),
-                      )
+                      ),
                     ],
                   ),
                   verticalSpace(Insets.lg),
@@ -94,7 +94,7 @@ class TransactionHistoryWallet extends GetView<TransactionHistoryController> {
                           textAlign: TextAlign.left,
                           style: TextStyles.desc.copyWith(color: Colors.white),
                         ),
-                      )
+                      ),
                     ],
                   ),
                   verticalSpace(Insets.xs),
@@ -196,10 +196,10 @@ class TransactionHistoryWallet extends GetView<TransactionHistoryController> {
                                 color: Colors.white,
                                 size: 12.w,
                               ),
-                            )
+                            ),
                           ],
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ],

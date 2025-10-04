@@ -113,7 +113,7 @@ class SigninView extends GetView<SigninController> {
                             value: item,
                             child: InputDropdownItem(value: item.language),
                           );
-                        })
+                        }),
                       ],
                       selectedItem:
                           controller.cUtility.appLanguage.value.language,

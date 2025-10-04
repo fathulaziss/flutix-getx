@@ -32,7 +32,7 @@ class MovieDetailView extends GetView<MovieDetailController> {
                     Routes.ORDER,
                     arguments: {
                       'movie_data': controller.movieData.value,
-                      'movie_detail_data': controller.movieDetailData.value
+                      'movie_detail_data': controller.movieDetailData.value,
                     },
                   ),
                   label: 'letsWatch'.tr,
@@ -54,7 +54,7 @@ class MovieDetailView extends GetView<MovieDetailController> {
               automaticallyImplyLeading: false,
               flexibleSpace: const MovieDetailPoster(),
             ),
-            const SliverToBoxAdapter(child: MovieDetailBody())
+            const SliverToBoxAdapter(child: MovieDetailBody()),
           ],
         ),
       );

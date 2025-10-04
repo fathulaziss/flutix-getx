@@ -50,7 +50,7 @@ class OrderConfirmButton extends GetView<OrderConfirmController> {
                       size: 18.w,
                     ),
                   ),
-                )
+                ),
               ],
             ),
             verticalSpace(Insets.xs),
@@ -99,10 +99,10 @@ class OrderConfirmButton extends GetView<OrderConfirmController> {
                         ),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
-                      )
+                      ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
             verticalSpace(Insets.sm),

@@ -34,7 +34,7 @@ class TicketComplete extends GetView<TicketController> {
                           onTap: () => Get.toNamed(
                             Routes.TICKET_DETAIL,
                             arguments: {
-                              'data': controller.listTicketComplete[index]
+                              'data': controller.listTicketComplete[index],
                             },
                           ),
                           data: controller.listTicketComplete[index],

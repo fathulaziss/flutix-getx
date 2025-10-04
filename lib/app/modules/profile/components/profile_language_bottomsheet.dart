@@ -32,7 +32,7 @@ class ProfileLanguageBottomSheet extends GetView<ProfileController> {
                 Get.back();
               },
             );
-          }).toList(),
+          }),
         ],
       );
     });

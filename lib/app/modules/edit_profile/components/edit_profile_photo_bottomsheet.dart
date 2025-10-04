@@ -90,7 +90,7 @@ class EditProfilePhotoBottomSheet extends GetView<EditProfileController> {
               ),
             ),
           ],
-        )
+        ),
       ],
     );
   }

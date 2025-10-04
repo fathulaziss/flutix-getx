@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 
 class CardApp extends StatelessWidget {
   const CardApp({
-    Key? key,
+    super.key,
     this.margin,
     this.padding,
     this.radius,
@@ -20,7 +20,7 @@ class CardApp extends StatelessWidget {
     this.constraints,
     this.isShowShadows = false,
     this.shadows,
-  }) : super(key: key);
+  });
 
   final EdgeInsets? margin;
   final EdgeInsets? padding;

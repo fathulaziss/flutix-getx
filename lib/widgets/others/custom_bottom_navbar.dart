@@ -7,10 +7,10 @@ import 'package:get/get.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({
-    Key? key,
+    super.key,
     required this.selectedIndex,
     required this.onTap,
-  }) : super(key: key);
+  });
   final int selectedIndex;
   final Function(int index) onTap;
 
@@ -47,13 +47,13 @@ class CustomBottomNavBar extends StatelessWidget {
 
 class ItemNavbar extends StatelessWidget {
   const ItemNavbar({
-    Key? key,
+    super.key,
     required this.isSelected,
     required this.label,
     this.assetIcon = '',
     this.onTap,
     this.icon,
-  }) : super(key: key);
+  });
 
   final bool isSelected;
   final String label;
@@ -89,7 +89,7 @@ class ItemNavbar extends StatelessWidget {
                 fontSize: 10.w,
                 color: isSelected ? AppColor.primaryColor1 : Colors.grey,
               ),
-            )
+            ),
           ],
         ),
       ),

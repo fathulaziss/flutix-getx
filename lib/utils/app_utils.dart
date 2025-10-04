@@ -6,27 +6,18 @@ import 'package:flutix/utils/format_date_time.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_jailbreak_detection/flutter_jailbreak_detection.dart';
 import 'package:intl/intl.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 class AppUtils {
-  static dismissKeyboard() {
+  static void dismissKeyboard() {
     FocusManager.instance.primaryFocus?.unfocus();
   }
 
   static Future<String> getAppVersion() async {
     final packageInfo = await PackageInfo.fromPlatform();
     return 'Versi ${packageInfo.version}';
-  }
-
-  static Future<bool> checkIsJailBroken() async {
-    if (kReleaseMode) {
-      final b = await FlutterJailbreakDetection.jailbroken;
-      return b;
-    }
-    return false;
   }
 
   static Future<bool> checkTokenValidity(String token) async {
@@ -70,9 +61,9 @@ class AppUtils {
   static void generateColorSwatch(Color color) {
     final strengths = <double>[.05];
     final swatch = <int, Color>{};
-    final r = color.red;
-    final g = color.green;
-    final b = color.blue;
+    final r = color.r.toInt();
+    final g = color.g.toInt();
+    final b = color.b.toInt();
 
     for (var i = 1; i < 10; i++) {
       strengths.add(0.1 * i);
@@ -140,7 +131,7 @@ class ThousandsSeparatorInputFormatter extends TextInputFormatter {
   }
 }
 
-logSys(String s) {
+void logSys(String s) {
   if (kDebugMode) {
     d.log(s);
   }

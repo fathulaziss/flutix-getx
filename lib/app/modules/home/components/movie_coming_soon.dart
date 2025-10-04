@@ -74,7 +74,7 @@ class MovieComingSoon extends GetView<MovieController> {
                           onTap: () => Get.toNamed(
                             Routes.MOVIE_DETAIL,
                             arguments: {
-                              'movie': controller.listMovieComingSoon[index]
+                              'movie': controller.listMovieComingSoon[index],
                             },
                           ),
                         );

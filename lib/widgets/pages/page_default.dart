@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 
 class PageDefault extends StatelessWidget {
   const PageDefault({
-    Key? key,
+    super.key,
     required this.child,
     required this.title,
     this.bottomBarHeight = 0,
@@ -13,7 +13,7 @@ class PageDefault extends StatelessWidget {
     this.backgroundColor = Colors.white,
     this.shadowColor,
     this.isScrollable = false,
-  }) : super(key: key);
+  });
 
   final String title;
   final Widget child;

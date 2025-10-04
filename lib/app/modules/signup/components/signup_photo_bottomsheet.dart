@@ -68,7 +68,7 @@ class SignupPhotoBottomSheet extends GetView<SignupController> {
               ),
             ),
           ],
-        )
+        ),
       ],
     );
   }

@@ -57,12 +57,12 @@ class MovieDetailPoster extends GetView<MovieDetailController> {
                   begin: Alignment.bottomCenter,
                   end: Alignment.center,
                   colors: [
-                    AppColor.backgroundColor1.withOpacity(0.9),
-                    AppColor.backgroundColor1.withOpacity(0.1)
+                    AppColor.backgroundColor1.withValues(alpha: 0.9),
+                    AppColor.backgroundColor1.withValues(alpha: 0.1),
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       );

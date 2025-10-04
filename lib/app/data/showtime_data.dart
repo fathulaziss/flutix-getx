@@ -16,7 +16,7 @@ List<Map<String, dynamic>> showtimeData = [
       '19:30',
       '20:30',
       '21:30',
-      '22:00'
+      '22:00',
     ],
   },
   {
@@ -36,7 +36,7 @@ List<Map<String, dynamic>> showtimeData = [
       '19:30',
       '20:30',
       '21:30',
-      '22:00'
+      '22:00',
     ],
   },
   {
@@ -56,7 +56,7 @@ List<Map<String, dynamic>> showtimeData = [
       '19:30',
       '20:30',
       '21:30',
-      '22:00'
+      '22:00',
     ],
   }
 ];

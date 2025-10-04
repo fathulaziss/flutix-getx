@@ -70,7 +70,7 @@ class MovieShowing extends GetView<MovieController> {
                           onTap: () => Get.toNamed(
                             Routes.MOVIE_DETAIL,
                             arguments: {
-                              'movie': controller.listMovieShowing[index]
+                              'movie': controller.listMovieShowing[index],
                             },
                           ),
                         );

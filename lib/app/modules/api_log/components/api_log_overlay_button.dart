@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ApiLogOverlayButton extends StatefulWidget {
-  const ApiLogOverlayButton({Key? key}) : super(key: key);
+  const ApiLogOverlayButton({super.key});
 
   @override
   OverlayLogButtonState createState() => OverlayLogButtonState();
@@ -35,7 +35,7 @@ class OverlayLogButtonState extends State<ApiLogOverlayButton> {
               ),
             ),
           ),
-        )
+        ),
       ],
     );
   }

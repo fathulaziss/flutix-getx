@@ -33,7 +33,6 @@ class TicketDetailQr extends StatelessWidget {
                   child: QrImageView(data: data.orderId),
                 ),
               ),
-              barrierDismissible: true,
             );
           },
           child: CardApp(
