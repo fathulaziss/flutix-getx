@@ -56,31 +56,23 @@ class MovieController extends GetxController {
         language: cUtility.appLanguage.value,
         page: 1,
       );
-      final int totalPages = response['total_pages'];
       final tempMovieShowing = <MovieModel>[];
       final dataMovieShowing = <MovieModel>[];
 
-      for (var i = 1; i < totalPages;) {
-        final res = await ApiMovies.getMovieShowing(
-          language: cUtility.appLanguage.value,
-          page: i,
+      final data =
+          (response['results'] as List).map(MovieModel.fromJson).toList();
+
+      final dataFilter = data.where((item) {
+        return DateTime.parse(item.releaseDate).isBefore(DateTime.now()) &&
+            item.voteAverage >= minimumRating;
+      }).toList();
+
+      tempMovieShowing
+        ..addAll(dataFilter)
+        ..sort(
+          (a, b) => DateTime.parse(b.releaseDate)
+              .compareTo(DateTime.parse(a.releaseDate)),
         );
-
-        final data = (res['results'] as List).map(MovieModel.fromJson).toList();
-
-        final dataFilter = data.where((item) {
-          return DateTime.parse(item.releaseDate).isBefore(DateTime.now()) &&
-              item.voteAverage >= minimumRating;
-        }).toList();
-
-        tempMovieShowing.addAll(dataFilter);
-        i++;
-      }
-
-      tempMovieShowing.sort(
-        (a, b) => DateTime.parse(b.releaseDate)
-            .compareTo(DateTime.parse(a.releaseDate)),
-      );
 
       dataMovieShowing
         ..addAll(tempMovieShowing.sublist(0, 10))

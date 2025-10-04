@@ -1,3 +1,4 @@
+import 'package:flutix/styles/colors.dart';
 import 'package:flutix/styles/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -29,6 +30,7 @@ class PageDefault extends StatelessWidget {
       backgroundColor: backgroundColor,
       appBar: AppBar(
         shadowColor: shadowColor,
+        backgroundColor: AppColor.primaryColor1,
         title: SizedBox(
           width: Get.width,
           child: Text(
@@ -40,7 +42,10 @@ class PageDefault extends StatelessWidget {
           onPressed: Get.back,
           iconSize: 20.w,
           constraints: BoxConstraints(minWidth: 20.w),
-          icon: const Icon(Icons.arrow_back_ios),
+          icon: const Icon(
+            Icons.arrow_back_ios,
+            color: Colors.white,
+          ),
         ),
       ),
       bottomNavigationBar:

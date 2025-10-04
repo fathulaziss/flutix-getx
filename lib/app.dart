@@ -51,22 +51,16 @@ class _AppState extends State<App> {
           title: 'Flutix',
           theme: AppStyle.appTheme(0xFF2C1F63, Colors.white),
           builder: (context, child) {
-            return MediaQuery(
-              data: MediaQuery.of(context).copyWith(
-                textScaler: TextScaler.linear(Get.width <= 360 ? .85 : 1),
-              ),
-              child: GestureDetector(
-                behavior: HitTestBehavior.translucent,
-                onTap: AppUtils.dismissKeyboard,
-                child: Obx(
-                  () => Stack(
-                    children: [
-                      child!,
-                      if (cUtility.isShowLog.value) const ApiLogOverlayButton(),
-                      if (cUtility.isShowLog.value)
-                        PageInfo(pageName: pageName),
-                    ],
-                  ),
+            return GestureDetector(
+              behavior: HitTestBehavior.translucent,
+              onTap: AppUtils.dismissKeyboard,
+              child: Obx(
+                () => Stack(
+                  children: [
+                    child!,
+                    if (cUtility.isShowLog.value) const ApiLogOverlayButton(),
+                    if (cUtility.isShowLog.value) PageInfo(pageName: pageName),
+                  ],
                 ),
               ),
             );

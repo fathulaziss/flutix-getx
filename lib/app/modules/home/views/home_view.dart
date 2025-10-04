@@ -20,6 +20,8 @@ class HomeView extends GetView<HomeController> {
         backgroundColor: AppColor.backgroundColor1,
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
+          backgroundColor: AppColor.primaryColor1,
+          shape: const CircleBorder(), // force circle
           onPressed: () => Get.toNamed(Routes.TOPUP),
           child: Image.asset(
             AppAsset.icon('ic_topup.png'),

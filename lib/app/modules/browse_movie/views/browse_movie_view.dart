@@ -33,7 +33,7 @@ class BrowseMovieView extends GetView<BrowseMovieController> {
                             gridDelegate:
                                 SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 2,
-                              childAspectRatio: 1.07,
+                              childAspectRatio: 1.04,
                               mainAxisSpacing: Insets.med,
                               crossAxisSpacing: Insets.med,
                             ),
