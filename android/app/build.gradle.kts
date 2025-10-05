@@ -32,7 +32,7 @@ val keystoreProperties = Properties().apply {
 
 android {
     namespace = "com.fathdotdev.flutix"
-    compileSdk = 35
+    compileSdk = 36
     ndkVersion = flutter.ndkVersion
 
     flavorDimensions += "flavor-dimension"
@@ -58,6 +58,12 @@ android {
         }
     }
 
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging = true
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -72,7 +78,7 @@ android {
     defaultConfig {
         applicationId = "com.fathdotdev.flutix"
         minSdk = 25
-        targetSdk = 35
+        targetSdk = 36
         versionCode = flutterVersionCode.toInt()
         versionName = flutterVersionName
         multiDexEnabled = true
